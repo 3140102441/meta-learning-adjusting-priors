@@ -1,13 +1,14 @@
 
 from __future__ import absolute_import, division, print_function
 
+import os
 import timeit
 import random
 import numpy as np
 from Models.stochastic_models import get_model
 from Utils import common as cmn
 from Utils.Bayes_utils import run_test_Bayes
-from Utils.common import grad_step, get_loss_criterion, write_to_log, get_value
+from Utils.common import grad_step, get_loss_criterion, write_to_log, get_value, save_model_state, load_model_state, debug
 from PriorMetaLearning.Get_Objective_MPB import get_objective
 
 # -------------------------------------------------------------------------------------------
@@ -28,12 +29,25 @@ def run_meta_learning(data_loaders, prm):
     loss_criterion = get_loss_criterion(prm.loss_type)
 
     n_train_tasks = len(data_loaders)
+    #import pudb
+    #pudb.set_trace()
 
     # Create posterior models for each task:
     posteriors_models = [get_model(prm) for _ in range(n_train_tasks)]
-
     # Create a 'dummy' model to generate the set of parameters of the shared prior:
     prior_model = get_model(prm)
+    if prm.from_pretrain:
+        if prm.data_source == "CIFAR100":
+            pretrain_path = "pretrained_cifar100/epoch-46-acc0.478.pth"
+        elif prm.data_source == 'Caltech256':
+            pretrain_path = "pretrained_caltech256/epoch-7-acc0.303.pth"
+        else:
+            pretrain_path = None
+        for e in posteriors_models:
+            load_model_state(e, pretrain_path, pop_softmax = True )
+
+        load_model_state(prior_model, pretrain_path, pop_softmax = True )
+        write_to_log("load pretrained from" + pretrain_path, prm)
 
     # Gather all tasks posterior params:
     all_post_param = sum([list(posterior_model.parameters()) for posterior_model in posteriors_models], [])
@@ -92,13 +106,13 @@ def run_meta_learning(data_loaders, prm):
             # Take gradient step with the shared prior and all tasks' posteriors:
             grad_step(total_objective, all_optimizer, lr_schedule, prm.lr, i_epoch)
 
-            # Print status:
+            # Print training status of current batch:
             log_interval = 200
             if i_meta_batch % log_interval == 0:
                 batch_acc = info['correct_count'] / info['sample_count']
-                print(cmn.status_string(i_epoch,  prm.n_meta_train_epochs, i_meta_batch, n_meta_batches, batch_acc, get_value(total_objective)) +
-                      ' Empiric-Loss: {:.4}\t Task-Comp. {:.4}\t Meta-Comp.: {:.4}'.
-                      format(info['avg_empirical_loss'], info['avg_intra_task_comp'], info['meta_comp']))
+                write_to_log(cmn.status_string(i_epoch,  prm.n_meta_train_epochs, i_meta_batch, n_meta_batches, batch_acc, get_value(total_objective)) +
+                        ' Empiric-Loss: {:.4}\t Task-Comp. {:.4}\t Meta-Comp.: {:.4}, w_kld : {:.4}, b_kld : {:.4}'.
+                        format(info['avg_empirical_loss'], info['avg_intra_task_comp'], info['meta_comp'], info['w_kld'], info['b_kld']), prm)
         # end  meta-batches loop
 
     # end run_epoch()
@@ -114,14 +128,14 @@ def run_meta_learning(data_loaders, prm):
             model = posteriors_models[i_task]
             test_loader = data_loaders[i_task]['test']
             if len(test_loader) > 0:
-                test_acc, test_loss = run_test_Bayes(model, test_loader, loss_criterion, prm)
+                test_acc, test_loss = run_test_Bayes(model, test_loader, loss_criterion, prm, verbose=0)
                 n_tests += 1
                 test_acc_avg += test_acc
 
                 n_test_samples = len(test_loader.dataset)
 
-                write_to_log('Train Task {}, Test set: {} -  Average loss: {:.4}, Accuracy: {:.3} (of {} samples)\n'.format(
-                    i_task, prm.test_type, test_loss, test_acc, n_test_samples), prm)
+                #write_to_log('Train Task {}, Test set: {} -  Average loss: {:.4}, Accuracy: {:.3} (of {} samples)\n'.format(
+                    #i_task, prm.test_type, test_loss, test_acc, n_test_samples), prm)
             else:
                 print('Train Task {}, Test set: {} - No test data'.format(i_task, prm.test_type))
 
@@ -145,7 +159,15 @@ def run_meta_learning(data_loaders, prm):
 
     # Training loop:
     for i_epoch in range(prm.n_meta_train_epochs):
+        save_path = os.path.join(prm.result_dir, 'Epoch_{}_model.pth'.format(i_epoch))
         run_train_epoch(i_epoch)
+        if i_epoch % 1 == 0:
+            save_model_state(prior_model, save_path)
+            #utils.debug()
+            import pudb
+            #pudb.set_trace()
+            test_acc_avg = run_test()
+            print("Epoch {}: test_acc is {}".format(i_epoch, test_acc_avg))
 
     stop_time = timeit.default_timer()
 

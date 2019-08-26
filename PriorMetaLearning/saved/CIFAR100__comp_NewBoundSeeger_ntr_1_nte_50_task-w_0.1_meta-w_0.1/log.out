@@ -1,0 +1,616 @@
+Log file created at  2019-04-22 17:23:09
+Run script: main_Meta_Bayes.py
+Parameters:
+Namespace(K_Shot_MetaTest=50, K_Shot_MetaTrain=40, N_Way=5, batch_size=16, chars_split_type='random', complexity_type='NewBoundSeeger', data_path='/data5/tlgao/meta/meta-learning-adjusting-priors/ML_data_sets', data_source='CIFAR100', data_transform='None', limit_train_samples_in_test_tasks=2000, load_model_path='', loss_type='CrossEntropy', lr=0.001, meta_batch_size=16, meta_complex_w=0.1, mode='MetaTrain', model_name='CIFARNet', n_inner_steps=50, n_meta_test_epochs=10, n_meta_train_chars=1200, n_meta_train_classes=500, n_meta_train_epochs=10, n_pixels_shuffles=200, n_test_tasks=50, n_train_tasks=1, result_dir='saved/CIFAR100__comp_NewBoundSeeger_ntr_1_nte_50_task-w_0.1_meta-w_0.1', run_name='CIFAR100__comp_NewBoundSeeger_ntr_1_nte_50_task-w_0.1_meta-w_0.1', seed=1, task_complex_w=0.1, test_batch_size=128)
+--------------------------------------------------
+--- Generating 1 training-tasks
+Stochastic-CIFARNet
+---- Meta-Training set: 1 tasks
+Run finished at:  2019-04-22 17:23:42
+MaxPosterior Average Test Error: 50.5%	 Runtime: 24.850042601116 [sec]
+Trained prior saved in saved/CIFAR100__comp_NewBoundSeeger_ntr_1_nte_50_task-w_0.1_meta-w_0.1/model.pt
+---- Generating 50 test-tasks with at most 2000 training samples
+Meta-Testing with transferred prior....
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.71 	  Acc: 0.0	 Empiric Loss: 1.675	 Intra-Comp. 0.3456
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.132 	  Acc: 0.625	 Empiric Loss: 1.103	 Intra-Comp. 0.2902
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.9662 	  Acc: 0.75	 Empiric Loss: 0.939	 Intra-Comp. 0.2717
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.873 	  Acc: 0.75	 Empiric Loss: 0.847	 Intra-Comp. 0.2607
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.167 	  Acc: 0.625	 Empiric Loss: 1.138	 Intra-Comp. 0.2939
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.8932 	  Acc: 0.625	 Empiric Loss: 0.8669	 Intra-Comp. 0.2631
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7582 	  Acc: 0.75	 Empiric Loss: 0.7335	 Intra-Comp. 0.2462
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3617 	  Acc: 0.75	 Empiric Loss: 0.3432	 Intra-Comp. 0.1847
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5375 	  Acc: 0.875	 Empiric Loss: 0.516	 Intra-Comp. 0.2148
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4616 	  Acc: 0.875	 Empiric Loss: 0.4413	 Intra-Comp. 0.2025
+MaxPosterior Average Test Error: 24.2%	 Runtime: 28.562341063283384 [sec]
+0 task : Error 0.24181818181818182, Complexity 0.2054583579301834, loss 0.7125775218009949
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.628 	  Acc: 0.188	 Empiric Loss: 1.595	 Intra-Comp. 0.3384
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.098 	  Acc: 0.5	 Empiric Loss: 1.069	 Intra-Comp. 0.2865
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.01 	  Acc: 0.688	 Empiric Loss: 0.982	 Intra-Comp. 0.2767
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.226 	  Acc: 0.562	 Empiric Loss: 1.196	 Intra-Comp. 0.3
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.4539 	  Acc: 0.875	 Empiric Loss: 0.4338	 Intra-Comp. 0.2012
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.5529 	  Acc: 0.75	 Empiric Loss: 0.5312	 Intra-Comp. 0.2172
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.6912 	  Acc: 0.625	 Empiric Loss: 0.6675	 Intra-Comp. 0.2372
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.5791 	  Acc: 0.812	 Empiric Loss: 0.557	 Intra-Comp. 0.2212
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.9029 	  Acc: 0.5	 Empiric Loss: 0.8765	 Intra-Comp. 0.2643
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4412 	  Acc: 0.938	 Empiric Loss: 0.4213	 Intra-Comp. 0.1991
+MaxPosterior Average Test Error: 33.3%	 Runtime: 25.819296912290156 [sec]
+1 task : Error 0.33272727272727276, Complexity 0.19686327874660492, loss 1.015703797340393
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.634 	  Acc: 0.0625	 Empiric Loss: 1.6	 Intra-Comp. 0.339
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.26 	  Acc: 0.5	 Empiric Loss: 1.229	 Intra-Comp. 0.3034
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.9026 	  Acc: 0.75	 Empiric Loss: 0.8762	 Intra-Comp. 0.2642
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.5859 	  Acc: 0.812	 Empiric Loss: 0.5637	 Intra-Comp. 0.2221
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.6403 	  Acc: 0.688	 Empiric Loss: 0.6173	 Intra-Comp. 0.2301
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.6718 	  Acc: 0.812	 Empiric Loss: 0.6483	 Intra-Comp. 0.2345
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7667 	  Acc: 0.625	 Empiric Loss: 0.742	 Intra-Comp. 0.2473
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.8233 	  Acc: 0.75	 Empiric Loss: 0.7978	 Intra-Comp. 0.2545
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.6737 	  Acc: 0.812	 Empiric Loss: 0.6502	 Intra-Comp. 0.2348
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.265 	  Acc: 1.0	 Empiric Loss: 0.2485	 Intra-Comp. 0.1649
+MaxPosterior Average Test Error: 39.3%	 Runtime: 26.903549776412547 [sec]
+2 task : Error 0.3927272727272727, Complexity 0.19923581182956696, loss 1.117041826248169
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.647 	  Acc: 0.188	 Empiric Loss: 1.613	 Intra-Comp. 0.3401
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 0.9815 	  Acc: 0.562	 Empiric Loss: 0.9542	 Intra-Comp. 0.2735
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.015 	  Acc: 0.625	 Empiric Loss: 0.987	 Intra-Comp. 0.2773
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.137 	  Acc: 0.562	 Empiric Loss: 1.108	 Intra-Comp. 0.2907
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9594 	  Acc: 0.5	 Empiric Loss: 0.9323	 Intra-Comp. 0.2709
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.4086 	  Acc: 0.812	 Empiric Loss: 0.3892	 Intra-Comp. 0.1933
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7302 	  Acc: 0.688	 Empiric Loss: 0.706	 Intra-Comp. 0.2425
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.1812 	  Acc: 1.0	 Empiric Loss: 0.1667	 Intra-Comp. 0.1444
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3433 	  Acc: 0.875	 Empiric Loss: 0.3252	 Intra-Comp. 0.1812
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1658 	  Acc: 1.0	 Empiric Loss: 0.1518	 Intra-Comp. 0.1401
+MaxPosterior Average Test Error: 35.2%	 Runtime: 27.89951046463102 [sec]
+3 task : Error 0.3523636363636363, Complexity 0.20779572427272797, loss 0.9532710909843445
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.65 	  Acc: 0.188	 Empiric Loss: 1.616	 Intra-Comp. 0.3403
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.541 	  Acc: 0.25	 Empiric Loss: 1.508	 Intra-Comp. 0.3305
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.195 	  Acc: 0.562	 Empiric Loss: 1.165	 Intra-Comp. 0.2968
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.079 	  Acc: 0.625	 Empiric Loss: 1.051	 Intra-Comp. 0.2844
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.127 	  Acc: 0.625	 Empiric Loss: 1.098	 Intra-Comp. 0.2896
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.927 	  Acc: 0.688	 Empiric Loss: 0.9003	 Intra-Comp. 0.2672
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 1.019 	  Acc: 0.5	 Empiric Loss: 0.9914	 Intra-Comp. 0.2778
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.8653 	  Acc: 0.688	 Empiric Loss: 0.8394	 Intra-Comp. 0.2597
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.842 	  Acc: 0.688	 Empiric Loss: 0.8163	 Intra-Comp. 0.2569
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4903 	  Acc: 0.75	 Empiric Loss: 0.4695	 Intra-Comp. 0.2073
+MaxPosterior Average Test Error: 43.7%	 Runtime: 26.72492218669504 [sec]
+4 task : Error 0.43672727272727274, Complexity 0.23128005862236023, loss 1.1929864883422852
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.664 	  Acc: 0.0	 Empiric Loss: 1.63	 Intra-Comp. 0.3416
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.531 	  Acc: 0.438	 Empiric Loss: 1.498	 Intra-Comp. 0.3297
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.386 	  Acc: 0.438	 Empiric Loss: 1.354	 Intra-Comp. 0.3159
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.257 	  Acc: 0.562	 Empiric Loss: 1.227	 Intra-Comp. 0.3032
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.418 	  Acc: 0.5	 Empiric Loss: 1.386	 Intra-Comp. 0.319
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.075 	  Acc: 0.75	 Empiric Loss: 1.046	 Intra-Comp. 0.284
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.9015 	  Acc: 0.625	 Empiric Loss: 0.8751	 Intra-Comp. 0.2641
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 1.226 	  Acc: 0.562	 Empiric Loss: 1.196	 Intra-Comp. 0.3001
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5547 	  Acc: 0.875	 Empiric Loss: 0.533	 Intra-Comp. 0.2175
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2231 	  Acc: 0.938	 Empiric Loss: 0.2075	 Intra-Comp. 0.1551
+MaxPosterior Average Test Error: 46.7%	 Runtime: 27.323631573468447 [sec]
+5 task : Error 0.46690909090909094, Complexity 0.24069248139858246, loss 1.2443201541900635
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.622 	  Acc: 0.0625	 Empiric Loss: 1.588	 Intra-Comp. 0.3379
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.268 	  Acc: 0.438	 Empiric Loss: 1.238	 Intra-Comp. 0.3043
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8662 	  Acc: 0.75	 Empiric Loss: 0.8402	 Intra-Comp. 0.2598
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.289 	  Acc: 0.5	 Empiric Loss: 1.258	 Intra-Comp. 0.3064
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5367 	  Acc: 0.75	 Empiric Loss: 0.5153	 Intra-Comp. 0.2147
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.43 	  Acc: 0.938	 Empiric Loss: 0.4103	 Intra-Comp. 0.1971
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 1.061 	  Acc: 0.625	 Empiric Loss: 1.033	 Intra-Comp. 0.2825
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.422 	  Acc: 0.875	 Empiric Loss: 0.4025	 Intra-Comp. 0.1957
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3218 	  Acc: 0.938	 Empiric Loss: 0.3041	 Intra-Comp. 0.1769
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2 	  Acc: 0.938	 Empiric Loss: 0.185	 Intra-Comp. 0.1493
+MaxPosterior Average Test Error: 35.7%	 Runtime: 27.529598229564726 [sec]
+6 task : Error 0.3570909090909091, Complexity 0.2090090811252594, loss 0.9527608752250671
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.628 	  Acc: 0.312	 Empiric Loss: 1.594	 Intra-Comp. 0.3384
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.252 	  Acc: 0.5	 Empiric Loss: 1.221	 Intra-Comp. 0.3026
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.058 	  Acc: 0.625	 Empiric Loss: 1.03	 Intra-Comp. 0.2821
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.332 	  Acc: 0.625	 Empiric Loss: 1.301	 Intra-Comp. 0.3107
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.6808 	  Acc: 0.812	 Empiric Loss: 0.6573	 Intra-Comp. 0.2358
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.718 	  Acc: 0.688	 Empiric Loss: 0.6939	 Intra-Comp. 0.2408
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.79 	  Acc: 0.688	 Empiric Loss: 0.765	 Intra-Comp. 0.2503
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.5232 	  Acc: 0.812	 Empiric Loss: 0.5019	 Intra-Comp. 0.2126
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3982 	  Acc: 0.875	 Empiric Loss: 0.3791	 Intra-Comp. 0.1915
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.581 	  Acc: 0.812	 Empiric Loss: 0.5588	 Intra-Comp. 0.2214
+MaxPosterior Average Test Error: 34.7%	 Runtime: 25.92757899966091 [sec]
+7 task : Error 0.3472727272727273, Complexity 0.20239043235778809, loss 1.076634407043457
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.643 	  Acc: 0.312	 Empiric Loss: 1.609	 Intra-Comp. 0.3397
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.034 	  Acc: 0.562	 Empiric Loss: 1.006	 Intra-Comp. 0.2794
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.082 	  Acc: 0.438	 Empiric Loss: 1.054	 Intra-Comp. 0.2848
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.6291 	  Acc: 0.75	 Empiric Loss: 0.6063	 Intra-Comp. 0.2285
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9287 	  Acc: 0.688	 Empiric Loss: 0.9019	 Intra-Comp. 0.2673
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.7659 	  Acc: 0.812	 Empiric Loss: 0.7412	 Intra-Comp. 0.2472
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 1.009 	  Acc: 0.625	 Empiric Loss: 0.981	 Intra-Comp. 0.2766
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.8479 	  Acc: 0.688	 Empiric Loss: 0.8221	 Intra-Comp. 0.2576
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3835 	  Acc: 0.875	 Empiric Loss: 0.3647	 Intra-Comp. 0.1888
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.6976 	  Acc: 0.688	 Empiric Loss: 0.6738	 Intra-Comp. 0.2381
+MaxPosterior Average Test Error: 44.8%	 Runtime: 28.65869543235749 [sec]
+8 task : Error 0.4483636363636364, Complexity 0.22015996277332306, loss 1.2838187217712402
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.654 	  Acc: 0.125	 Empiric Loss: 1.619	 Intra-Comp. 0.3407
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.093 	  Acc: 0.562	 Empiric Loss: 1.065	 Intra-Comp. 0.286
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8719 	  Acc: 0.688	 Empiric Loss: 0.8459	 Intra-Comp. 0.2605
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9812 	  Acc: 0.688	 Empiric Loss: 0.9539	 Intra-Comp. 0.2735
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.8929 	  Acc: 0.5	 Empiric Loss: 0.8666	 Intra-Comp. 0.2631
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.6201 	  Acc: 0.812	 Empiric Loss: 0.5974	 Intra-Comp. 0.2272
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.9276 	  Acc: 0.75	 Empiric Loss: 0.9009	 Intra-Comp. 0.2672
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.6522 	  Acc: 0.812	 Empiric Loss: 0.629	 Intra-Comp. 0.2318
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5153 	  Acc: 0.812	 Empiric Loss: 0.4942	 Intra-Comp. 0.2113
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2824 	  Acc: 0.938	 Empiric Loss: 0.2655	 Intra-Comp. 0.1687
+MaxPosterior Average Test Error: 34.0%	 Runtime: 25.700167313218117 [sec]
+9 task : Error 0.3396363636363636, Complexity 0.19941431283950806, loss 1.049386978149414
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.658 	  Acc: 0.0625	 Empiric Loss: 1.624	 Intra-Comp. 0.3411
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.386 	  Acc: 0.375	 Empiric Loss: 1.354	 Intra-Comp. 0.316
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.079 	  Acc: 0.625	 Empiric Loss: 1.051	 Intra-Comp. 0.2845
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.738 	  Acc: 0.625	 Empiric Loss: 0.7137	 Intra-Comp. 0.2435
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.6249 	  Acc: 0.812	 Empiric Loss: 0.6021	 Intra-Comp. 0.2279
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.6294 	  Acc: 0.812	 Empiric Loss: 0.6066	 Intra-Comp. 0.2285
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.9555 	  Acc: 0.688	 Empiric Loss: 0.9284	 Intra-Comp. 0.2705
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2626 	  Acc: 0.938	 Empiric Loss: 0.2462	 Intra-Comp. 0.1643
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.404 	  Acc: 0.938	 Empiric Loss: 0.3848	 Intra-Comp. 0.1925
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4393 	  Acc: 0.812	 Empiric Loss: 0.4194	 Intra-Comp. 0.1987
+MaxPosterior Average Test Error: 33.3%	 Runtime: 29.825792295858264 [sec]
+10 task : Error 0.33345454545454545, Complexity 0.2128070890903473, loss 0.9334810972213745
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.587 	  Acc: 0.438	 Empiric Loss: 1.554	 Intra-Comp. 0.3347
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.306 	  Acc: 0.438	 Empiric Loss: 1.275	 Intra-Comp. 0.3081
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.9106 	  Acc: 0.75	 Empiric Loss: 0.8841	 Intra-Comp. 0.2652
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.913 	  Acc: 0.625	 Empiric Loss: 0.8865	 Intra-Comp. 0.2655
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.055 	  Acc: 0.625	 Empiric Loss: 1.027	 Intra-Comp. 0.2818
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.644 	  Acc: 0.812	 Empiric Loss: 0.6209	 Intra-Comp. 0.2306
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.5222 	  Acc: 0.812	 Empiric Loss: 0.501	 Intra-Comp. 0.2124
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.917 	  Acc: 0.688	 Empiric Loss: 0.8904	 Intra-Comp. 0.266
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5302 	  Acc: 0.938	 Empiric Loss: 0.5088	 Intra-Comp. 0.2137
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.6941 	  Acc: 0.75	 Empiric Loss: 0.6704	 Intra-Comp. 0.2376
+MaxPosterior Average Test Error: 36.4%	 Runtime: 24.55166296288371 [sec]
+11 task : Error 0.364, Complexity 0.20296619832515717, loss 1.0864253044128418
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.696 	  Acc: 0.0625	 Empiric Loss: 1.661	 Intra-Comp. 0.3444
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.31 	  Acc: 0.625	 Empiric Loss: 1.28	 Intra-Comp. 0.3085
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.427 	  Acc: 0.5	 Empiric Loss: 1.395	 Intra-Comp. 0.3199
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.252 	  Acc: 0.562	 Empiric Loss: 1.222	 Intra-Comp. 0.3027
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.508 	  Acc: 0.312	 Empiric Loss: 1.475	 Intra-Comp. 0.3275
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.9944 	  Acc: 0.688	 Empiric Loss: 0.9669	 Intra-Comp. 0.275
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.9397 	  Acc: 0.688	 Empiric Loss: 0.9129	 Intra-Comp. 0.2686
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.9907 	  Acc: 0.625	 Empiric Loss: 0.9633	 Intra-Comp. 0.2746
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.6326 	  Acc: 0.812	 Empiric Loss: 0.6097	 Intra-Comp. 0.229
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.6892 	  Acc: 0.75	 Empiric Loss: 0.6655	 Intra-Comp. 0.2369
+MaxPosterior Average Test Error: 49.8%	 Runtime: 28.806079070083797 [sec]
+12 task : Error 0.4978181818181818, Complexity 0.2484247386455536, loss 1.3112504482269287
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.691 	  Acc: 0.125	 Empiric Loss: 1.656	 Intra-Comp. 0.3439
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.077 	  Acc: 0.625	 Empiric Loss: 1.048	 Intra-Comp. 0.2842
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.068 	  Acc: 0.625	 Empiric Loss: 1.04	 Intra-Comp. 0.2832
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.039 	  Acc: 0.625	 Empiric Loss: 1.011	 Intra-Comp. 0.28
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.136 	  Acc: 0.5	 Empiric Loss: 1.107	 Intra-Comp. 0.2906
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.8853 	  Acc: 0.625	 Empiric Loss: 0.8591	 Intra-Comp. 0.2622
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.585 	  Acc: 0.875	 Empiric Loss: 0.5628	 Intra-Comp. 0.222
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.8474 	  Acc: 0.75	 Empiric Loss: 0.8217	 Intra-Comp. 0.2575
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.7608 	  Acc: 0.688	 Empiric Loss: 0.7362	 Intra-Comp. 0.2465
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.3688 	  Acc: 0.938	 Empiric Loss: 0.3502	 Intra-Comp. 0.1861
+MaxPosterior Average Test Error: 35.5%	 Runtime: 24.174287287518382 [sec]
+13 task : Error 0.3545454545454545, Complexity 0.19742968678474426, loss 1.0168354511260986
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.64 	  Acc: 0.188	 Empiric Loss: 1.606	 Intra-Comp. 0.3395
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.505 	  Acc: 0.5	 Empiric Loss: 1.472	 Intra-Comp. 0.3272
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.305 	  Acc: 0.625	 Empiric Loss: 1.274	 Intra-Comp. 0.308
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.147 	  Acc: 0.625	 Empiric Loss: 1.118	 Intra-Comp. 0.2918
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.099 	  Acc: 0.625	 Empiric Loss: 1.071	 Intra-Comp. 0.2867
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.23 	  Acc: 0.562	 Empiric Loss: 1.2	 Intra-Comp. 0.3005
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.6545 	  Acc: 0.875	 Empiric Loss: 0.6313	 Intra-Comp. 0.2321
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.4972 	  Acc: 0.875	 Empiric Loss: 0.4764	 Intra-Comp. 0.2084
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 1.124 	  Acc: 0.562	 Empiric Loss: 1.095	 Intra-Comp. 0.2894
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4123 	  Acc: 0.875	 Empiric Loss: 0.3929	 Intra-Comp. 0.194
+MaxPosterior Average Test Error: 45.2%	 Runtime: 26.326350000686944 [sec]
+14 task : Error 0.4516363636363636, Complexity 0.2356691211462021, loss 1.2740001678466797
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.647 	  Acc: 0.25	 Empiric Loss: 1.613	 Intra-Comp. 0.3401
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 0.8788 	  Acc: 0.75	 Empiric Loss: 0.8526	 Intra-Comp. 0.2613
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.296 	  Acc: 0.625	 Empiric Loss: 1.265	 Intra-Comp. 0.3071
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9186 	  Acc: 0.625	 Empiric Loss: 0.892	 Intra-Comp. 0.2661
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.602 	  Acc: 0.812	 Empiric Loss: 0.5796	 Intra-Comp. 0.2245
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.037 	  Acc: 0.688	 Empiric Loss: 1.009	 Intra-Comp. 0.2797
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.4759 	  Acc: 0.875	 Empiric Loss: 0.4554	 Intra-Comp. 0.2049
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.63 	  Acc: 0.812	 Empiric Loss: 0.6071	 Intra-Comp. 0.2286
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.6881 	  Acc: 0.812	 Empiric Loss: 0.6644	 Intra-Comp. 0.2368
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.3298 	  Acc: 0.812	 Empiric Loss: 0.312	 Intra-Comp. 0.1785
+MaxPosterior Average Test Error: 29.1%	 Runtime: 33.889379982836545 [sec]
+15 task : Error 0.29127272727272724, Complexity 0.21644611656665802, loss 0.8115652203559875
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.655 	  Acc: 0.125	 Empiric Loss: 1.62	 Intra-Comp. 0.3407
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.187 	  Acc: 0.562	 Empiric Loss: 1.157	 Intra-Comp. 0.296
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.387 	  Acc: 0.562	 Empiric Loss: 1.356	 Intra-Comp. 0.3161
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.074 	  Acc: 0.688	 Empiric Loss: 1.045	 Intra-Comp. 0.2839
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.8196 	  Acc: 0.75	 Empiric Loss: 0.7942	 Intra-Comp. 0.254
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.218 	  Acc: 0.688	 Empiric Loss: 1.188	 Intra-Comp. 0.2992
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7526 	  Acc: 0.75	 Empiric Loss: 0.7281	 Intra-Comp. 0.2454
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.4943 	  Acc: 0.875	 Empiric Loss: 0.4735	 Intra-Comp. 0.2079
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.8794 	  Acc: 0.562	 Empiric Loss: 0.8533	 Intra-Comp. 0.2615
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.558 	  Acc: 0.75	 Empiric Loss: 0.5362	 Intra-Comp. 0.218
+MaxPosterior Average Test Error: 44.1%	 Runtime: 31.104629398323596 [sec]
+16 task : Error 0.44072727272727275, Complexity 0.2576562464237213, loss 1.0594738721847534
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.665 	  Acc: 0.25	 Empiric Loss: 1.631	 Intra-Comp. 0.3417
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.154 	  Acc: 0.625	 Empiric Loss: 1.125	 Intra-Comp. 0.2925
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.082 	  Acc: 0.625	 Empiric Loss: 1.054	 Intra-Comp. 0.2848
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.493 	  Acc: 0.438	 Empiric Loss: 1.461	 Intra-Comp. 0.3261
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.6954 	  Acc: 0.75	 Empiric Loss: 0.6716	 Intra-Comp. 0.2378
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.6897 	  Acc: 0.75	 Empiric Loss: 0.666	 Intra-Comp. 0.237
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.802 	  Acc: 0.688	 Empiric Loss: 0.7768	 Intra-Comp. 0.2518
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.8372 	  Acc: 0.562	 Empiric Loss: 0.8116	 Intra-Comp. 0.2563
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.6939 	  Acc: 0.688	 Empiric Loss: 0.6701	 Intra-Comp. 0.2376
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.6705 	  Acc: 0.688	 Empiric Loss: 0.647	 Intra-Comp. 0.2344
+MaxPosterior Average Test Error: 41.7%	 Runtime: 24.07713825535029 [sec]
+17 task : Error 0.4167272727272727, Complexity 0.24867595732212067, loss 1.0216554403305054
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.617 	  Acc: 0.312	 Empiric Loss: 1.584	 Intra-Comp. 0.3374
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.268 	  Acc: 0.562	 Empiric Loss: 1.238	 Intra-Comp. 0.3043
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.258 	  Acc: 0.5	 Empiric Loss: 1.228	 Intra-Comp. 0.3033
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.357 	  Acc: 0.375	 Empiric Loss: 1.326	 Intra-Comp. 0.3132
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.193 	  Acc: 0.562	 Empiric Loss: 1.164	 Intra-Comp. 0.2967
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.151 	  Acc: 0.625	 Empiric Loss: 1.122	 Intra-Comp. 0.2922
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.6562 	  Acc: 0.875	 Empiric Loss: 0.633	 Intra-Comp. 0.2323
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.7564 	  Acc: 0.812	 Empiric Loss: 0.7318	 Intra-Comp. 0.2459
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.6227 	  Acc: 0.875	 Empiric Loss: 0.5999	 Intra-Comp. 0.2276
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.7659 	  Acc: 0.688	 Empiric Loss: 0.7412	 Intra-Comp. 0.2472
+MaxPosterior Average Test Error: 42.2%	 Runtime: 25.369884023442864 [sec]
+18 task : Error 0.42181818181818187, Complexity 0.22930313646793365, loss 1.205691933631897
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.628 	  Acc: 0.375	 Empiric Loss: 1.594	 Intra-Comp. 0.3384
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.2 	  Acc: 0.5	 Empiric Loss: 1.17	 Intra-Comp. 0.2973
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.823 	  Acc: 0.812	 Empiric Loss: 0.7975	 Intra-Comp. 0.2545
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9271 	  Acc: 0.688	 Empiric Loss: 0.9004	 Intra-Comp. 0.2671
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.394 	  Acc: 0.5	 Empiric Loss: 1.362	 Intra-Comp. 0.3167
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.5849 	  Acc: 0.812	 Empiric Loss: 0.5627	 Intra-Comp. 0.222
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.9549 	  Acc: 0.625	 Empiric Loss: 0.9279	 Intra-Comp. 0.2704
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.7389 	  Acc: 0.812	 Empiric Loss: 0.7145	 Intra-Comp. 0.2436
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3184 	  Acc: 0.875	 Empiric Loss: 0.3007	 Intra-Comp. 0.1762
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.5045 	  Acc: 0.812	 Empiric Loss: 0.4835	 Intra-Comp. 0.2096
+MaxPosterior Average Test Error: 36.3%	 Runtime: 32.49055181443691 [sec]
+19 task : Error 0.36290909090909096, Complexity 0.222501739859581, loss 0.9881318211555481
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.632 	  Acc: 0.25	 Empiric Loss: 1.598	 Intra-Comp. 0.3388
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.112 	  Acc: 0.438	 Empiric Loss: 1.083	 Intra-Comp. 0.288
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.138 	  Acc: 0.562	 Empiric Loss: 1.109	 Intra-Comp. 0.2909
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.144 	  Acc: 0.625	 Empiric Loss: 1.115	 Intra-Comp. 0.2915
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.188 	  Acc: 0.562	 Empiric Loss: 1.158	 Intra-Comp. 0.2961
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.157 	  Acc: 0.625	 Empiric Loss: 1.128	 Intra-Comp. 0.2929
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.597 	  Acc: 0.75	 Empiric Loss: 0.5746	 Intra-Comp. 0.2238
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.7431 	  Acc: 0.75	 Empiric Loss: 0.7187	 Intra-Comp. 0.2442
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.6114 	  Acc: 0.812	 Empiric Loss: 0.5888	 Intra-Comp. 0.2259
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.529 	  Acc: 0.875	 Empiric Loss: 0.5076	 Intra-Comp. 0.2135
+MaxPosterior Average Test Error: 42.0%	 Runtime: 25.045976852998137 [sec]
+20 task : Error 0.4196363636363636, Complexity 0.22031767666339874, loss 1.166600227355957
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.682 	  Acc: 0.125	 Empiric Loss: 1.648	 Intra-Comp. 0.3432
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.181 	  Acc: 0.562	 Empiric Loss: 1.151	 Intra-Comp. 0.2953
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.084 	  Acc: 0.562	 Empiric Loss: 1.056	 Intra-Comp. 0.285
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.007 	  Acc: 0.625	 Empiric Loss: 0.9796	 Intra-Comp. 0.2764
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9444 	  Acc: 0.688	 Empiric Loss: 0.9175	 Intra-Comp. 0.2692
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.7309 	  Acc: 0.688	 Empiric Loss: 0.7066	 Intra-Comp. 0.2426
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.629 	  Acc: 0.875	 Empiric Loss: 0.6062	 Intra-Comp. 0.2285
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.8022 	  Acc: 0.562	 Empiric Loss: 0.7771	 Intra-Comp. 0.2519
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.403 	  Acc: 0.875	 Empiric Loss: 0.3838	 Intra-Comp. 0.1923
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4649 	  Acc: 0.812	 Empiric Loss: 0.4446	 Intra-Comp. 0.2031
+MaxPosterior Average Test Error: 43.4%	 Runtime: 28.51007648743689 [sec]
+21 task : Error 0.4341818181818182, Complexity 0.22199562191963196, loss 1.1610305309295654
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.664 	  Acc: 0.125	 Empiric Loss: 1.63	 Intra-Comp. 0.3416
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.318 	  Acc: 0.562	 Empiric Loss: 1.287	 Intra-Comp. 0.3093
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.206 	  Acc: 0.562	 Empiric Loss: 1.177	 Intra-Comp. 0.298
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9129 	  Acc: 0.75	 Empiric Loss: 0.8864	 Intra-Comp. 0.2655
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.032 	  Acc: 0.688	 Empiric Loss: 1.004	 Intra-Comp. 0.2792
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.761 	  Acc: 0.75	 Empiric Loss: 0.7363	 Intra-Comp. 0.2465
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 1.133 	  Acc: 0.562	 Empiric Loss: 1.104	 Intra-Comp. 0.2903
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.6795 	  Acc: 0.75	 Empiric Loss: 0.6559	 Intra-Comp. 0.2356
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.4465 	  Acc: 0.875	 Empiric Loss: 0.4265	 Intra-Comp. 0.2
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.6031 	  Acc: 0.75	 Empiric Loss: 0.5806	 Intra-Comp. 0.2247
+MaxPosterior Average Test Error: 43.0%	 Runtime: 25.106792679987848 [sec]
+22 task : Error 0.42981818181818177, Complexity 0.2529304027557373, loss 1.1313601732254028
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.673 	  Acc: 0.125	 Empiric Loss: 1.639	 Intra-Comp. 0.3424
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.36 	  Acc: 0.562	 Empiric Loss: 1.329	 Intra-Comp. 0.3135
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.229 	  Acc: 0.438	 Empiric Loss: 1.199	 Intra-Comp. 0.3003
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.12 	  Acc: 0.562	 Empiric Loss: 1.091	 Intra-Comp. 0.2889
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.207 	  Acc: 0.562	 Empiric Loss: 1.178	 Intra-Comp. 0.2981
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.341 	  Acc: 0.5	 Empiric Loss: 1.31	 Intra-Comp. 0.3116
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 1.093 	  Acc: 0.562	 Empiric Loss: 1.064	 Intra-Comp. 0.286
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 1.005 	  Acc: 0.625	 Empiric Loss: 0.9776	 Intra-Comp. 0.2762
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.8736 	  Acc: 0.812	 Empiric Loss: 0.8476	 Intra-Comp. 0.2607
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.7435 	  Acc: 0.75	 Empiric Loss: 0.7191	 Intra-Comp. 0.2442
+MaxPosterior Average Test Error: 42.9%	 Runtime: 32.70072285924107 [sec]
+23 task : Error 0.42872727272727273, Complexity 0.24677430093288422, loss 1.1126827001571655
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.678 	  Acc: 0.188	 Empiric Loss: 1.643	 Intra-Comp. 0.3428
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.427 	  Acc: 0.438	 Empiric Loss: 1.395	 Intra-Comp. 0.3199
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.428 	  Acc: 0.438	 Empiric Loss: 1.396	 Intra-Comp. 0.32
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.354 	  Acc: 0.5	 Empiric Loss: 1.323	 Intra-Comp. 0.3129
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9129 	  Acc: 0.75	 Empiric Loss: 0.8864	 Intra-Comp. 0.2655
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.869 	  Acc: 0.688	 Empiric Loss: 0.8429	 Intra-Comp. 0.2602
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 1.138 	  Acc: 0.562	 Empiric Loss: 1.109	 Intra-Comp. 0.2908
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.543 	  Acc: 0.75	 Empiric Loss: 0.5215	 Intra-Comp. 0.2157
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.7797 	  Acc: 0.75	 Empiric Loss: 0.7548	 Intra-Comp. 0.249
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4821 	  Acc: 0.875	 Empiric Loss: 0.4615	 Intra-Comp. 0.2059
+MaxPosterior Average Test Error: 48.1%	 Runtime: 26.051328842528164 [sec]
+24 task : Error 0.4810909090909091, Complexity 0.23105964064598083, loss 1.3031091690063477
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.691 	  Acc: 0.125	 Empiric Loss: 1.657	 Intra-Comp. 0.344
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.063 	  Acc: 0.562	 Empiric Loss: 1.035	 Intra-Comp. 0.2827
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8925 	  Acc: 0.875	 Empiric Loss: 0.8662	 Intra-Comp. 0.263
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.525 	  Acc: 0.375	 Empiric Loss: 1.492	 Intra-Comp. 0.3291
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9481 	  Acc: 0.625	 Empiric Loss: 0.9211	 Intra-Comp. 0.2696
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.721 	  Acc: 0.875	 Empiric Loss: 0.6968	 Intra-Comp. 0.2412
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.849 	  Acc: 0.75	 Empiric Loss: 0.8232	 Intra-Comp. 0.2577
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.7187 	  Acc: 0.688	 Empiric Loss: 0.6946	 Intra-Comp. 0.2409
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.9761 	  Acc: 0.625	 Empiric Loss: 0.9488	 Intra-Comp. 0.2729
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.5524 	  Acc: 0.875	 Empiric Loss: 0.5307	 Intra-Comp. 0.2171
+MaxPosterior Average Test Error: 36.9%	 Runtime: 29.113627110607922 [sec]
+25 task : Error 0.3687272727272727, Complexity 0.24071314930915833, loss 0.9688165187835693
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.677 	  Acc: 0.0625	 Empiric Loss: 1.643	 Intra-Comp. 0.3427
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.329 	  Acc: 0.625	 Empiric Loss: 1.298	 Intra-Comp. 0.3104
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.003 	  Acc: 0.562	 Empiric Loss: 0.9755	 Intra-Comp. 0.276
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.631 	  Acc: 0.812	 Empiric Loss: 0.6081	 Intra-Comp. 0.2287
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5393 	  Acc: 0.812	 Empiric Loss: 0.5178	 Intra-Comp. 0.2151
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.185 	  Acc: 1.0	 Empiric Loss: 0.1704	 Intra-Comp. 0.1454
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.3388 	  Acc: 0.938	 Empiric Loss: 0.3208	 Intra-Comp. 0.1803
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.4802 	  Acc: 0.875	 Empiric Loss: 0.4596	 Intra-Comp. 0.2056
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2791 	  Acc: 0.938	 Empiric Loss: 0.2623	 Intra-Comp. 0.1679
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1595 	  Acc: 0.938	 Empiric Loss: 0.1456	 Intra-Comp. 0.1383
+MaxPosterior Average Test Error: 29.6%	 Runtime: 24.908351006917655 [sec]
+26 task : Error 0.2963636363636364, Complexity 0.21614958345890045, loss 0.8213667869567871
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.665 	  Acc: 0.125	 Empiric Loss: 1.631	 Intra-Comp. 0.3417
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.297 	  Acc: 0.375	 Empiric Loss: 1.266	 Intra-Comp. 0.3072
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.9779 	  Acc: 0.688	 Empiric Loss: 0.9506	 Intra-Comp. 0.2731
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.7198 	  Acc: 0.812	 Empiric Loss: 0.6957	 Intra-Comp. 0.2411
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.992 	  Acc: 0.75	 Empiric Loss: 0.9646	 Intra-Comp. 0.2747
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.8273 	  Acc: 0.625	 Empiric Loss: 0.8018	 Intra-Comp. 0.255
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.6913 	  Acc: 0.875	 Empiric Loss: 0.6676	 Intra-Comp. 0.2372
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3739 	  Acc: 0.812	 Empiric Loss: 0.3552	 Intra-Comp. 0.187
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5453 	  Acc: 0.812	 Empiric Loss: 0.5237	 Intra-Comp. 0.216
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1848 	  Acc: 1.0	 Empiric Loss: 0.1703	 Intra-Comp. 0.1454
+MaxPosterior Average Test Error: 32.1%	 Runtime: 30.20801983587444 [sec]
+27 task : Error 0.3210909090909091, Complexity 0.19843196868896484, loss 0.9253991842269897
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.655 	  Acc: 0.25	 Empiric Loss: 1.621	 Intra-Comp. 0.3408
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.274 	  Acc: 0.562	 Empiric Loss: 1.243	 Intra-Comp. 0.3049
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.083 	  Acc: 0.625	 Empiric Loss: 1.054	 Intra-Comp. 0.2848
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.256 	  Acc: 0.5	 Empiric Loss: 1.226	 Intra-Comp. 0.3031
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9229 	  Acc: 0.688	 Empiric Loss: 0.8963	 Intra-Comp. 0.2667
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.5753 	  Acc: 0.875	 Empiric Loss: 0.5532	 Intra-Comp. 0.2206
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.8339 	  Acc: 0.375	 Empiric Loss: 0.8083	 Intra-Comp. 0.2558
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.945 	  Acc: 0.625	 Empiric Loss: 0.9181	 Intra-Comp. 0.2693
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.6312 	  Acc: 0.812	 Empiric Loss: 0.6083	 Intra-Comp. 0.2288
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4151 	  Acc: 0.875	 Empiric Loss: 0.3956	 Intra-Comp. 0.1945
+MaxPosterior Average Test Error: 41.2%	 Runtime: 24.601146924309433 [sec]
+28 task : Error 0.4116363636363637, Complexity 0.2463873028755188, loss 1.0769373178482056
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.645 	  Acc: 0.312	 Empiric Loss: 1.611	 Intra-Comp. 0.3399
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.335 	  Acc: 0.5	 Empiric Loss: 1.304	 Intra-Comp. 0.311
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.184 	  Acc: 0.438	 Empiric Loss: 1.155	 Intra-Comp. 0.2957
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.16 	  Acc: 0.688	 Empiric Loss: 1.13	 Intra-Comp. 0.2931
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.152 	  Acc: 0.625	 Empiric Loss: 1.123	 Intra-Comp. 0.2923
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.7268 	  Acc: 0.812	 Empiric Loss: 0.7026	 Intra-Comp. 0.242
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7089 	  Acc: 0.75	 Empiric Loss: 0.6849	 Intra-Comp. 0.2396
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.5055 	  Acc: 0.875	 Empiric Loss: 0.4845	 Intra-Comp. 0.2097
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5568 	  Acc: 0.812	 Empiric Loss: 0.535	 Intra-Comp. 0.2178
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.3522 	  Acc: 0.938	 Empiric Loss: 0.3339	 Intra-Comp. 0.1829
+MaxPosterior Average Test Error: 36.3%	 Runtime: 24.784875754266977 [sec]
+29 task : Error 0.3632727272727273, Complexity 0.22495897114276886, loss 0.9759607315063477
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.63 	  Acc: 0.25	 Empiric Loss: 1.596	 Intra-Comp. 0.3386
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.215 	  Acc: 0.438	 Empiric Loss: 1.185	 Intra-Comp. 0.2989
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8246 	  Acc: 0.625	 Empiric Loss: 0.7992	 Intra-Comp. 0.2547
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9385 	  Acc: 0.688	 Empiric Loss: 0.9116	 Intra-Comp. 0.2685
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.7789 	  Acc: 0.75	 Empiric Loss: 0.754	 Intra-Comp. 0.2488
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.5405 	  Acc: 0.875	 Empiric Loss: 0.519	 Intra-Comp. 0.2153
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.8836 	  Acc: 0.75	 Empiric Loss: 0.8574	 Intra-Comp. 0.262
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2843 	  Acc: 0.938	 Empiric Loss: 0.2674	 Intra-Comp. 0.1691
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2188 	  Acc: 1.0	 Empiric Loss: 0.2034	 Intra-Comp. 0.1541
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.444 	  Acc: 0.875	 Empiric Loss: 0.424	 Intra-Comp. 0.1995
+MaxPosterior Average Test Error: 30.4%	 Runtime: 31.267716109752655 [sec]
+30 task : Error 0.3043636363636364, Complexity 0.21505917608737946, loss 0.8292186260223389
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.617 	  Acc: 0.25	 Empiric Loss: 1.583	 Intra-Comp. 0.3374
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.3 	  Acc: 0.625	 Empiric Loss: 1.269	 Intra-Comp. 0.3075
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.971 	  Acc: 0.5	 Empiric Loss: 0.9438	 Intra-Comp. 0.2723
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9791 	  Acc: 0.562	 Empiric Loss: 0.9518	 Intra-Comp. 0.2732
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.794 	  Acc: 0.75	 Empiric Loss: 0.7689	 Intra-Comp. 0.2508
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.9218 	  Acc: 0.562	 Empiric Loss: 0.8951	 Intra-Comp. 0.2665
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7568 	  Acc: 0.688	 Empiric Loss: 0.7322	 Intra-Comp. 0.246
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.5145 	  Acc: 0.812	 Empiric Loss: 0.4934	 Intra-Comp. 0.2112
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.7189 	  Acc: 0.812	 Empiric Loss: 0.6948	 Intra-Comp. 0.241
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.3209 	  Acc: 0.938	 Empiric Loss: 0.3032	 Intra-Comp. 0.1767
+MaxPosterior Average Test Error: 39.7%	 Runtime: 26.224951359443367 [sec]
+31 task : Error 0.3974545454545455, Complexity 0.23548732697963715, loss 1.120120882987976
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.639 	  Acc: 0.25	 Empiric Loss: 1.605	 Intra-Comp. 0.3394
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.235 	  Acc: 0.5	 Empiric Loss: 1.205	 Intra-Comp. 0.301
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.078 	  Acc: 0.562	 Empiric Loss: 1.05	 Intra-Comp. 0.2843
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.16 	  Acc: 0.625	 Empiric Loss: 1.13	 Intra-Comp. 0.2931
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.8496 	  Acc: 0.75	 Empiric Loss: 0.8238	 Intra-Comp. 0.2578
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.8303 	  Acc: 0.75	 Empiric Loss: 0.8048	 Intra-Comp. 0.2554
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.8303 	  Acc: 0.875	 Empiric Loss: 0.8048	 Intra-Comp. 0.2554
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.7603 	  Acc: 0.75	 Empiric Loss: 0.7356	 Intra-Comp. 0.2464
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.234 	  Acc: 1.0	 Empiric Loss: 0.2182	 Intra-Comp. 0.1577
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4936 	  Acc: 0.875	 Empiric Loss: 0.4728	 Intra-Comp. 0.2078
+MaxPosterior Average Test Error: 39.7%	 Runtime: 28.221302300691605 [sec]
+32 task : Error 0.3967272727272727, Complexity 0.206073597073555, loss 1.0774469375610352
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.641 	  Acc: 0.188	 Empiric Loss: 1.607	 Intra-Comp. 0.3396
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.365 	  Acc: 0.562	 Empiric Loss: 1.334	 Intra-Comp. 0.3139
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.232 	  Acc: 0.5	 Empiric Loss: 1.202	 Intra-Comp. 0.3007
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.251 	  Acc: 0.5	 Empiric Loss: 1.22	 Intra-Comp. 0.3025
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9215 	  Acc: 0.688	 Empiric Loss: 0.8948	 Intra-Comp. 0.2665
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.8303 	  Acc: 0.688	 Empiric Loss: 0.8047	 Intra-Comp. 0.2554
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.8143 	  Acc: 0.688	 Empiric Loss: 0.789	 Intra-Comp. 0.2534
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.4819 	  Acc: 0.938	 Empiric Loss: 0.4613	 Intra-Comp. 0.2059
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.6864 	  Acc: 0.688	 Empiric Loss: 0.6627	 Intra-Comp. 0.2365
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.7331 	  Acc: 0.812	 Empiric Loss: 0.7088	 Intra-Comp. 0.2429
+MaxPosterior Average Test Error: 46.8%	 Runtime: 24.57123626768589 [sec]
+33 task : Error 0.46799999999999997, Complexity 0.2582560181617737, loss 1.1633356809616089
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.649 	  Acc: 0.188	 Empiric Loss: 1.615	 Intra-Comp. 0.3402
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.269 	  Acc: 0.562	 Empiric Loss: 1.239	 Intra-Comp. 0.3044
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.316 	  Acc: 0.438	 Empiric Loss: 1.285	 Intra-Comp. 0.3091
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.6807 	  Acc: 0.812	 Empiric Loss: 0.6571	 Intra-Comp. 0.2357
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9826 	  Acc: 0.688	 Empiric Loss: 0.9552	 Intra-Comp. 0.2736
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.7058 	  Acc: 0.75	 Empiric Loss: 0.6819	 Intra-Comp. 0.2392
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 1.121 	  Acc: 0.562	 Empiric Loss: 1.092	 Intra-Comp. 0.289
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.8157 	  Acc: 0.625	 Empiric Loss: 0.7903	 Intra-Comp. 0.2536
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.8453 	  Acc: 0.75	 Empiric Loss: 0.8196	 Intra-Comp. 0.2573
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4289 	  Acc: 0.875	 Empiric Loss: 0.4092	 Intra-Comp. 0.1969
+MaxPosterior Average Test Error: 34.1%	 Runtime: 32.97138195671141 [sec]
+34 task : Error 0.3410909090909091, Complexity 0.22869089245796204, loss 0.9475741982460022
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.666 	  Acc: 0.125	 Empiric Loss: 1.632	 Intra-Comp. 0.3418
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.142 	  Acc: 0.5	 Empiric Loss: 1.113	 Intra-Comp. 0.2912
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.482 	  Acc: 0.25	 Empiric Loss: 1.45	 Intra-Comp. 0.3251
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.023 	  Acc: 0.688	 Empiric Loss: 0.9947	 Intra-Comp. 0.2782
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.7811 	  Acc: 0.625	 Empiric Loss: 0.7562	 Intra-Comp. 0.2491
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.295 	  Acc: 0.375	 Empiric Loss: 1.264	 Intra-Comp. 0.307
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 1.183 	  Acc: 0.562	 Empiric Loss: 1.153	 Intra-Comp. 0.2956
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.9659 	  Acc: 0.562	 Empiric Loss: 0.9387	 Intra-Comp. 0.2717
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.9207 	  Acc: 0.688	 Empiric Loss: 0.894	 Intra-Comp. 0.2664
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 1.057 	  Acc: 0.625	 Empiric Loss: 1.029	 Intra-Comp. 0.282
+MaxPosterior Average Test Error: 43.9%	 Runtime: 25.179368978366256 [sec]
+35 task : Error 0.43927272727272726, Complexity 0.2474498599767685, loss 1.1328539848327637
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.631 	  Acc: 0.25	 Empiric Loss: 1.597	 Intra-Comp. 0.3386
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.302 	  Acc: 0.438	 Empiric Loss: 1.271	 Intra-Comp. 0.3077
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.129 	  Acc: 0.375	 Empiric Loss: 1.1	 Intra-Comp. 0.2899
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.265 	  Acc: 0.562	 Empiric Loss: 1.234	 Intra-Comp. 0.304
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9185 	  Acc: 0.625	 Empiric Loss: 0.8919	 Intra-Comp. 0.2661
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.8358 	  Acc: 0.688	 Empiric Loss: 0.8102	 Intra-Comp. 0.2561
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.9842 	  Acc: 0.5	 Empiric Loss: 0.9568	 Intra-Comp. 0.2738
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.9156 	  Acc: 0.625	 Empiric Loss: 0.889	 Intra-Comp. 0.2658
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5694 	  Acc: 0.812	 Empiric Loss: 0.5474	 Intra-Comp. 0.2197
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.5675 	  Acc: 0.688	 Empiric Loss: 0.5456	 Intra-Comp. 0.2194
+MaxPosterior Average Test Error: 37.3%	 Runtime: 30.3732338398695 [sec]
+36 task : Error 0.3727272727272727, Complexity 0.25781795382499695, loss 1.025512456893921
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.644 	  Acc: 0.188	 Empiric Loss: 1.61	 Intra-Comp. 0.3399
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.428 	  Acc: 0.5	 Empiric Loss: 1.396	 Intra-Comp. 0.32
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.161 	  Acc: 0.625	 Empiric Loss: 1.132	 Intra-Comp. 0.2933
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.8441 	  Acc: 0.75	 Empiric Loss: 0.8184	 Intra-Comp. 0.2571
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5852 	  Acc: 0.75	 Empiric Loss: 0.563	 Intra-Comp. 0.2221
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.8627 	  Acc: 0.625	 Empiric Loss: 0.8368	 Intra-Comp. 0.2594
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7353 	  Acc: 0.875	 Empiric Loss: 0.711	 Intra-Comp. 0.2432
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3533 	  Acc: 0.875	 Empiric Loss: 0.335	 Intra-Comp. 0.1831
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2845 	  Acc: 0.875	 Empiric Loss: 0.2676	 Intra-Comp. 0.1691
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1623 	  Acc: 1.0	 Empiric Loss: 0.1484	 Intra-Comp. 0.1391
+MaxPosterior Average Test Error: 25.5%	 Runtime: 23.40366257261485 [sec]
+37 task : Error 0.2552727272727273, Complexity 0.1738426685333252, loss 0.7664870619773865
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.677 	  Acc: 0.0625	 Empiric Loss: 1.643	 Intra-Comp. 0.3427
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.363 	  Acc: 0.5	 Empiric Loss: 1.332	 Intra-Comp. 0.3137
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.235 	  Acc: 0.562	 Empiric Loss: 1.205	 Intra-Comp. 0.3009
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.739 	  Acc: 0.75	 Empiric Loss: 0.7147	 Intra-Comp. 0.2436
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9078 	  Acc: 0.688	 Empiric Loss: 0.8813	 Intra-Comp. 0.2649
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.6408 	  Acc: 0.75	 Empiric Loss: 0.6178	 Intra-Comp. 0.2302
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.8455 	  Acc: 0.625	 Empiric Loss: 0.8198	 Intra-Comp. 0.2573
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.749 	  Acc: 0.625	 Empiric Loss: 0.7245	 Intra-Comp. 0.245
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2611 	  Acc: 0.875	 Empiric Loss: 0.2447	 Intra-Comp. 0.164
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.3742 	  Acc: 0.812	 Empiric Loss: 0.3555	 Intra-Comp. 0.1871
+MaxPosterior Average Test Error: 34.7%	 Runtime: 35.10237011127174 [sec]
+38 task : Error 0.3472727272727273, Complexity 0.21194514632225037, loss 0.9800095558166504
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.644 	  Acc: 0.0625	 Empiric Loss: 1.61	 Intra-Comp. 0.3399
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.448 	  Acc: 0.25	 Empiric Loss: 1.415	 Intra-Comp. 0.3218
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.09 	  Acc: 0.625	 Empiric Loss: 1.062	 Intra-Comp. 0.2857
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.102 	  Acc: 0.5	 Empiric Loss: 1.074	 Intra-Comp. 0.287
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.151 	  Acc: 0.562	 Empiric Loss: 1.122	 Intra-Comp. 0.2922
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.28 	  Acc: 0.438	 Empiric Loss: 1.25	 Intra-Comp. 0.3056
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.8603 	  Acc: 0.625	 Empiric Loss: 0.8344	 Intra-Comp. 0.2591
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 1.351 	  Acc: 0.562	 Empiric Loss: 1.32	 Intra-Comp. 0.3126
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5794 	  Acc: 0.812	 Empiric Loss: 0.5573	 Intra-Comp. 0.2212
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.3612 	  Acc: 1.0	 Empiric Loss: 0.3427	 Intra-Comp. 0.1846
+MaxPosterior Average Test Error: 43.6%	 Runtime: 25.281506890431046 [sec]
+39 task : Error 0.43600000000000005, Complexity 0.24711674451828003, loss 1.0611239671707153
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.695 	  Acc: 0.0	 Empiric Loss: 1.661	 Intra-Comp. 0.3443
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.328 	  Acc: 0.438	 Empiric Loss: 1.297	 Intra-Comp. 0.3103
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.117 	  Acc: 0.562	 Empiric Loss: 1.088	 Intra-Comp. 0.2885
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.8083 	  Acc: 0.688	 Empiric Loss: 0.783	 Intra-Comp. 0.2526
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.7802 	  Acc: 0.688	 Empiric Loss: 0.7553	 Intra-Comp. 0.249
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.9921 	  Acc: 0.562	 Empiric Loss: 0.9646	 Intra-Comp. 0.2747
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.781 	  Acc: 0.688	 Empiric Loss: 0.7561	 Intra-Comp. 0.2491
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.448 	  Acc: 0.938	 Empiric Loss: 0.4279	 Intra-Comp. 0.2002
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.7324 	  Acc: 0.812	 Empiric Loss: 0.7081	 Intra-Comp. 0.2428
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.5977 	  Acc: 0.75	 Empiric Loss: 0.5753	 Intra-Comp. 0.2239
+MaxPosterior Average Test Error: 36.5%	 Runtime: 29.529019011184573 [sec]
+40 task : Error 0.3647272727272727, Complexity 0.2498873621225357, loss 0.9441866874694824
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.694 	  Acc: 0.0625	 Empiric Loss: 1.659	 Intra-Comp. 0.3442
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.178 	  Acc: 0.625	 Empiric Loss: 1.149	 Intra-Comp. 0.2951
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8374 	  Acc: 0.75	 Empiric Loss: 0.8117	 Intra-Comp. 0.2563
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.8697 	  Acc: 0.75	 Empiric Loss: 0.8437	 Intra-Comp. 0.2602
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.092 	  Acc: 0.625	 Empiric Loss: 1.064	 Intra-Comp. 0.2859
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.9719 	  Acc: 0.688	 Empiric Loss: 0.9447	 Intra-Comp. 0.2724
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.4457 	  Acc: 0.812	 Empiric Loss: 0.4257	 Intra-Comp. 0.1998
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 1.075 	  Acc: 0.688	 Empiric Loss: 1.047	 Intra-Comp. 0.284
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.399 	  Acc: 0.875	 Empiric Loss: 0.3799	 Intra-Comp. 0.1916
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2263 	  Acc: 0.938	 Empiric Loss: 0.2107	 Intra-Comp. 0.1559
+MaxPosterior Average Test Error: 34.4%	 Runtime: 23.972585891373456 [sec]
+41 task : Error 0.34363636363636363, Complexity 0.221391499042511, loss 1.0151441097259521
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.653 	  Acc: 0.25	 Empiric Loss: 1.618	 Intra-Comp. 0.3406
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.414 	  Acc: 0.438	 Empiric Loss: 1.382	 Intra-Comp. 0.3186
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.387 	  Acc: 0.5	 Empiric Loss: 1.355	 Intra-Comp. 0.316
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.8727 	  Acc: 0.688	 Empiric Loss: 0.8466	 Intra-Comp. 0.2606
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.7936 	  Acc: 0.625	 Empiric Loss: 0.7685	 Intra-Comp. 0.2507
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 1.023 	  Acc: 0.688	 Empiric Loss: 0.9955	 Intra-Comp. 0.2783
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.8327 	  Acc: 0.688	 Empiric Loss: 0.8071	 Intra-Comp. 0.2557
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 1.011 	  Acc: 0.562	 Empiric Loss: 0.9836	 Intra-Comp. 0.2769
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.7938 	  Acc: 0.75	 Empiric Loss: 0.7687	 Intra-Comp. 0.2508
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4339 	  Acc: 0.938	 Empiric Loss: 0.4141	 Intra-Comp. 0.1978
+MaxPosterior Average Test Error: 45.3%	 Runtime: 31.446167228743434 [sec]
+42 task : Error 0.45345454545454544, Complexity 0.2405526489019394, loss 1.259185791015625
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.653 	  Acc: 0.25	 Empiric Loss: 1.619	 Intra-Comp. 0.3406
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.219 	  Acc: 0.375	 Empiric Loss: 1.189	 Intra-Comp. 0.2993
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.348 	  Acc: 0.312	 Empiric Loss: 1.316	 Intra-Comp. 0.3122
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.115 	  Acc: 0.312	 Empiric Loss: 1.086	 Intra-Comp. 0.2883
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9734 	  Acc: 0.625	 Empiric Loss: 0.9461	 Intra-Comp. 0.2726
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.9667 	  Acc: 0.562	 Empiric Loss: 0.9395	 Intra-Comp. 0.2718
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.9398 	  Acc: 0.625	 Empiric Loss: 0.9129	 Intra-Comp. 0.2687
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.8719 	  Acc: 0.75	 Empiric Loss: 0.8458	 Intra-Comp. 0.2605
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.8682 	  Acc: 0.625	 Empiric Loss: 0.8422	 Intra-Comp. 0.2601
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.97 	  Acc: 0.5	 Empiric Loss: 0.9427	 Intra-Comp. 0.2722
+MaxPosterior Average Test Error: 44.6%	 Runtime: 25.497901048511267 [sec]
+43 task : Error 0.4458181818181818, Complexity 0.27020949125289917, loss 1.0706886053085327
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.643 	  Acc: 0.25	 Empiric Loss: 1.609	 Intra-Comp. 0.3398
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.372 	  Acc: 0.5	 Empiric Loss: 1.341	 Intra-Comp. 0.3146
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.794 	  Acc: 0.25	 Empiric Loss: 1.758	 Intra-Comp. 0.3528
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.209 	  Acc: 0.438	 Empiric Loss: 1.179	 Intra-Comp. 0.2983
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.7824 	  Acc: 0.625	 Empiric Loss: 0.7575	 Intra-Comp. 0.2493
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.6885 	  Acc: 0.688	 Empiric Loss: 0.6648	 Intra-Comp. 0.2368
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.9672 	  Acc: 0.688	 Empiric Loss: 0.94	 Intra-Comp. 0.2719
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.6492 	  Acc: 0.75	 Empiric Loss: 0.6261	 Intra-Comp. 0.2314
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5128 	  Acc: 0.812	 Empiric Loss: 0.4917	 Intra-Comp. 0.2109
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.5781 	  Acc: 0.875	 Empiric Loss: 0.556	 Intra-Comp. 0.221
+MaxPosterior Average Test Error: 39.0%	 Runtime: 25.90100879315287 [sec]
+44 task : Error 0.38981818181818184, Complexity 0.2019834965467453, loss 1.0949559211730957
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.647 	  Acc: 0.125	 Empiric Loss: 1.613	 Intra-Comp. 0.3401
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.256 	  Acc: 0.375	 Empiric Loss: 1.226	 Intra-Comp. 0.3031
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.6127 	  Acc: 0.75	 Empiric Loss: 0.5901	 Intra-Comp. 0.2261
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.764 	  Acc: 0.688	 Empiric Loss: 0.7393	 Intra-Comp. 0.2469
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5708 	  Acc: 0.75	 Empiric Loss: 0.5488	 Intra-Comp. 0.2199
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.5436 	  Acc: 0.875	 Empiric Loss: 0.522	 Intra-Comp. 0.2157
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.5928 	  Acc: 0.812	 Empiric Loss: 0.5705	 Intra-Comp. 0.2232
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.7435 	  Acc: 0.75	 Empiric Loss: 0.7191	 Intra-Comp. 0.2442
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3184 	  Acc: 1.0	 Empiric Loss: 0.3008	 Intra-Comp. 0.1762
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.178 	  Acc: 0.875	 Empiric Loss: 0.1636	 Intra-Comp. 0.1435
+MaxPosterior Average Test Error: 32.8%	 Runtime: 29.881319047883153 [sec]
+45 task : Error 0.32799999999999996, Complexity 0.20166461169719696, loss 0.9065049886703491
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.671 	  Acc: 0.125	 Empiric Loss: 1.637	 Intra-Comp. 0.3422
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.224 	  Acc: 0.562	 Empiric Loss: 1.194	 Intra-Comp. 0.2998
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.39 	  Acc: 0.5	 Empiric Loss: 1.358	 Intra-Comp. 0.3164
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.7759 	  Acc: 0.812	 Empiric Loss: 0.751	 Intra-Comp. 0.2485
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9761 	  Acc: 0.625	 Empiric Loss: 0.9488	 Intra-Comp. 0.2729
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.9356 	  Acc: 0.688	 Empiric Loss: 0.9088	 Intra-Comp. 0.2682
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.681 	  Acc: 0.812	 Empiric Loss: 0.6574	 Intra-Comp. 0.2358
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.6351 	  Acc: 0.938	 Empiric Loss: 0.6122	 Intra-Comp. 0.2293
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.4323 	  Acc: 0.875	 Empiric Loss: 0.4126	 Intra-Comp. 0.1975
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.5125 	  Acc: 0.688	 Empiric Loss: 0.4914	 Intra-Comp. 0.2109
+MaxPosterior Average Test Error: 41.1%	 Runtime: 25.633411607705057 [sec]
+46 task : Error 0.41054545454545455, Complexity 0.2534595727920532, loss 1.066017746925354
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.647 	  Acc: 0.125	 Empiric Loss: 1.613	 Intra-Comp. 0.3401
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.234 	  Acc: 0.562	 Empiric Loss: 1.204	 Intra-Comp. 0.3008
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8129 	  Acc: 0.688	 Empiric Loss: 0.7876	 Intra-Comp. 0.2532
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.036 	  Acc: 0.438	 Empiric Loss: 1.008	 Intra-Comp. 0.2796
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.034 	  Acc: 0.625	 Empiric Loss: 1.006	 Intra-Comp. 0.2794
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.5747 	  Acc: 0.875	 Empiric Loss: 0.5526	 Intra-Comp. 0.2205
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.6201 	  Acc: 0.812	 Empiric Loss: 0.5974	 Intra-Comp. 0.2272
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.4258 	  Acc: 0.812	 Empiric Loss: 0.4061	 Intra-Comp. 0.1964
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2718 	  Acc: 0.875	 Empiric Loss: 0.2552	 Intra-Comp. 0.1664
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.5884 	  Acc: 0.75	 Empiric Loss: 0.5662	 Intra-Comp. 0.2225
+MaxPosterior Average Test Error: 31.7%	 Runtime: 30.227839924395084 [sec]
+47 task : Error 0.3170909090909091, Complexity 0.21794678270816803, loss 0.9058045744895935
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.658 	  Acc: 0.312	 Empiric Loss: 1.624	 Intra-Comp. 0.341
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.587 	  Acc: 0.375	 Empiric Loss: 1.554	 Intra-Comp. 0.3347
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.174 	  Acc: 0.438	 Empiric Loss: 1.145	 Intra-Comp. 0.2947
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.142 	  Acc: 0.562	 Empiric Loss: 1.113	 Intra-Comp. 0.2912
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 1.123 	  Acc: 0.688	 Empiric Loss: 1.094	 Intra-Comp. 0.2892
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.8699 	  Acc: 0.688	 Empiric Loss: 0.8439	 Intra-Comp. 0.2603
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.5228 	  Acc: 0.875	 Empiric Loss: 0.5015	 Intra-Comp. 0.2125
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3187 	  Acc: 0.938	 Empiric Loss: 0.301	 Intra-Comp. 0.1763
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3292 	  Acc: 0.938	 Empiric Loss: 0.3113	 Intra-Comp. 0.1784
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1419 	  Acc: 1.0	 Empiric Loss: 0.1286	 Intra-Comp. 0.1331
+MaxPosterior Average Test Error: 36.9%	 Runtime: 26.259061268530786 [sec]
+48 task : Error 0.3694545454545455, Complexity 0.20733891427516937, loss 1.0571614503860474
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.696 	  Acc: 0.0625	 Empiric Loss: 1.662	 Intra-Comp. 0.3444
+(10.0%)	Epoch: 1 	 Batch: 0 	 Objective: 0.8661 	  Acc: 0.812	 Empiric Loss: 0.8402	 Intra-Comp. 0.2598
+(20.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.082 	  Acc: 0.625	 Empiric Loss: 1.054	 Intra-Comp. 0.2848
+(30.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.7561 	  Acc: 0.75	 Empiric Loss: 0.7315	 Intra-Comp. 0.2459
+(40.0%)	Epoch: 4 	 Batch: 0 	 Objective: 0.647 	  Acc: 0.688	 Empiric Loss: 0.6239	 Intra-Comp. 0.231
+(50.0%)	Epoch: 5 	 Batch: 0 	 Objective: 0.479 	  Acc: 0.812	 Empiric Loss: 0.4584	 Intra-Comp. 0.2054
+(60.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7508 	  Acc: 0.75	 Empiric Loss: 0.7263	 Intra-Comp. 0.2452
+(70.0%)	Epoch: 7 	 Batch: 0 	 Objective: 0.4217 	  Acc: 0.875	 Empiric Loss: 0.4021	 Intra-Comp. 0.1957
+(80.0%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3774 	  Acc: 0.875	 Empiric Loss: 0.3586	 Intra-Comp. 0.1876
+(90.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.3558 	  Acc: 0.875	 Empiric Loss: 0.3374	 Intra-Comp. 0.1836
+MaxPosterior Average Test Error: 28.3%	 Runtime: 32.81131509318948 [sec]
+49 task : Error 0.28254545454545454, Complexity 0.19044725596904755, loss 0.8751651644706726
+Total runtime: 00 hours, 23 minutes and 45 seconds
+----- Final Results: 
+----- Meta-Testing - Avg test err: 38.1%, STD: 5.95%, Avg test loss : 1.04, std : 0.138, Avg complexity : 0.224, std : 0.0216

@@ -1,0 +1,142 @@
+Log file created at  2019-05-02 14:08:00
+Run script: main_Meta_Bayes.py
+Parameters:
+Namespace(K_Shot_MetaTest=50, K_Shot_MetaTrain=50, N_Way=5, batch_size=16, chars_split_type='random', complexity_type='NewBoundSeeger', data_path='/data5/tlgao/meta/meta-learning-adjusting-priors/ML_data_sets', data_source='CIFAR100', data_transform='None', limit_train_samples_in_test_tasks=2000, load_model_path='', loss_type='CrossEntropy', lr=0.001, meta_batch_size=16, meta_complex_w=0.1, mode='MetaTrain', model_name='CIFARNet', n_inner_steps=50, n_meta_test_epochs=4, n_meta_train_chars=1200, n_meta_train_classes=500, n_meta_train_epochs=5, n_pixels_shuffles=200, n_test_tasks=10, n_train_tasks=3, result_dir='saved_epoch/CIFAR100__comp_NewBoundSeeger_ntr_3_nte_10_task-w_0.1_meta-w_0.1', run_name='CIFAR100__comp_NewBoundSeeger_ntr_3_nte_10_task-w_0.1_meta-w_0.1', seed=1, task_complex_w=0.1, test_batch_size=128)
+--------------------------------------------------
+--- Generating 3 training-tasks
+Stochastic-CIFARNet
+---- Meta-Training set: 3 tasks
+Run finished at:  2019-05-02 14:08:56
+MaxPosterior Average Test Error: 44.5%	 Runtime: 43.15437349304557 [sec]
+Trained prior saved in saved_epoch/CIFAR100__comp_NewBoundSeeger_ntr_3_nte_10_task-w_0.1_meta-w_0.1/model.pt
+---- Generating 10 test-tasks with at most 2000 training samples
+Meta-Testing with transferred prior....
+---------------------Test on Epoch_0------------------------
+Meta-Testing task 1 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.597 	  Acc: 0.375	 Empiric Loss: 1.563	 Intra-Comp. 0.3356
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.459 	  Acc: 0.312	 Empiric Loss: 1.427	 Intra-Comp. 0.3229
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.263 	  Acc: 0.625	 Empiric Loss: 1.232	 Intra-Comp. 0.3038
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.217 	  Acc: 0.5	 Empiric Loss: 1.187	 Intra-Comp. 0.2991
+MaxPosterior Average Test Error: 42.1%	 Runtime: 14.145365759730339 [sec]
+Meta-Testing task 2 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.649 	  Acc: 0.188	 Empiric Loss: 1.615	 Intra-Comp. 0.3402
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.302 	  Acc: 0.438	 Empiric Loss: 1.271	 Intra-Comp. 0.3077
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.217 	  Acc: 0.562	 Empiric Loss: 1.187	 Intra-Comp. 0.2991
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.403 	  Acc: 0.5	 Empiric Loss: 1.371	 Intra-Comp. 0.3176
+MaxPosterior Average Test Error: 48.3%	 Runtime: 13.77710462268442 [sec]
+Meta-Testing task 3 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.597 	  Acc: 0.5	 Empiric Loss: 1.563	 Intra-Comp. 0.3356
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 0.9115 	  Acc: 0.812	 Empiric Loss: 0.885	 Intra-Comp. 0.2653
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.2 	  Acc: 0.5	 Empiric Loss: 1.171	 Intra-Comp. 0.2974
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.597 	  Acc: 0.875	 Empiric Loss: 0.5746	 Intra-Comp. 0.2238
+MaxPosterior Average Test Error: 41.4%	 Runtime: 18.74973142053932 [sec]
+Meta-Testing task 4 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.652 	  Acc: 0.125	 Empiric Loss: 1.618	 Intra-Comp. 0.3405
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.547 	  Acc: 0.375	 Empiric Loss: 1.514	 Intra-Comp. 0.3311
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.435 	  Acc: 0.438	 Empiric Loss: 1.403	 Intra-Comp. 0.3206
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.123 	  Acc: 0.562	 Empiric Loss: 1.095	 Intra-Comp. 0.2893
+MaxPosterior Average Test Error: 40.8%	 Runtime: 14.220775946974754 [sec]
+Meta-Testing task 5 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.597 	  Acc: 0.312	 Empiric Loss: 1.564	 Intra-Comp. 0.3357
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.181 	  Acc: 0.5	 Empiric Loss: 1.151	 Intra-Comp. 0.2953
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.037 	  Acc: 0.562	 Empiric Loss: 1.009	 Intra-Comp. 0.2797
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.176 	  Acc: 0.5	 Empiric Loss: 1.147	 Intra-Comp. 0.2949
+MaxPosterior Average Test Error: 43.3%	 Runtime: 13.497471190057695 [sec]
+Meta-Testing task 6 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.642 	  Acc: 0.25	 Empiric Loss: 1.608	 Intra-Comp. 0.3396
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.476 	  Acc: 0.375	 Empiric Loss: 1.443	 Intra-Comp. 0.3245
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.645 	  Acc: 0.312	 Empiric Loss: 1.611	 Intra-Comp. 0.3399
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.049 	  Acc: 0.625	 Empiric Loss: 1.021	 Intra-Comp. 0.2811
+MaxPosterior Average Test Error: 51.1%	 Runtime: 13.626426309347153 [sec]
+Meta-Testing task 7 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.655 	  Acc: 0.25	 Empiric Loss: 1.621	 Intra-Comp. 0.3408
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.414 	  Acc: 0.375	 Empiric Loss: 1.382	 Intra-Comp. 0.3187
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.099 	  Acc: 0.688	 Empiric Loss: 1.07	 Intra-Comp. 0.2866
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.722 	  Acc: 0.812	 Empiric Loss: 0.6979	 Intra-Comp. 0.2414
+MaxPosterior Average Test Error: 38.3%	 Runtime: 14.156487227417529 [sec]
+Meta-Testing task 8 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.643 	  Acc: 0.312	 Empiric Loss: 1.609	 Intra-Comp. 0.3397
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.673 	  Acc: 0.125	 Empiric Loss: 1.639	 Intra-Comp. 0.3424
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.455 	  Acc: 0.562	 Empiric Loss: 1.423	 Intra-Comp. 0.3226
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.257 	  Acc: 0.562	 Empiric Loss: 1.226	 Intra-Comp. 0.3031
+MaxPosterior Average Test Error: 52.4%	 Runtime: 13.296935531310737 [sec]
+Meta-Testing task 9 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.709 	  Acc: 0.125	 Empiric Loss: 1.675	 Intra-Comp. 0.3456
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.233 	  Acc: 0.438	 Empiric Loss: 1.203	 Intra-Comp. 0.3008
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.7322 	  Acc: 0.812	 Empiric Loss: 0.7079	 Intra-Comp. 0.2427
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.7947 	  Acc: 0.562	 Empiric Loss: 0.7696	 Intra-Comp. 0.2509
+MaxPosterior Average Test Error: 31.5%	 Runtime: 13.327142046764493 [sec]
+Meta-Testing task 10 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.642 	  Acc: 0.125	 Empiric Loss: 1.608	 Intra-Comp. 0.3396
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.354 	  Acc: 0.375	 Empiric Loss: 1.323	 Intra-Comp. 0.3129
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.361 	  Acc: 0.5	 Empiric Loss: 1.329	 Intra-Comp. 0.3135
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.232 	  Acc: 0.5	 Empiric Loss: 1.202	 Intra-Comp. 0.3007
+MaxPosterior Average Test Error: 48.5%	 Runtime: 13.403952460736036 [sec]
+----- Epoch 0 Results: 
+----- Meta-Testing - Avg test err: 43.8%, STD: 6.08%, Avg test loss : 1.1, STD: 0.135 Avg test comp : 0.279 STD : 0.0148
+---------------------Test on Epoch_3------------------------
+Meta-Testing task 1 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.681 	  Acc: 0.125	 Empiric Loss: 1.646	 Intra-Comp. 0.3431
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.284 	  Acc: 0.438	 Empiric Loss: 1.253	 Intra-Comp. 0.3059
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.9818 	  Acc: 0.562	 Empiric Loss: 0.9545	 Intra-Comp. 0.2735
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.239 	  Acc: 0.375	 Empiric Loss: 1.209	 Intra-Comp. 0.3014
+MaxPosterior Average Test Error: 44.8%	 Runtime: 13.626152540557086 [sec]
+Meta-Testing task 2 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.631 	  Acc: 0.188	 Empiric Loss: 1.597	 Intra-Comp. 0.3386
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.13 	  Acc: 0.5	 Empiric Loss: 1.101	 Intra-Comp. 0.2899
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.222 	  Acc: 0.562	 Empiric Loss: 1.192	 Intra-Comp. 0.2996
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.063 	  Acc: 0.438	 Empiric Loss: 1.034	 Intra-Comp. 0.2826
+MaxPosterior Average Test Error: 48.4%	 Runtime: 13.873837674036622 [sec]
+Meta-Testing task 3 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.697 	  Acc: 0.125	 Empiric Loss: 1.662	 Intra-Comp. 0.3445
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.39 	  Acc: 0.625	 Empiric Loss: 1.359	 Intra-Comp. 0.3164
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8684 	  Acc: 0.562	 Empiric Loss: 0.8424	 Intra-Comp. 0.2601
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9594 	  Acc: 0.625	 Empiric Loss: 0.9323	 Intra-Comp. 0.2709
+MaxPosterior Average Test Error: 44.6%	 Runtime: 13.606487869285047 [sec]
+Meta-Testing task 4 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.658 	  Acc: 0.0625	 Empiric Loss: 1.624	 Intra-Comp. 0.3411
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.269 	  Acc: 0.312	 Empiric Loss: 1.239	 Intra-Comp. 0.3044
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.11 	  Acc: 0.438	 Empiric Loss: 1.081	 Intra-Comp. 0.2877
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.586 	  Acc: 0.562	 Empiric Loss: 1.552	 Intra-Comp. 0.3346
+MaxPosterior Average Test Error: 44.2%	 Runtime: 14.010579799301922 [sec]
+Meta-Testing task 5 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.673 	  Acc: 0.125	 Empiric Loss: 1.639	 Intra-Comp. 0.3424
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.284 	  Acc: 0.375	 Empiric Loss: 1.253	 Intra-Comp. 0.3059
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.235 	  Acc: 0.562	 Empiric Loss: 1.205	 Intra-Comp. 0.301
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.063 	  Acc: 0.625	 Empiric Loss: 1.035	 Intra-Comp. 0.2827
+MaxPosterior Average Test Error: 42.8%	 Runtime: 13.676932335831225 [sec]
+Meta-Testing task 6 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.633 	  Acc: 0.25	 Empiric Loss: 1.599	 Intra-Comp. 0.3388
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.445 	  Acc: 0.5	 Empiric Loss: 1.413	 Intra-Comp. 0.3216
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.491 	  Acc: 0.438	 Empiric Loss: 1.458	 Intra-Comp. 0.3259
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.07 	  Acc: 0.625	 Empiric Loss: 1.042	 Intra-Comp. 0.2835
+MaxPosterior Average Test Error: 53.0%	 Runtime: 14.112470965832472 [sec]
+Meta-Testing task 7 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.677 	  Acc: 0.25	 Empiric Loss: 1.643	 Intra-Comp. 0.3427
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.45 	  Acc: 0.625	 Empiric Loss: 1.417	 Intra-Comp. 0.322
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.114 	  Acc: 0.625	 Empiric Loss: 1.086	 Intra-Comp. 0.2883
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.084 	  Acc: 0.625	 Empiric Loss: 1.055	 Intra-Comp. 0.285
+MaxPosterior Average Test Error: 38.4%	 Runtime: 13.565969261340797 [sec]
+Meta-Testing task 8 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.632 	  Acc: 0.0625	 Empiric Loss: 1.598	 Intra-Comp. 0.3387
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.453 	  Acc: 0.5	 Empiric Loss: 1.421	 Intra-Comp. 0.3224
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.254 	  Acc: 0.438	 Empiric Loss: 1.223	 Intra-Comp. 0.3028
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.389 	  Acc: 0.438	 Empiric Loss: 1.357	 Intra-Comp. 0.3163
+MaxPosterior Average Test Error: 50.5%	 Runtime: 13.62768195848912 [sec]
+Meta-Testing task 9 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.652 	  Acc: 0.125	 Empiric Loss: 1.618	 Intra-Comp. 0.3406
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 0.6805 	  Acc: 0.75	 Empiric Loss: 0.6569	 Intra-Comp. 0.2357
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.166 	  Acc: 0.625	 Empiric Loss: 1.136	 Intra-Comp. 0.2937
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.136 	  Acc: 0.625	 Empiric Loss: 1.107	 Intra-Comp. 0.2906
+MaxPosterior Average Test Error: 31.5%	 Runtime: 13.406559313647449 [sec]
+Meta-Testing task 10 out of 10...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.683 	  Acc: 0.0625	 Empiric Loss: 1.649	 Intra-Comp. 0.3433
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.36 	  Acc: 0.375	 Empiric Loss: 1.329	 Intra-Comp. 0.3135
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.563 	  Acc: 0.312	 Empiric Loss: 1.53	 Intra-Comp. 0.3325
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.892 	  Acc: 0.688	 Empiric Loss: 0.8657	 Intra-Comp. 0.263
+MaxPosterior Average Test Error: 49.9%	 Runtime: 13.614081460051239 [sec]
+----- Epoch 3 Results: 
+----- Meta-Testing - Avg test err: 44.8%, STD: 6.02%, Avg test loss : 1.12, STD: 0.139 Avg test comp : 0.284 STD : 0.0148
+Total runtime: 00 hours, 05 minutes and 38 seconds
+----- Final Results: 
+----- Meta-Testing - Avg test err: 44.8%, STD: 6.02%, Avg test loss : 1.12, std : 0.139, Avg complexity : 0.284, std : 0.0148

@@ -6,6 +6,8 @@ import timeit, time, os
 import numpy as np
 import torch
 import torch.optim as optim
+import sys
+sys.path.append("/home/tlgao/meta/meta-learning-adjusting-priors")
 
 from PriorMetaLearning import meta_test_Bayes, meta_train_Bayes_finite_tasks, meta_train_Bayes_infinite_tasks
 from Data_Path import get_data_path
@@ -13,11 +15,14 @@ from Models.stochastic_models import get_model
 from Utils.data_gen import Task_Generator
 from Utils.common import save_model_state, load_model_state, create_result_dir, set_random_seed, write_to_log, save_run_data
 from PriorMetaLearning.Analyze_Prior import run_prior_analysis
+from pudb import set_trace
+from opt import prm
 
-torch.backends.cudnn.benchmark = True  # For speed improvement with models with fixed-length inputs
+#torch.backends.cudnn.benchmark = True  # For speed improvement with models with fixed-length inputs
 # -------------------------------------------------------------------------------------------
 #  Set Parameters
 # -------------------------------------------------------------------------------------------
+"""
 
 parser = argparse.ArgumentParser()
 
@@ -51,7 +56,7 @@ parser.add_argument('--n_train_tasks', type=int, help='Number of meta-training t
                     default=5)
 
 parser.add_argument('--data-transform', type=str, help="Data transformation:  'None' / 'Permute_Pixels' / 'Permute_Labels'/ Shuffled_Pixels ",
-                    default='Permute_Labels')
+                    default='None')
 
 parser.add_argument('--n_pixels_shuffles', type=int, help='In case of "Shuffled_Pixels": how many pixels swaps',
                     default=200)
@@ -122,7 +127,14 @@ parser.add_argument('--meta_batch_size', type=int, help='Maximal number of tasks
                     default=5)
 # -------------------------------------------------------------------------------------------
 
+parser.add_argument('--task_complex_w', type=float, help='weight of task complexity term',
+                    default=1.0)
+parser.add_argument('--meta_complex_w', type=float, help='weight of meta complexity term',
+                    default=1.0)
+
+
 prm = parser.parse_args()
+"""
 prm.data_path = get_data_path()
 set_random_seed(prm.seed)
 create_result_dir(prm)
@@ -155,6 +167,7 @@ prm.test_type = 'MaxPosterior' # 'MaxPosterior' / 'MajorityVote' / 'AvgVote'
 # path to save the learned meta-parameters
 save_path = os.path.join(prm.result_dir, 'model.pt')
 
+#set_trace()
 task_generator = Task_Generator(prm)
 
 # -------------------------------------------------------------------------------------------
@@ -220,11 +233,39 @@ test_tasks_data = task_generator.create_meta_batch(prm, n_test_tasks, meta_split
 write_to_log('Meta-Testing with transferred prior....', prm)
 
 test_err_vec = np.zeros(n_test_tasks)
-for i_task in range(n_test_tasks):
-    print('Meta-Testing task {} out of {}...'.format(1+i_task, n_test_tasks))
-    task_data = test_tasks_data[i_task]
-    test_err_vec[i_task], _ = meta_test_Bayes.run_learning(task_data, prior_model, prm, init_from_prior, verbose=0)
+test_comp_vec = np.zeros(n_test_tasks)
+test_loss_vec = np.zeros(n_test_tasks)
+#for i_epoch in range(prm.n_meta_train_epochs):
+#for i_task in range(n_test_tasks):
+if True:
+    #task_data = test_tasks_data[i_task]
+    #test_err_vec[i_task], test_comp_vec[i_task], test_loss_vec[i_task], _ = meta_test_Bayes.run_learning(task_data, prior_model, prm, init_from_prior, verbose=0)
+    #write_to_log("{} task : Error {}, Complexity {}, loss {}".format(i_task, test_err_vec[i_task], test_comp_vec[i_task], test_loss_vec[i_task]), prm)
+    #if i_epoch % 3 != 0:
+    #    continue
+    i_epoch = 10
+    test_err_vec = np.zeros(n_test_tasks)
+    test_loss_vec = np.zeros(n_test_tasks)
 
+    epoch_prior_model = get_model(prm)
+    prior_prefix = "Epoch_{}".format(i_epoch)
+    prior_path = os.path.join(prm.result_dir, '{}_model.pth'.format(prior_prefix))
+    assert os.path.exists(prior_path)
+    load_model_state(prior_model, prior_path)
+
+    write_to_log("---------------------Test on {}------------------------".format(prior_prefix), prm)
+    for i_task in range(n_test_tasks):
+        #init prior_model with i epoch models
+        print('Meta-Testing task {} out of {}...'.format(1+i_task, n_test_tasks))
+        write_to_log('Meta-Testing task {} out of {}...'.format(1+i_task, n_test_tasks), prm)
+        task_data = test_tasks_data[i_task]
+        test_err_vec[i_task], test_comp_vec[i_task], test_loss_vec[i_task],_ = meta_test_Bayes.run_learning(task_data, prior_model, prm,  init_from_prior = init_from_prior, verbose=0)
+
+    write_to_log('----- Epoch {} Results: '.format(i_epoch), prm)
+    write_to_log('----- Meta-Testing - Avg test err: {:.3}%, STD: {:.3}%, Avg test loss : {:.3}, STD: {:.3} Avg test comp : {:.3} STD : {:.3}'
+             .format(100 * test_err_vec.mean(), 100 * test_err_vec.std(), test_loss_vec.mean(),  test_loss_vec.std(), test_comp_vec.mean(), test_comp_vec.std()), prm)
+
+#
 
 # save result
 save_run_data(prm, {'test_err_vec': test_err_vec})
@@ -233,7 +274,7 @@ save_run_data(prm, {'test_err_vec': test_err_vec})
 #  Print results
 # -------------------------------------------------------------------------------------------
 #  Print prior analysis
-run_prior_analysis(prior_model)
+#run_prior_analysis(prior_model)
 
 stop_time = timeit.default_timer()
 write_to_log('Total runtime: ' +
@@ -241,8 +282,8 @@ write_to_log('Total runtime: ' +
 
 #  Print results
 write_to_log('----- Final Results: ', prm)
-write_to_log('----- Meta-Testing - Avg test err: {:.3}%, STD: {:.3}%'
-             .format(100 * test_err_vec.mean(), 100 * test_err_vec.std()), prm)
+write_to_log('----- Meta-Testing - Avg test err: {:.3}%, STD: {:.3}%, Avg test loss : {:.3}, std : {:.3}, Avg complexity : {:.3}, std : {:.3}'
+             .format(100 * test_err_vec.mean(), 100 * test_err_vec.std(), test_loss_vec.mean(), test_loss_vec.std(), test_comp_vec.mean(), test_comp_vec.std()), prm)
 
 # -------------------------------------------------------------------------------------------
 #  Compare to standard learning

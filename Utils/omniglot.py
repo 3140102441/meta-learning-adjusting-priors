@@ -110,7 +110,7 @@ def get_task(chars, root_path, n_labels, k_train_shot, final_input_trans=None, t
         cls_train_samp = all_class_samples[:k_train_shot]
         train_samp += cls_train_samp
         # Rest go to test set:
-        cls_test_samp = all_class_samples[k_train_shot+1:]
+        cls_test_samp = all_class_samples[k_train_shot:]
         test_samp += cls_test_samp
 
         # Targets \ labels:

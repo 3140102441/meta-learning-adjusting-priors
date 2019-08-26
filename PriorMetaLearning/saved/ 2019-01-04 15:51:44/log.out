@@ -1,0 +1,6 @@
+Log file created at  2019-01-04 15:51:44
+Run script: main_Meta_Bayes.py
+Parameters:
+Namespace(K_Shot_MetaTest=100, K_Shot_MetaTrain=100, N_Way=5, batch_size=128, chars_split_type='random', complexity_type='NewBoundSeeger', data_path='/data5/tlgao/meta/meta-learning-adjusting-priors/ML_data_sets', data_source='MNIST', data_transform='Permute_Labels', limit_train_samples_in_test_tasks=2000, load_model_path='', loss_type='CrossEntropy', lr=0.001, meta_batch_size=5, mode='MetaTrain', model_name='ConvNet3', n_inner_steps=50, n_meta_test_epochs=200, n_meta_train_chars=1200, n_meta_train_classes=500, n_meta_train_epochs=150, n_pixels_shuffles=200, n_test_tasks=10, n_train_tasks=5, result_dir='saved/ 2019-01-04 15:51:44', run_name=' 2019-01-04 15:51:44', seed=1, test_batch_size=128)
+--------------------------------------------------
+--- Generating 5 training-tasks

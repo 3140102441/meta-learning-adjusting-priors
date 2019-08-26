@@ -6,6 +6,7 @@ from Models.stochastic_models import get_model
 from Utils import common as cmn, data_gen
 from Utils.Bayes_utils import get_bayes_task_objective, run_test_Bayes, get_meta_complexity_term
 from Utils.common import grad_step, net_norm, count_correct, get_loss_criterion, get_value
+from pudb import set_trace
 
 # -------------------------------------------------------------------------------------------
 #
@@ -20,12 +21,15 @@ def get_objective(prior_model, prm, mb_data_loaders, mb_iterators, mb_posteriors
     sum_intra_task_comp = 0
     correct_count = 0
     sample_count = 0
+    #set_trace()
 
     # KLD between hyper-posterior and hyper-prior:
-    hyper_kl = (1 / (2 * prm.kappa_prior**2)) * net_norm(prior_model, p=2)
+    hyper_kl = (1 / (2 * prm.kappa_prior**2)) * net_norm(prior_model, p=2) #net_norm is L2-regularization
 
     # Hyper-prior term:
     meta_complex_term = get_meta_complexity_term(hyper_kl, prm, n_train_tasks)
+    sum_w_kld = 0.0
+    sum_b_kld = 0.0
 
     # ----------- loop over tasks in meta-batch -----------------------------------#
     for i_task in range(n_tasks_in_mb):
@@ -62,10 +66,12 @@ def get_objective(prior_model, prm, mb_data_loaders, mb_iterators, mb_posteriors
             sample_count += inputs.size(0)
 
             # Intra-task complexity of current task:
-            curr_empirical_loss, curr_complexity = get_bayes_task_objective(
+            curr_empirical_loss, curr_complexity, task_info = get_bayes_task_objective(
                 prm, prior_model, post_model,
                 n_samples, curr_empirical_loss, hyper_kl, n_train_tasks=n_train_tasks)
 
+            sum_w_kld += task_info["w_kld"]
+            sum_b_kld += task_info["b_kld"]
             task_empirical_loss += (1 / n_MC) * curr_empirical_loss
             task_complexity += (1 / n_MC) * curr_complexity
         # end Monte-Carlo loop
@@ -76,13 +82,18 @@ def get_objective(prior_model, prm, mb_data_loaders, mb_iterators, mb_posteriors
     # end loop over tasks in meta-batch
     avg_empirical_loss = (1 / n_tasks_in_mb) * sum_empirical_loss
     avg_intra_task_comp = (1 / n_tasks_in_mb) * sum_intra_task_comp
+    avg_w_kld += (1 / n_tasks_in_mb) * sum_w_kld
+    avg_b_kld += (1 / n_tasks_in_mb) * sum_b_kld
 
 
     # Approximated total objective:
-    total_objective = avg_empirical_loss + avg_intra_task_comp + meta_complex_term
+    total_objective = avg_empirical_loss + prm.task_complex_w * avg_intra_task_comp + prm.meta_complex_w * meta_complex_term
 
     info = {'sample_count': get_value(sample_count), 'correct_count': get_value(correct_count),
                   'avg_empirical_loss': get_value(avg_empirical_loss),
                   'avg_intra_task_comp': get_value(avg_intra_task_comp),
-                  'meta_comp': get_value(meta_complex_term)}
+                  'meta_comp': get_value(meta_complex_term),
+                  'w_kld' : avg_w_kld,
+                  'b_kld' : avg_b_kld
+                  }
     return total_objective, info

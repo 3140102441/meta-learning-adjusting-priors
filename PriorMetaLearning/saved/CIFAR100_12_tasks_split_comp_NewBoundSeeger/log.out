@@ -1,0 +1,6 @@
+Log file created at  2019-04-18 21:16:33
+Run script: main_Meta_Bayes.py
+Parameters:
+Namespace(K_Shot_MetaTest=100, K_Shot_MetaTrain=100, N_Way=5, batch_size=16, chars_split_type='random', complexity_type='NewBoundSeeger', data_path='/data5/tlgao/meta/meta-learning-adjusting-priors/ML_data_sets', data_source='CIFAR100', data_transform='None', limit_train_samples_in_test_tasks=2000, load_model_path='', loss_type='CrossEntropy', lr=0.001, meta_batch_size=16, meta_complex_w=0.0, mode='MetaTrain', model_name='CIFARNet', n_inner_steps=50, n_meta_test_epochs=40, n_meta_train_chars=1200, n_meta_train_classes=500, n_meta_train_epochs=30, n_pixels_shuffles=200, n_test_tasks=20, n_train_tasks=12, result_dir='saved/CIFAR100_12_tasks_split_comp_NewBoundSeeger', run_name='CIFAR100_12_tasks_split_comp_NewBoundSeeger', seed=1, task_complex_w=0.0001, test_batch_size=128)
+--------------------------------------------------
+--- Generating 12 training-tasks

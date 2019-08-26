@@ -1,0 +1,1480 @@
+Log file created at  2019-01-18 17:04:37
+Run script: main_Meta_Bayes.py
+Parameters:
+Namespace(K_Shot_MetaTest=15, K_Shot_MetaTrain=15, N_Way=5, batch_size=16, chars_split_type='random', complexity_type='NewBoundSeeger', data_path='/data5/tlgao/meta/meta-learning-adjusting-priors/ML_data_sets', data_source='Omniglot', data_transform='None', limit_train_samples_in_test_tasks=2000, load_model_path='', loss_type='CrossEntropy', lr=0.001, meta_batch_size=16, meta_complex_w=0.1, mode='MetaTrain', model_name='ConvNet3', n_inner_steps=50, n_meta_test_epochs=30, n_meta_train_chars=1200, n_meta_train_classes=500, n_meta_train_epochs=100, n_pixels_shuffles=200, n_test_tasks=20, n_train_tasks=50, result_dir='saved/PermutedLabels_5_Tasks_NewBoundSeeger_Comp', run_name='PermutedLabels_5_Tasks_NewBoundSeeger_Comp', seed=1, task_complex_w=0.0003, test_batch_size=128)
+--------------------------------------------------
+--- Generating 50 training-tasks
+Stochastic-ConvNet3
+---- Meta-Training set: 50 tasks
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 6.978 	  Acc: 0.16	 Empiric-Loss: 1.625	 Task-Comp. 1.705e+04	 Meta-Comp.: 2.376
+Epoch 0: test_acc is 0.30639999999999984
+(1.0%)	Epoch: 1 	 Batch: 0 	 Objective: 4.59 	  Acc: 0.293	 Empiric-Loss: 1.583	 Task-Comp. 9.233e+03	 Meta-Comp.: 2.376
+Epoch 1: test_acc is 0.37999999999999984
+(2.0%)	Epoch: 2 	 Batch: 0 	 Objective: 3.498 	  Acc: 0.391	 Empiric-Loss: 1.56	 Task-Comp. 5.668e+03	 Meta-Comp.: 2.376
+Epoch 2: test_acc is 0.44079999999999997
+(3.0%)	Epoch: 3 	 Batch: 0 	 Objective: 2.95 	  Acc: 0.352	 Empiric-Loss: 1.564	 Task-Comp. 3.827e+03	 Meta-Comp.: 2.376
+Epoch 3: test_acc is 0.47279999999999994
+(4.0%)	Epoch: 4 	 Batch: 0 	 Objective: 2.575 	  Acc: 0.449	 Empiric-Loss: 1.521	 Task-Comp. 2.721e+03	 Meta-Comp.: 2.376
+Epoch 4: test_acc is 0.5096
+(5.0%)	Epoch: 5 	 Batch: 0 	 Objective: 2.35 	  Acc: 0.453	 Empiric-Loss: 1.481	 Task-Comp. 2.106e+03	 Meta-Comp.: 2.376
+Epoch 5: test_acc is 0.5296
+(6.0%)	Epoch: 6 	 Batch: 0 	 Objective: 2.161 	  Acc: 0.59	 Empiric-Loss: 1.381	 Task-Comp. 1.806e+03	 Meta-Comp.: 2.376
+Epoch 6: test_acc is 0.5872000000000002
+(7.0%)	Epoch: 7 	 Batch: 0 	 Objective: 2.015 	  Acc: 0.59	 Empiric-Loss: 1.291	 Task-Comp. 1.619e+03	 Meta-Comp.: 2.376
+Epoch 7: test_acc is 0.6408000000000001
+(8.0%)	Epoch: 8 	 Batch: 0 	 Objective: 1.806 	  Acc: 0.684	 Empiric-Loss: 1.065	 Task-Comp. 1.675e+03	 Meta-Comp.: 2.376
+Epoch 8: test_acc is 0.6552000000000001
+(9.0%)	Epoch: 9 	 Batch: 0 	 Objective: 1.773 	  Acc: 0.664	 Empiric-Loss: 1.069	 Task-Comp. 1.558e+03	 Meta-Comp.: 2.376
+Epoch 9: test_acc is 0.7128000000000003
+(10.0%)	Epoch: 10 	 Batch: 0 	 Objective: 1.69 	  Acc: 0.66	 Empiric-Loss: 1.01	 Task-Comp. 1.474e+03	 Meta-Comp.: 2.376
+Epoch 10: test_acc is 0.7376
+(11.0%)	Epoch: 11 	 Batch: 0 	 Objective: 1.57 	  Acc: 0.793	 Empiric-Loss: 0.7985	 Task-Comp. 1.779e+03	 Meta-Comp.: 2.376
+Epoch 11: test_acc is 0.7592000000000003
+(12.0%)	Epoch: 12 	 Batch: 0 	 Objective: 1.554 	  Acc: 0.715	 Empiric-Loss: 0.8394	 Task-Comp. 1.59e+03	 Meta-Comp.: 2.376
+Epoch 12: test_acc is 0.7736000000000002
+(13.0%)	Epoch: 13 	 Batch: 0 	 Objective: 1.445 	  Acc: 0.801	 Empiric-Loss: 0.6642	 Task-Comp. 1.812e+03	 Meta-Comp.: 2.376
+Epoch 13: test_acc is 0.8128000000000002
+(14.0%)	Epoch: 14 	 Batch: 0 	 Objective: 1.463 	  Acc: 0.785	 Empiric-Loss: 0.7333	 Task-Comp. 1.641e+03	 Meta-Comp.: 2.376
+Epoch 14: test_acc is 0.8120000000000003
+(15.0%)	Epoch: 15 	 Batch: 0 	 Objective: 1.434 	  Acc: 0.805	 Empiric-Loss: 0.7059	 Task-Comp. 1.636e+03	 Meta-Comp.: 2.376
+Epoch 15: test_acc is 0.8248000000000003
+(16.0%)	Epoch: 16 	 Batch: 0 	 Objective: 1.344 	  Acc: 0.863	 Empiric-Loss: 0.5691	 Task-Comp. 1.792e+03	 Meta-Comp.: 2.376
+Epoch 16: test_acc is 0.8424000000000004
+(17.0%)	Epoch: 17 	 Batch: 0 	 Objective: 1.376 	  Acc: 0.809	 Empiric-Loss: 0.6245	 Task-Comp. 1.713e+03	 Meta-Comp.: 2.376
+Epoch 17: test_acc is 0.8560000000000003
+(18.0%)	Epoch: 18 	 Batch: 0 	 Objective: 1.276 	  Acc: 0.84	 Empiric-Loss: 0.5106	 Task-Comp. 1.758e+03	 Meta-Comp.: 2.376
+Epoch 18: test_acc is 0.8584000000000005
+(19.0%)	Epoch: 19 	 Batch: 0 	 Objective: 1.248 	  Acc: 0.859	 Empiric-Loss: 0.5067	 Task-Comp. 1.678e+03	 Meta-Comp.: 2.376
+Epoch 19: test_acc is 0.8576000000000006
+(20.0%)	Epoch: 20 	 Batch: 0 	 Objective: 1.155 	  Acc: 0.875	 Empiric-Loss: 0.4199	 Task-Comp. 1.659e+03	 Meta-Comp.: 2.376
+Epoch 20: test_acc is 0.8584000000000003
+(21.0%)	Epoch: 21 	 Batch: 0 	 Objective: 1.128 	  Acc: 0.914	 Empiric-Loss: 0.3724	 Task-Comp. 1.727e+03	 Meta-Comp.: 2.376
+Epoch 21: test_acc is 0.8760000000000006
+(22.0%)	Epoch: 22 	 Batch: 0 	 Objective: 1.205 	  Acc: 0.875	 Empiric-Loss: 0.457	 Task-Comp. 1.701e+03	 Meta-Comp.: 2.376
+Epoch 22: test_acc is 0.8712000000000004
+(23.0%)	Epoch: 23 	 Batch: 0 	 Objective: 1.16 	  Acc: 0.879	 Empiric-Loss: 0.4205	 Task-Comp. 1.672e+03	 Meta-Comp.: 2.376
+Epoch 23: test_acc is 0.8832000000000003
+(24.0%)	Epoch: 24 	 Batch: 0 	 Objective: 1.133 	  Acc: 0.879	 Empiric-Loss: 0.4084	 Task-Comp. 1.622e+03	 Meta-Comp.: 2.376
+Epoch 24: test_acc is 0.8792000000000005
+(25.0%)	Epoch: 25 	 Batch: 0 	 Objective: 1.042 	  Acc: 0.926	 Empiric-Loss: 0.3095	 Task-Comp. 1.649e+03	 Meta-Comp.: 2.376
+Epoch 25: test_acc is 0.8904000000000006
+(26.0%)	Epoch: 26 	 Batch: 0 	 Objective: 1.086 	  Acc: 0.891	 Empiric-Loss: 0.3691	 Task-Comp. 1.598e+03	 Meta-Comp.: 2.376
+Epoch 26: test_acc is 0.8832000000000005
+(27.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.9651 	  Acc: 0.957	 Empiric-Loss: 0.2705	 Task-Comp. 1.523e+03	 Meta-Comp.: 2.376
+Epoch 27: test_acc is 0.8872000000000003
+(28.0%)	Epoch: 28 	 Batch: 0 	 Objective: 1.021 	  Acc: 0.922	 Empiric-Loss: 0.3345	 Task-Comp. 1.496e+03	 Meta-Comp.: 2.376
+Epoch 28: test_acc is 0.8920000000000006
+(29.0%)	Epoch: 29 	 Batch: 0 	 Objective: 0.9427 	  Acc: 0.953	 Empiric-Loss: 0.2543	 Task-Comp. 1.502e+03	 Meta-Comp.: 2.376
+Epoch 29: test_acc is 0.8936000000000004
+(30.0%)	Epoch: 30 	 Batch: 0 	 Objective: 0.9831 	  Acc: 0.918	 Empiric-Loss: 0.3059	 Task-Comp. 1.465e+03	 Meta-Comp.: 2.376
+Epoch 30: test_acc is 0.8960000000000007
+(31.0%)	Epoch: 31 	 Batch: 0 	 Objective: 0.9518 	  Acc: 0.934	 Empiric-Loss: 0.2899	 Task-Comp. 1.414e+03	 Meta-Comp.: 2.376
+Epoch 31: test_acc is 0.8856000000000005
+(32.0%)	Epoch: 32 	 Batch: 0 	 Objective: 0.8888 	  Acc: 0.945	 Empiric-Loss: 0.2286	 Task-Comp. 1.408e+03	 Meta-Comp.: 2.376
+Epoch 32: test_acc is 0.8984000000000008
+(33.0%)	Epoch: 33 	 Batch: 0 	 Objective: 0.888 	  Acc: 0.957	 Empiric-Loss: 0.2399	 Task-Comp. 1.368e+03	 Meta-Comp.: 2.376
+Epoch 33: test_acc is 0.8992000000000004
+(34.0%)	Epoch: 34 	 Batch: 0 	 Objective: 0.8515 	  Acc: 0.941	 Empiric-Loss: 0.2135	 Task-Comp. 1.335e+03	 Meta-Comp.: 2.376
+Epoch 34: test_acc is 0.8968000000000005
+(35.0%)	Epoch: 35 	 Batch: 0 	 Objective: 0.8885 	  Acc: 0.938	 Empiric-Loss: 0.2507	 Task-Comp. 1.334e+03	 Meta-Comp.: 2.376
+Epoch 35: test_acc is 0.8976000000000005
+(36.0%)	Epoch: 36 	 Batch: 0 	 Objective: 0.8506 	  Acc: 0.949	 Empiric-Loss: 0.2243	 Task-Comp. 1.296e+03	 Meta-Comp.: 2.376
+Epoch 36: test_acc is 0.9000000000000005
+(37.0%)	Epoch: 37 	 Batch: 0 	 Objective: 0.8133 	  Acc: 0.969	 Empiric-Loss: 0.1956	 Task-Comp. 1.267e+03	 Meta-Comp.: 2.376
+Epoch 37: test_acc is 0.8920000000000006
+(38.0%)	Epoch: 38 	 Batch: 0 	 Objective: 0.8027 	  Acc: 0.953	 Empiric-Loss: 0.185	 Task-Comp. 1.267e+03	 Meta-Comp.: 2.376
+Epoch 38: test_acc is 0.9048000000000005
+(39.0%)	Epoch: 39 	 Batch: 0 	 Objective: 0.7764 	  Acc: 0.945	 Empiric-Loss: 0.1744	 Task-Comp. 1.215e+03	 Meta-Comp.: 2.376
+Epoch 39: test_acc is 0.8968000000000004
+(40.0%)	Epoch: 40 	 Batch: 0 	 Objective: 0.7759 	  Acc: 0.957	 Empiric-Loss: 0.1731	 Task-Comp. 1.217e+03	 Meta-Comp.: 2.376
+Epoch 40: test_acc is 0.9088000000000005
+(41.0%)	Epoch: 41 	 Batch: 0 	 Objective: 0.7549 	  Acc: 0.957	 Empiric-Loss: 0.1797	 Task-Comp. 1.125e+03	 Meta-Comp.: 2.376
+Epoch 41: test_acc is 0.8960000000000004
+(42.0%)	Epoch: 42 	 Batch: 0 	 Objective: 0.769 	  Acc: 0.949	 Empiric-Loss: 0.1871	 Task-Comp. 1.148e+03	 Meta-Comp.: 2.376
+Epoch 42: test_acc is 0.9072000000000006
+(43.0%)	Epoch: 43 	 Batch: 0 	 Objective: 0.7393 	  Acc: 0.969	 Empiric-Loss: 0.159	 Task-Comp. 1.142e+03	 Meta-Comp.: 2.376
+Epoch 43: test_acc is 0.9080000000000001
+(44.0%)	Epoch: 44 	 Batch: 0 	 Objective: 0.7499 	  Acc: 0.965	 Empiric-Loss: 0.1776	 Task-Comp. 1.116e+03	 Meta-Comp.: 2.376
+Epoch 44: test_acc is 0.9040000000000004
+(45.0%)	Epoch: 45 	 Batch: 0 	 Objective: 0.703 	  Acc: 0.961	 Empiric-Loss: 0.1477	 Task-Comp. 1.059e+03	 Meta-Comp.: 2.376
+Epoch 45: test_acc is 0.9016000000000006
+(46.0%)	Epoch: 46 	 Batch: 0 	 Objective: 0.7408 	  Acc: 0.965	 Empiric-Loss: 0.1733	 Task-Comp. 1.1e+03	 Meta-Comp.: 2.376
+Epoch 46: test_acc is 0.9104000000000005
+(47.0%)	Epoch: 47 	 Batch: 0 	 Objective: 0.7225 	  Acc: 0.957	 Empiric-Loss: 0.1695	 Task-Comp. 1.051e+03	 Meta-Comp.: 2.376
+Epoch 47: test_acc is 0.9112000000000005
+(48.0%)	Epoch: 48 	 Batch: 0 	 Objective: 0.7026 	  Acc: 0.961	 Empiric-Loss: 0.1481	 Task-Comp. 1.056e+03	 Meta-Comp.: 2.376
+Epoch 48: test_acc is 0.9096000000000004
+(49.0%)	Epoch: 49 	 Batch: 0 	 Objective: 0.6807 	  Acc: 0.98	 Empiric-Loss: 0.1403	 Task-Comp. 1.009e+03	 Meta-Comp.: 2.376
+Epoch 49: test_acc is 0.9072000000000006
+(50.0%)	Epoch: 50 	 Batch: 0 	 Objective: 0.6726 	  Acc: 0.98	 Empiric-Loss: 0.1432	 Task-Comp. 972.5	 Meta-Comp.: 2.376
+Epoch 50: test_acc is 0.9160000000000004
+(51.0%)	Epoch: 51 	 Batch: 0 	 Objective: 0.6549 	  Acc: 0.973	 Empiric-Loss: 0.1348	 Task-Comp. 941.8	 Meta-Comp.: 2.376
+Epoch 51: test_acc is 0.9128000000000006
+(52.0%)	Epoch: 52 	 Batch: 0 	 Objective: 0.6622 	  Acc: 0.965	 Empiric-Loss: 0.1475	 Task-Comp. 923.7	 Meta-Comp.: 2.376
+Epoch 52: test_acc is 0.9112000000000005
+(53.0%)	Epoch: 53 	 Batch: 0 	 Objective: 0.6458 	  Acc: 0.973	 Empiric-Loss: 0.1268	 Task-Comp. 937.8	 Meta-Comp.: 2.376
+Epoch 53: test_acc is 0.9040000000000006
+(54.0%)	Epoch: 54 	 Batch: 0 	 Objective: 0.654 	  Acc: 0.977	 Empiric-Loss: 0.1406	 Task-Comp. 919.2	 Meta-Comp.: 2.376
+Epoch 54: test_acc is 0.9168000000000006
+(55.0%)	Epoch: 55 	 Batch: 0 	 Objective: 0.6379 	  Acc: 0.98	 Empiric-Loss: 0.1237	 Task-Comp. 922.0	 Meta-Comp.: 2.376
+Epoch 55: test_acc is 0.9144000000000005
+(56.0%)	Epoch: 56 	 Batch: 0 	 Objective: 0.6202 	  Acc: 0.98	 Empiric-Loss: 0.1167	 Task-Comp. 886.2	 Meta-Comp.: 2.376
+Epoch 56: test_acc is 0.9192000000000007
+(57.0%)	Epoch: 57 	 Batch: 0 	 Objective: 0.6121 	  Acc: 0.98	 Empiric-Loss: 0.118	 Task-Comp. 854.8	 Meta-Comp.: 2.376
+Epoch 57: test_acc is 0.9064000000000005
+(58.0%)	Epoch: 58 	 Batch: 0 	 Objective: 0.602 	  Acc: 0.984	 Empiric-Loss: 0.108	 Task-Comp. 854.5	 Meta-Comp.: 2.376
+Epoch 58: test_acc is 0.9152000000000003
+(59.0%)	Epoch: 59 	 Batch: 0 	 Objective: 0.5871 	  Acc: 0.988	 Empiric-Loss: 0.09849	 Task-Comp. 836.6	 Meta-Comp.: 2.376
+Epoch 59: test_acc is 0.9024000000000002
+(60.0%)	Epoch: 60 	 Batch: 0 	 Objective: 0.6146 	  Acc: 0.984	 Empiric-Loss: 0.1108	 Task-Comp. 887.5	 Meta-Comp.: 2.376
+Epoch 60: test_acc is 0.9160000000000005
+(61.0%)	Epoch: 61 	 Batch: 0 	 Objective: 0.5539 	  Acc: 0.988	 Empiric-Loss: 0.08245	 Task-Comp. 779.2	 Meta-Comp.: 2.376
+Epoch 61: test_acc is 0.9184000000000004
+(62.0%)	Epoch: 62 	 Batch: 0 	 Objective: 0.5567 	  Acc: 0.984	 Empiric-Loss: 0.09118	 Task-Comp. 759.4	 Meta-Comp.: 2.376
+Epoch 62: test_acc is 0.9152000000000007
+(63.0%)	Epoch: 63 	 Batch: 0 	 Objective: 0.5559 	  Acc: 0.988	 Empiric-Loss: 0.08569	 Task-Comp. 775.3	 Meta-Comp.: 2.376
+Epoch 63: test_acc is 0.9200000000000003
+(64.0%)	Epoch: 64 	 Batch: 0 	 Objective: 0.5558 	  Acc: 0.988	 Empiric-Loss: 0.09787	 Task-Comp. 734.1	 Meta-Comp.: 2.376
+Epoch 64: test_acc is 0.9216000000000004
+(65.0%)	Epoch: 65 	 Batch: 0 	 Objective: 0.555 	  Acc: 0.977	 Empiric-Loss: 0.09174	 Task-Comp. 752.0	 Meta-Comp.: 2.376
+Epoch 65: test_acc is 0.9120000000000006
+(66.0%)	Epoch: 66 	 Batch: 0 	 Objective: 0.5482 	  Acc: 0.988	 Empiric-Loss: 0.09984	 Task-Comp. 702.2	 Meta-Comp.: 2.376
+Epoch 66: test_acc is 0.9184000000000004
+(67.0%)	Epoch: 67 	 Batch: 0 	 Objective: 0.5084 	  Acc: 0.992	 Empiric-Loss: 0.0639	 Task-Comp. 689.6	 Meta-Comp.: 2.376
+Epoch 67: test_acc is 0.9120000000000007
+(68.0%)	Epoch: 68 	 Batch: 0 	 Objective: 0.5393 	  Acc: 0.977	 Empiric-Loss: 0.08691	 Task-Comp. 715.8	 Meta-Comp.: 2.376
+Epoch 68: test_acc is 0.9184000000000005
+(69.0%)	Epoch: 69 	 Batch: 0 	 Objective: 0.5296 	  Acc: 0.988	 Empiric-Loss: 0.08392	 Task-Comp. 693.4	 Meta-Comp.: 2.376
+Epoch 69: test_acc is 0.9208000000000007
+(70.0%)	Epoch: 70 	 Batch: 0 	 Objective: 0.5181 	  Acc: 0.988	 Empiric-Loss: 0.07486	 Task-Comp. 685.3	 Meta-Comp.: 2.376
+Epoch 70: test_acc is 0.9192000000000005
+(71.0%)	Epoch: 71 	 Batch: 0 	 Objective: 0.5213 	  Acc: 0.988	 Empiric-Loss: 0.08544	 Task-Comp. 660.6	 Meta-Comp.: 2.376
+Epoch 71: test_acc is 0.9232000000000004
+(72.0%)	Epoch: 72 	 Batch: 0 	 Objective: 0.504 	  Acc: 0.984	 Empiric-Loss: 0.07477	 Task-Comp. 638.7	 Meta-Comp.: 2.376
+Epoch 72: test_acc is 0.9184000000000005
+(73.0%)	Epoch: 73 	 Batch: 0 	 Objective: 0.5051 	  Acc: 0.977	 Empiric-Loss: 0.07369	 Task-Comp. 646.0	 Meta-Comp.: 2.376
+Epoch 73: test_acc is 0.9160000000000004
+(74.0%)	Epoch: 74 	 Batch: 0 	 Objective: 0.5046 	  Acc: 0.992	 Empiric-Loss: 0.07398	 Task-Comp. 643.1	 Meta-Comp.: 2.376
+Epoch 74: test_acc is 0.9232000000000005
+(75.0%)	Epoch: 75 	 Batch: 0 	 Objective: 0.4994 	  Acc: 0.992	 Empiric-Loss: 0.0721	 Task-Comp. 632.0	 Meta-Comp.: 2.376
+Epoch 75: test_acc is 0.9200000000000004
+(76.0%)	Epoch: 76 	 Batch: 0 	 Objective: 0.4798 	  Acc: 0.996	 Empiric-Loss: 0.05513	 Task-Comp. 623.3	 Meta-Comp.: 2.376
+Epoch 76: test_acc is 0.9232000000000005
+(77.0%)	Epoch: 77 	 Batch: 0 	 Objective: 0.4745 	  Acc: 0.992	 Empiric-Loss: 0.06116	 Task-Comp. 585.7	 Meta-Comp.: 2.376
+Epoch 77: test_acc is 0.9256000000000004
+(78.0%)	Epoch: 78 	 Batch: 0 	 Objective: 0.4711 	  Acc: 0.992	 Empiric-Loss: 0.04897	 Task-Comp. 615.0	 Meta-Comp.: 2.376
+Epoch 78: test_acc is 0.9176000000000005
+(79.0%)	Epoch: 79 	 Batch: 0 	 Objective: 0.4816 	  Acc: 0.98	 Empiric-Loss: 0.07394	 Task-Comp. 566.7	 Meta-Comp.: 2.376
+Epoch 79: test_acc is 0.9216000000000006
+(80.0%)	Epoch: 80 	 Batch: 0 	 Objective: 0.4666 	  Acc: 0.984	 Empiric-Loss: 0.05973	 Task-Comp. 564.1	 Meta-Comp.: 2.376
+Epoch 80: test_acc is 0.9224000000000006
+(81.0%)	Epoch: 81 	 Batch: 0 	 Objective: 0.4893 	  Acc: 0.992	 Empiric-Loss: 0.07059	 Task-Comp. 603.7	 Meta-Comp.: 2.376
+Epoch 81: test_acc is 0.9232000000000007
+(82.0%)	Epoch: 82 	 Batch: 0 	 Objective: 0.4866 	  Acc: 0.984	 Empiric-Loss: 0.07109	 Task-Comp. 593.0	 Meta-Comp.: 2.376
+Epoch 82: test_acc is 0.9248000000000006
+(83.0%)	Epoch: 83 	 Batch: 0 	 Objective: 0.466 	  Acc: 0.992	 Empiric-Loss: 0.05534	 Task-Comp. 576.7	 Meta-Comp.: 2.376
+Epoch 83: test_acc is 0.9304000000000004
+(84.0%)	Epoch: 84 	 Batch: 0 	 Objective: 0.4576 	  Acc: 0.996	 Empiric-Loss: 0.05035	 Task-Comp. 565.3	 Meta-Comp.: 2.376
+Epoch 84: test_acc is 0.9264000000000004
+(85.0%)	Epoch: 85 	 Batch: 0 	 Objective: 0.459 	  Acc: 0.996	 Empiric-Loss: 0.05869	 Task-Comp. 542.2	 Meta-Comp.: 2.376
+Epoch 85: test_acc is 0.9216000000000005
+(86.0%)	Epoch: 86 	 Batch: 0 	 Objective: 0.4619 	  Acc: 0.996	 Empiric-Loss: 0.04928	 Task-Comp. 583.3	 Meta-Comp.: 2.376
+Epoch 86: test_acc is 0.9152000000000003
+(87.0%)	Epoch: 87 	 Batch: 0 	 Objective: 0.4446 	  Acc: 0.992	 Empiric-Loss: 0.04614	 Task-Comp. 536.2	 Meta-Comp.: 2.376
+Epoch 87: test_acc is 0.9144000000000005
+(88.0%)	Epoch: 88 	 Batch: 0 	 Objective: 0.4361 	  Acc: 0.992	 Empiric-Loss: 0.04603	 Task-Comp. 508.1	 Meta-Comp.: 2.376
+Epoch 88: test_acc is 0.9160000000000005
+(89.0%)	Epoch: 89 	 Batch: 0 	 Objective: 0.4412 	  Acc: 0.996	 Empiric-Loss: 0.04747	 Task-Comp. 520.3	 Meta-Comp.: 2.376
+Epoch 89: test_acc is 0.9080000000000006
+(90.0%)	Epoch: 90 	 Batch: 0 	 Objective: 0.4577 	  Acc: 0.992	 Empiric-Loss: 0.06145	 Task-Comp. 528.6	 Meta-Comp.: 2.376
+Epoch 90: test_acc is 0.9264000000000004
+(91.0%)	Epoch: 91 	 Batch: 0 	 Objective: 0.4444 	  Acc: 0.988	 Empiric-Loss: 0.05219	 Task-Comp. 515.2	 Meta-Comp.: 2.376
+Epoch 91: test_acc is 0.9296000000000006
+(92.0%)	Epoch: 92 	 Batch: 0 	 Objective: 0.4197 	  Acc: 1.0	 Empiric-Loss: 0.0361	 Task-Comp. 486.6	 Meta-Comp.: 2.376
+Epoch 92: test_acc is 0.9208000000000004
+(93.0%)	Epoch: 93 	 Batch: 0 	 Objective: 0.4326 	  Acc: 0.996	 Empiric-Loss: 0.04017	 Task-Comp. 515.9	 Meta-Comp.: 2.376
+Epoch 93: test_acc is 0.9320000000000005
+(94.0%)	Epoch: 94 	 Batch: 0 	 Objective: 0.4361 	  Acc: 0.992	 Empiric-Loss: 0.04852	 Task-Comp. 499.7	 Meta-Comp.: 2.376
+Epoch 94: test_acc is 0.9312000000000004
+(95.0%)	Epoch: 95 	 Batch: 0 	 Objective: 0.4089 	  Acc: 1.0	 Empiric-Loss: 0.03438	 Task-Comp. 456.4	 Meta-Comp.: 2.376
+Epoch 95: test_acc is 0.9240000000000005
+(96.0%)	Epoch: 96 	 Batch: 0 	 Objective: 0.4113 	  Acc: 0.992	 Empiric-Loss: 0.03462	 Task-Comp. 463.6	 Meta-Comp.: 2.376
+Epoch 96: test_acc is 0.9248000000000005
+(97.0%)	Epoch: 97 	 Batch: 0 	 Objective: 0.423 	  Acc: 0.996	 Empiric-Loss: 0.03986	 Task-Comp. 485.1	 Meta-Comp.: 2.376
+Epoch 97: test_acc is 0.9256000000000006
+(98.0%)	Epoch: 98 	 Batch: 0 	 Objective: 0.4439 	  Acc: 0.977	 Empiric-Loss: 0.05846	 Task-Comp. 492.8	 Meta-Comp.: 2.376
+Epoch 98: test_acc is 0.9240000000000006
+(99.0%)	Epoch: 99 	 Batch: 0 	 Objective: 0.4341 	  Acc: 0.992	 Empiric-Loss: 0.057	 Task-Comp. 464.9	 Meta-Comp.: 2.376
+Epoch 99: test_acc is 0.9256000000000006
+Run finished at:  2019-01-18 17:21:39
+MaxPosterior Average Test Error: 7.44%	 Runtime: 1015.0696645826101 [sec]
+Trained prior saved in saved/PermutedLabels_5_Tasks_NewBoundSeeger_Comp/model.pt
+---- Generating 20 test-tasks with at most 2000 training samples
+Meta-Testing with transferred prior....
+Meta-Testing task 1 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.893 	  Acc: 0.125	 Empiric Loss: 1.893	 Intra-Comp. 0.6993
+Test Accuracy: 0.72 (18/25), Test loss: 0.04353
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.018 	  Acc: 0.625	 Empiric Loss: 1.004	 Intra-Comp. 45.72
+Test Accuracy: 0.88 (22/25), Test loss: 0.02805
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.7756 	  Acc: 0.688	 Empiric Loss: 0.742	 Intra-Comp. 112.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.0203
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.3065 	  Acc: 1.0	 Empiric Loss: 0.2532	 Intra-Comp. 177.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01633
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.2539 	  Acc: 1.0	 Empiric Loss: 0.1822	 Intra-Comp. 238.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01425
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.2051 	  Acc: 1.0	 Empiric Loss: 0.1201	 Intra-Comp. 283.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.01383
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.2209 	  Acc: 1.0	 Empiric Loss: 0.1266	 Intra-Comp. 314.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01383
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2021 	  Acc: 1.0	 Empiric Loss: 0.1021	 Intra-Comp. 333.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.0143
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.183 	  Acc: 1.0	 Empiric Loss: 0.08006	 Intra-Comp. 343.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01512
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2305 	  Acc: 0.938	 Empiric Loss: 0.1265	 Intra-Comp. 346.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01485
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.2626 	  Acc: 0.938	 Empiric Loss: 0.1589	 Intra-Comp. 345.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.01496
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.1484 	  Acc: 1.0	 Empiric Loss: 0.0471	 Intra-Comp. 337.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01565
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.1273 	  Acc: 1.0	 Empiric Loss: 0.02847	 Intra-Comp. 329.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.01646
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1768 	  Acc: 1.0	 Empiric Loss: 0.07966	 Intra-Comp. 323.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01777
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.129 	  Acc: 1.0	 Empiric Loss: 0.03346	 Intra-Comp. 318.5
+Test Accuracy: 0.88 (22/25), Test loss: 0.01867
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1914 	  Acc: 1.0	 Empiric Loss: 0.09722	 Intra-Comp. 314.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01745
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.1512 	  Acc: 1.0	 Empiric Loss: 0.06026	 Intra-Comp. 303.0
+Test Accuracy: 0.88 (22/25), Test loss: 0.01715
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1147 	  Acc: 1.0	 Empiric Loss: 0.02648	 Intra-Comp. 294.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.01715
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1789 	  Acc: 1.0	 Empiric Loss: 0.09258	 Intra-Comp. 287.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01753
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1885 	  Acc: 0.938	 Empiric Loss: 0.1038	 Intra-Comp. 282.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01804
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.111 	  Acc: 1.0	 Empiric Loss: 0.02821	 Intra-Comp. 276.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01749
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1075 	  Acc: 1.0	 Empiric Loss: 0.02386	 Intra-Comp. 278.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01658
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1716 	  Acc: 0.938	 Empiric Loss: 0.08676	 Intra-Comp. 283.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01532
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1227 	  Acc: 1.0	 Empiric Loss: 0.03783	 Intra-Comp. 283.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01458
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1518 	  Acc: 1.0	 Empiric Loss: 0.06666	 Intra-Comp. 283.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01468
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1038 	  Acc: 1.0	 Empiric Loss: 0.01879	 Intra-Comp. 283.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.01503
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1424 	  Acc: 1.0	 Empiric Loss: 0.05757	 Intra-Comp. 282.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01569
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1385 	  Acc: 1.0	 Empiric Loss: 0.05474	 Intra-Comp. 279.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01623
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.145 	  Acc: 1.0	 Empiric Loss: 0.06265	 Intra-Comp. 274.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.01704
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1019 	  Acc: 1.0	 Empiric Loss: 0.02113	 Intra-Comp. 269.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.01768
+Test Accuracy: 0.88 (22/25), Test loss: 0.01768
+MaxPosterior Average Test Error: 12.0%	 Runtime: 4.982173592783511 [sec]
+Meta-Testing task 2 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.936 	  Acc: 0.312	 Empiric Loss: 1.936	 Intra-Comp. 0.7054
+Test Accuracy: 0.64 (16/25), Test loss: 0.04226
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.263 	  Acc: 0.438	 Empiric Loss: 1.25	 Intra-Comp. 41.47
+Test Accuracy: 0.8 (20/25), Test loss: 0.02956
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.904 	  Acc: 0.75	 Empiric Loss: 0.8759	 Intra-Comp. 93.8
+Test Accuracy: 0.88 (22/25), Test loss: 0.02315
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.4587 	  Acc: 0.938	 Empiric Loss: 0.4144	 Intra-Comp. 147.7
+Test Accuracy: 0.88 (22/25), Test loss: 0.01868
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5407 	  Acc: 0.812	 Empiric Loss: 0.4797	 Intra-Comp. 203.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.01625
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.6198 	  Acc: 0.812	 Empiric Loss: 0.5437	 Intra-Comp. 253.9
+Test Accuracy: 0.88 (22/25), Test loss: 0.0145
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.2212 	  Acc: 1.0	 Empiric Loss: 0.1342	 Intra-Comp. 290.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01177
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.4391 	  Acc: 0.938	 Empiric Loss: 0.3412	 Intra-Comp. 326.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.01195
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2905 	  Acc: 1.0	 Empiric Loss: 0.1856	 Intra-Comp. 349.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01155
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.239 	  Acc: 1.0	 Empiric Loss: 0.1292	 Intra-Comp. 366.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01079
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.318 	  Acc: 1.0	 Empiric Loss: 0.2055	 Intra-Comp. 375.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01099
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2146 	  Acc: 1.0	 Empiric Loss: 0.1021	 Intra-Comp. 375.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01074
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.2127 	  Acc: 1.0	 Empiric Loss: 0.09991	 Intra-Comp. 376.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01015
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.3087 	  Acc: 0.938	 Empiric Loss: 0.1947	 Intra-Comp. 379.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.009305
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1657 	  Acc: 1.0	 Empiric Loss: 0.05341	 Intra-Comp. 374.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.009559
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.2098 	  Acc: 1.0	 Empiric Loss: 0.0979	 Intra-Comp. 373.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.009497
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.1758 	  Acc: 1.0	 Empiric Loss: 0.06584	 Intra-Comp. 366.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.009484
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.3428 	  Acc: 0.938	 Empiric Loss: 0.233	 Intra-Comp. 366.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01043
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1649 	  Acc: 1.0	 Empiric Loss: 0.0574	 Intra-Comp. 358.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.008936
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.143 	  Acc: 1.0	 Empiric Loss: 0.03666	 Intra-Comp. 354.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.007366
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.2633 	  Acc: 1.0	 Empiric Loss: 0.1561	 Intra-Comp. 357.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.007964
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.2123 	  Acc: 1.0	 Empiric Loss: 0.1053	 Intra-Comp. 356.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.009024
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.2198 	  Acc: 1.0	 Empiric Loss: 0.1127	 Intra-Comp. 357.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.009279
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.2025 	  Acc: 1.0	 Empiric Loss: 0.0955	 Intra-Comp. 356.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.008753
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1717 	  Acc: 1.0	 Empiric Loss: 0.06509	 Intra-Comp. 355.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.008865
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.2248 	  Acc: 1.0	 Empiric Loss: 0.1177	 Intra-Comp. 357.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.0079
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.2075 	  Acc: 1.0	 Empiric Loss: 0.1014	 Intra-Comp. 353.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.008381
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1727 	  Acc: 1.0	 Empiric Loss: 0.06736	 Intra-Comp. 351.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.00835
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1893 	  Acc: 1.0	 Empiric Loss: 0.08386	 Intra-Comp. 351.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.007782
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.172 	  Acc: 1.0	 Empiric Loss: 0.06804	 Intra-Comp. 346.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.007646
+Test Accuracy: 0.92 (23/25), Test loss: 0.007646
+MaxPosterior Average Test Error: 8.0%	 Runtime: 4.889825567603111 [sec]
+Meta-Testing task 3 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.676 	  Acc: 0.25	 Empiric Loss: 1.676	 Intra-Comp. 0.6672
+Test Accuracy: 0.6 (15/25), Test loss: 0.05173
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.312 	  Acc: 0.438	 Empiric Loss: 1.3	 Intra-Comp. 38.75
+Test Accuracy: 0.64 (16/25), Test loss: 0.03828
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 1.082 	  Acc: 0.625	 Empiric Loss: 1.054	 Intra-Comp. 93.27
+Test Accuracy: 0.72 (18/25), Test loss: 0.03091
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9824 	  Acc: 0.812	 Empiric Loss: 0.9375	 Intra-Comp. 149.9
+Test Accuracy: 0.84 (21/25), Test loss: 0.0266
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.9906 	  Acc: 0.688	 Empiric Loss: 0.9284	 Intra-Comp. 207.4
+Test Accuracy: 0.84 (21/25), Test loss: 0.02404
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.507 	  Acc: 0.938	 Empiric Loss: 0.4301	 Intra-Comp. 256.3
+Test Accuracy: 0.8 (20/25), Test loss: 0.02308
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.6413 	  Acc: 0.875	 Empiric Loss: 0.5497	 Intra-Comp. 305.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.02153
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2674 	  Acc: 1.0	 Empiric Loss: 0.1648	 Intra-Comp. 341.9
+Test Accuracy: 0.88 (22/25), Test loss: 0.0215
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.5347 	  Acc: 0.938	 Empiric Loss: 0.4215	 Intra-Comp. 377.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.02322
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.3207 	  Acc: 1.0	 Empiric Loss: 0.2008	 Intra-Comp. 399.6
+Test Accuracy: 0.88 (22/25), Test loss: 0.02101
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.2707 	  Acc: 1.0	 Empiric Loss: 0.1447	 Intra-Comp. 420.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.02113
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2955 	  Acc: 1.0	 Empiric Loss: 0.1646	 Intra-Comp. 436.2
+Test Accuracy: 0.88 (22/25), Test loss: 0.02204
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.28 	  Acc: 1.0	 Empiric Loss: 0.1464	 Intra-Comp. 445.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.0216
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.2841 	  Acc: 1.0	 Empiric Loss: 0.1488	 Intra-Comp. 451.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.02125
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.3853 	  Acc: 0.938	 Empiric Loss: 0.2476	 Intra-Comp. 458.8
+Test Accuracy: 0.88 (22/25), Test loss: 0.02192
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.2937 	  Acc: 1.0	 Empiric Loss: 0.155	 Intra-Comp. 462.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.02216
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.2167 	  Acc: 1.0	 Empiric Loss: 0.07713	 Intra-Comp. 465.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.01848
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.2552 	  Acc: 1.0	 Empiric Loss: 0.1135	 Intra-Comp. 472.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.01986
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.2708 	  Acc: 1.0	 Empiric Loss: 0.1297	 Intra-Comp. 470.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.02257
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.3213 	  Acc: 1.0	 Empiric Loss: 0.1811	 Intra-Comp. 467.6
+Test Accuracy: 0.88 (22/25), Test loss: 0.02073
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.327 	  Acc: 0.938	 Empiric Loss: 0.1863	 Intra-Comp. 469.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.02129
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.2441 	  Acc: 0.938	 Empiric Loss: 0.1046	 Intra-Comp. 465.0
+Test Accuracy: 0.88 (22/25), Test loss: 0.02061
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.256 	  Acc: 1.0	 Empiric Loss: 0.1178	 Intra-Comp. 460.6
+Test Accuracy: 0.88 (22/25), Test loss: 0.0204
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.2395 	  Acc: 1.0	 Empiric Loss: 0.1027	 Intra-Comp. 456.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.01957
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.2159 	  Acc: 1.0	 Empiric Loss: 0.08032	 Intra-Comp. 452.0
+Test Accuracy: 0.88 (22/25), Test loss: 0.02001
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1863 	  Acc: 1.0	 Empiric Loss: 0.05226	 Intra-Comp. 446.9
+Test Accuracy: 0.88 (22/25), Test loss: 0.02145
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1784 	  Acc: 1.0	 Empiric Loss: 0.0455	 Intra-Comp. 442.9
+Test Accuracy: 0.88 (22/25), Test loss: 0.02233
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.176 	  Acc: 1.0	 Empiric Loss: 0.04441	 Intra-Comp. 438.8
+Test Accuracy: 0.88 (22/25), Test loss: 0.02253
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.246 	  Acc: 1.0	 Empiric Loss: 0.1144	 Intra-Comp. 438.7
+Test Accuracy: 0.88 (22/25), Test loss: 0.02312
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1478 	  Acc: 1.0	 Empiric Loss: 0.01847	 Intra-Comp. 431.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.02413
+Test Accuracy: 0.88 (22/25), Test loss: 0.02413
+MaxPosterior Average Test Error: 12.0%	 Runtime: 5.051738189533353 [sec]
+Meta-Testing task 4 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 2.12 	  Acc: 0.0625	 Empiric Loss: 2.119	 Intra-Comp. 0.7308
+Test Accuracy: 0.52 (13/25), Test loss: 0.05041
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.385 	  Acc: 0.438	 Empiric Loss: 1.372	 Intra-Comp. 44.2
+Test Accuracy: 0.76 (19/25), Test loss: 0.03591
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.6369 	  Acc: 0.938	 Empiric Loss: 0.6052	 Intra-Comp. 105.8
+Test Accuracy: 0.76 (19/25), Test loss: 0.02901
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.7867 	  Acc: 0.875	 Empiric Loss: 0.734	 Intra-Comp. 175.5
+Test Accuracy: 0.8 (20/25), Test loss: 0.02309
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5028 	  Acc: 0.938	 Empiric Loss: 0.4332	 Intra-Comp. 231.9
+Test Accuracy: 0.84 (21/25), Test loss: 0.0197
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.6547 	  Acc: 0.75	 Empiric Loss: 0.569	 Intra-Comp. 285.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.01676
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.7524 	  Acc: 0.688	 Empiric Loss: 0.6534	 Intra-Comp. 330.0
+Test Accuracy: 0.88 (22/25), Test loss: 0.0141
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.425 	  Acc: 0.875	 Empiric Loss: 0.3169	 Intra-Comp. 360.5
+Test Accuracy: 0.88 (22/25), Test loss: 0.0119
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3122 	  Acc: 0.938	 Empiric Loss: 0.1969	 Intra-Comp. 384.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.01108
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2941 	  Acc: 0.938	 Empiric Loss: 0.1736	 Intra-Comp. 401.4
+Test Accuracy: 0.84 (21/25), Test loss: 0.01395
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.5773 	  Acc: 0.812	 Empiric Loss: 0.4523	 Intra-Comp. 416.6
+Test Accuracy: 0.88 (22/25), Test loss: 0.01193
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2142 	  Acc: 1.0	 Empiric Loss: 0.08979	 Intra-Comp. 414.9
+Test Accuracy: 0.88 (22/25), Test loss: 0.01152
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.2048 	  Acc: 1.0	 Empiric Loss: 0.08014	 Intra-Comp. 415.7
+Test Accuracy: 0.84 (21/25), Test loss: 0.01243
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.2357 	  Acc: 1.0	 Empiric Loss: 0.1112	 Intra-Comp. 415.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.01059
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.181 	  Acc: 1.0	 Empiric Loss: 0.05805	 Intra-Comp. 409.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.00757
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.2023 	  Acc: 1.0	 Empiric Loss: 0.08001	 Intra-Comp. 407.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.007678
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.2175 	  Acc: 1.0	 Empiric Loss: 0.09586	 Intra-Comp. 405.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.008973
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1876 	  Acc: 1.0	 Empiric Loss: 0.06607	 Intra-Comp. 404.9
+Test Accuracy: 0.88 (22/25), Test loss: 0.01193
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.2645 	  Acc: 1.0	 Empiric Loss: 0.1415	 Intra-Comp. 410.0
+Test Accuracy: 0.88 (22/25), Test loss: 0.009121
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.2073 	  Acc: 0.938	 Empiric Loss: 0.08416	 Intra-Comp. 410.5
+Test Accuracy: 0.88 (22/25), Test loss: 0.008307
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.2618 	  Acc: 1.0	 Empiric Loss: 0.139	 Intra-Comp. 409.6
+Test Accuracy: 0.88 (22/25), Test loss: 0.00968
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.2635 	  Acc: 0.938	 Empiric Loss: 0.1415	 Intra-Comp. 406.9
+Test Accuracy: 0.84 (21/25), Test loss: 0.01178
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1757 	  Acc: 1.0	 Empiric Loss: 0.05433	 Intra-Comp. 404.5
+Test Accuracy: 0.88 (22/25), Test loss: 0.009432
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1821 	  Acc: 1.0	 Empiric Loss: 0.06097	 Intra-Comp. 403.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.008386
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1834 	  Acc: 1.0	 Empiric Loss: 0.06187	 Intra-Comp. 405.0
+Test Accuracy: 0.96 (24/25), Test loss: 0.006506
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.2497 	  Acc: 0.938	 Empiric Loss: 0.1274	 Intra-Comp. 407.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.006486
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1784 	  Acc: 1.0	 Empiric Loss: 0.05775	 Intra-Comp. 402.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.007144
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.2972 	  Acc: 0.938	 Empiric Loss: 0.1771	 Intra-Comp. 400.2
+Test Accuracy: 0.88 (22/25), Test loss: 0.008792
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1808 	  Acc: 1.0	 Empiric Loss: 0.06331	 Intra-Comp. 391.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.00791
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1607 	  Acc: 1.0	 Empiric Loss: 0.04487	 Intra-Comp. 386.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.006743
+Test Accuracy: 0.92 (23/25), Test loss: 0.006743
+MaxPosterior Average Test Error: 8.0%	 Runtime: 5.02673617657274 [sec]
+Meta-Testing task 5 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 2.015 	  Acc: 0.188	 Empiric Loss: 2.015	 Intra-Comp. 0.7165
+Test Accuracy: 0.4 (10/25), Test loss: 0.05185
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.272 	  Acc: 0.438	 Empiric Loss: 1.259	 Intra-Comp. 42.91
+Test Accuracy: 0.72 (18/25), Test loss: 0.03373
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 1.008 	  Acc: 0.688	 Empiric Loss: 0.9757	 Intra-Comp. 106.6
+Test Accuracy: 0.8 (20/25), Test loss: 0.02582
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.7532 	  Acc: 0.812	 Empiric Loss: 0.7027	 Intra-Comp. 168.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.02094
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.485 	  Acc: 0.875	 Empiric Loss: 0.4187	 Intra-Comp. 220.9
+Test Accuracy: 0.88 (22/25), Test loss: 0.01905
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.4089 	  Acc: 0.938	 Empiric Loss: 0.3289	 Intra-Comp. 266.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01784
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.5113 	  Acc: 0.75	 Empiric Loss: 0.4203	 Intra-Comp. 303.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.01592
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2958 	  Acc: 0.938	 Empiric Loss: 0.1982	 Intra-Comp. 325.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.0152
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3751 	  Acc: 0.938	 Empiric Loss: 0.272	 Intra-Comp. 343.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01507
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2518 	  Acc: 0.938	 Empiric Loss: 0.1459	 Intra-Comp. 353.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.0144
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.3322 	  Acc: 0.938	 Empiric Loss: 0.2236	 Intra-Comp. 362.0
+Test Accuracy: 0.96 (24/25), Test loss: 0.01327
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2142 	  Acc: 1.0	 Empiric Loss: 0.1053	 Intra-Comp. 363.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.01245
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.1964 	  Acc: 1.0	 Empiric Loss: 0.08727	 Intra-Comp. 363.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.01206
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.2047 	  Acc: 1.0	 Empiric Loss: 0.09573	 Intra-Comp. 363.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.01182
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1833 	  Acc: 1.0	 Empiric Loss: 0.07497	 Intra-Comp. 360.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.0121
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.217 	  Acc: 1.0	 Empiric Loss: 0.1086	 Intra-Comp. 361.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.01188
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.2179 	  Acc: 1.0	 Empiric Loss: 0.11	 Intra-Comp. 359.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.01122
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.2024 	  Acc: 1.0	 Empiric Loss: 0.09517	 Intra-Comp. 357.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.01168
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.2767 	  Acc: 0.938	 Empiric Loss: 0.1694	 Intra-Comp. 357.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01516
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1939 	  Acc: 1.0	 Empiric Loss: 0.08742	 Intra-Comp. 354.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.0128
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1806 	  Acc: 1.0	 Empiric Loss: 0.07498	 Intra-Comp. 352.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01425
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.4312 	  Acc: 0.875	 Empiric Loss: 0.3234	 Intra-Comp. 359.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.01265
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.2312 	  Acc: 1.0	 Empiric Loss: 0.1243	 Intra-Comp. 356.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.01248
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1976 	  Acc: 0.938	 Empiric Loss: 0.09074	 Intra-Comp. 356.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.01269
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1219 	  Acc: 1.0	 Empiric Loss: 0.01586	 Intra-Comp. 353.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.01296
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.215 	  Acc: 0.938	 Empiric Loss: 0.1086	 Intra-Comp. 354.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01333
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.2326 	  Acc: 1.0	 Empiric Loss: 0.1268	 Intra-Comp. 352.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01321
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1316 	  Acc: 1.0	 Empiric Loss: 0.02692	 Intra-Comp. 348.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01355
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.2073 	  Acc: 1.0	 Empiric Loss: 0.1024	 Intra-Comp. 349.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01288
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.2382 	  Acc: 1.0	 Empiric Loss: 0.1332	 Intra-Comp. 350.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01279
+Test Accuracy: 0.92 (23/25), Test loss: 0.01279
+MaxPosterior Average Test Error: 8.0%	 Runtime: 5.15509579796344 [sec]
+Meta-Testing task 6 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.549 	  Acc: 0.375	 Empiric Loss: 1.549	 Intra-Comp. 0.6474
+Test Accuracy: 0.8 (20/25), Test loss: 0.03762
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 0.8053 	  Acc: 0.688	 Empiric Loss: 0.7938	 Intra-Comp. 38.54
+Test Accuracy: 0.76 (19/25), Test loss: 0.02734
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.5914 	  Acc: 0.875	 Empiric Loss: 0.5634	 Intra-Comp. 93.29
+Test Accuracy: 0.88 (22/25), Test loss: 0.0203
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.3635 	  Acc: 0.938	 Empiric Loss: 0.319	 Intra-Comp. 148.2
+Test Accuracy: 0.88 (22/25), Test loss: 0.01792
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.3157 	  Acc: 0.938	 Empiric Loss: 0.2556	 Intra-Comp. 200.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01705
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.2515 	  Acc: 0.938	 Empiric Loss: 0.1782	 Intra-Comp. 244.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.01686
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.2228 	  Acc: 0.938	 Empiric Loss: 0.1391	 Intra-Comp. 279.0
+Test Accuracy: 0.88 (22/25), Test loss: 0.01666
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.1594 	  Acc: 1.0	 Empiric Loss: 0.06967	 Intra-Comp. 299.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.0185
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3373 	  Acc: 0.875	 Empiric Loss: 0.2428	 Intra-Comp. 315.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.0193
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.15 	  Acc: 1.0	 Empiric Loss: 0.05469	 Intra-Comp. 317.7
+Test Accuracy: 0.88 (22/25), Test loss: 0.01885
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.1598 	  Acc: 1.0	 Empiric Loss: 0.0638	 Intra-Comp. 320.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01688
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.1844 	  Acc: 1.0	 Empiric Loss: 0.08821	 Intra-Comp. 320.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.01682
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.2329 	  Acc: 0.938	 Empiric Loss: 0.1368	 Intra-Comp. 320.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.01862
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.2048 	  Acc: 1.0	 Empiric Loss: 0.1097	 Intra-Comp. 317.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.0183
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1409 	  Acc: 1.0	 Empiric Loss: 0.0465	 Intra-Comp. 314.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01548
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1062 	  Acc: 1.0	 Empiric Loss: 0.01258	 Intra-Comp. 312.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01515
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.2283 	  Acc: 1.0	 Empiric Loss: 0.1347	 Intra-Comp. 312.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01437
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1569 	  Acc: 1.0	 Empiric Loss: 0.06505	 Intra-Comp. 306.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01749
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1149 	  Acc: 1.0	 Empiric Loss: 0.02514	 Intra-Comp. 299.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.0198
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1519 	  Acc: 1.0	 Empiric Loss: 0.06372	 Intra-Comp. 294.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01859
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1314 	  Acc: 1.0	 Empiric Loss: 0.04538	 Intra-Comp. 286.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01653
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1664 	  Acc: 1.0	 Empiric Loss: 0.08135	 Intra-Comp. 283.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.01594
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1222 	  Acc: 1.0	 Empiric Loss: 0.0391	 Intra-Comp. 277.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01678
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1445 	  Acc: 1.0	 Empiric Loss: 0.06272	 Intra-Comp. 272.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01613
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.09647 	  Acc: 1.0	 Empiric Loss: 0.01669	 Intra-Comp. 265.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01448
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1045 	  Acc: 1.0	 Empiric Loss: 0.02621	 Intra-Comp. 261.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01343
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.2044 	  Acc: 0.938	 Empiric Loss: 0.1264	 Intra-Comp. 260.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01229
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1861 	  Acc: 1.0	 Empiric Loss: 0.109	 Intra-Comp. 257.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01549
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1011 	  Acc: 1.0	 Empiric Loss: 0.02501	 Intra-Comp. 253.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.0191
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1012 	  Acc: 1.0	 Empiric Loss: 0.02535	 Intra-Comp. 252.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01948
+Test Accuracy: 0.92 (23/25), Test loss: 0.01948
+MaxPosterior Average Test Error: 8.0%	 Runtime: 5.262377556413412 [sec]
+Meta-Testing task 7 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.928 	  Acc: 0.375	 Empiric Loss: 1.928	 Intra-Comp. 0.7042
+Test Accuracy: 0.44 (11/25), Test loss: 0.03901
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.048 	  Acc: 0.688	 Empiric Loss: 1.036	 Intra-Comp. 40.46
+Test Accuracy: 0.76 (19/25), Test loss: 0.028
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 1.026 	  Acc: 0.5	 Empiric Loss: 0.9968	 Intra-Comp. 96.09
+Test Accuracy: 0.72 (18/25), Test loss: 0.02189
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.7278 	  Acc: 0.812	 Empiric Loss: 0.6815	 Intra-Comp. 154.3
+Test Accuracy: 0.72 (18/25), Test loss: 0.01918
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.4709 	  Acc: 0.875	 Empiric Loss: 0.4091	 Intra-Comp. 206.1
+Test Accuracy: 0.84 (21/25), Test loss: 0.01578
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.3498 	  Acc: 1.0	 Empiric Loss: 0.2757	 Intra-Comp. 247.1
+Test Accuracy: 0.8 (20/25), Test loss: 0.0134
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.3943 	  Acc: 0.812	 Empiric Loss: 0.3101	 Intra-Comp. 280.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01169
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2375 	  Acc: 1.0	 Empiric Loss: 0.1459	 Intra-Comp. 305.6
+Test Accuracy: 0.88 (22/25), Test loss: 0.0108
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3143 	  Acc: 0.875	 Empiric Loss: 0.2164	 Intra-Comp. 326.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01012
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2499 	  Acc: 0.938	 Empiric Loss: 0.1494	 Intra-Comp. 334.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.01033
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.2906 	  Acc: 1.0	 Empiric Loss: 0.1872	 Intra-Comp. 344.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.01024
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2731 	  Acc: 0.938	 Empiric Loss: 0.1679	 Intra-Comp. 350.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.00985
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.3351 	  Acc: 0.938	 Empiric Loss: 0.2283	 Intra-Comp. 355.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.009468
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.3269 	  Acc: 0.938	 Empiric Loss: 0.2188	 Intra-Comp. 360.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.008886
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.3206 	  Acc: 0.938	 Empiric Loss: 0.2116	 Intra-Comp. 363.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.008046
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1827 	  Acc: 1.0	 Empiric Loss: 0.07462	 Intra-Comp. 360.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.009429
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.3401 	  Acc: 0.875	 Empiric Loss: 0.2306	 Intra-Comp. 365.0
+Test Accuracy: 0.88 (22/25), Test loss: 0.008631
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.2427 	  Acc: 0.938	 Empiric Loss: 0.1341	 Intra-Comp. 361.8
+Test Accuracy: 0.88 (22/25), Test loss: 0.008721
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.2824 	  Acc: 0.938	 Empiric Loss: 0.1733	 Intra-Comp. 363.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.009193
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.2408 	  Acc: 1.0	 Empiric Loss: 0.1313	 Intra-Comp. 364.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.00804
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.2935 	  Acc: 0.875	 Empiric Loss: 0.1847	 Intra-Comp. 362.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.007998
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1808 	  Acc: 1.0	 Empiric Loss: 0.07325	 Intra-Comp. 358.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.008387
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.2227 	  Acc: 1.0	 Empiric Loss: 0.114	 Intra-Comp. 362.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01234
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.287 	  Acc: 1.0	 Empiric Loss: 0.1759	 Intra-Comp. 370.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.007623
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.2113 	  Acc: 1.0	 Empiric Loss: 0.102	 Intra-Comp. 364.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.007465
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.2557 	  Acc: 0.938	 Empiric Loss: 0.1461	 Intra-Comp. 365.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.01058
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1858 	  Acc: 0.938	 Empiric Loss: 0.07612	 Intra-Comp. 365.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.007431
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1995 	  Acc: 1.0	 Empiric Loss: 0.09129	 Intra-Comp. 360.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.007402
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.2261 	  Acc: 1.0	 Empiric Loss: 0.1181	 Intra-Comp. 359.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01111
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.3706 	  Acc: 0.875	 Empiric Loss: 0.2604	 Intra-Comp. 367.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.006601
+Test Accuracy: 0.96 (24/25), Test loss: 0.006601
+MaxPosterior Average Test Error: 4.0%	 Runtime: 5.183484976179898 [sec]
+Meta-Testing task 8 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.695 	  Acc: 0.312	 Empiric Loss: 1.695	 Intra-Comp. 0.67
+Test Accuracy: 0.68 (17/25), Test loss: 0.0337
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.218 	  Acc: 0.5	 Empiric Loss: 1.206	 Intra-Comp. 38.76
+Test Accuracy: 0.8 (20/25), Test loss: 0.02417
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.6391 	  Acc: 0.938	 Empiric Loss: 0.612	 Intra-Comp. 90.24
+Test Accuracy: 0.92 (23/25), Test loss: 0.01724
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.712 	  Acc: 0.812	 Empiric Loss: 0.6685	 Intra-Comp. 145.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.013
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5271 	  Acc: 0.938	 Empiric Loss: 0.4688	 Intra-Comp. 194.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01102
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.4464 	  Acc: 0.875	 Empiric Loss: 0.3757	 Intra-Comp. 235.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.009747
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.2401 	  Acc: 1.0	 Empiric Loss: 0.1601	 Intra-Comp. 266.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.009209
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3221 	  Acc: 0.938	 Empiric Loss: 0.2333	 Intra-Comp. 296.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.00909
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2528 	  Acc: 1.0	 Empiric Loss: 0.1581	 Intra-Comp. 315.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.009493
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2388 	  Acc: 1.0	 Empiric Loss: 0.139	 Intra-Comp. 332.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.008779
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.1974 	  Acc: 1.0	 Empiric Loss: 0.0936	 Intra-Comp. 346.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.008433
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2299 	  Acc: 1.0	 Empiric Loss: 0.1225	 Intra-Comp. 358.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.008019
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.3845 	  Acc: 0.875	 Empiric Loss: 0.2738	 Intra-Comp. 369.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.00807
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1748 	  Acc: 1.0	 Empiric Loss: 0.06394	 Intra-Comp. 369.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.008283
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.2132 	  Acc: 1.0	 Empiric Loss: 0.1009	 Intra-Comp. 374.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.008313
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.2079 	  Acc: 0.938	 Empiric Loss: 0.09543	 Intra-Comp. 375.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.008186
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.1906 	  Acc: 1.0	 Empiric Loss: 0.07847	 Intra-Comp. 373.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.008157
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1753 	  Acc: 1.0	 Empiric Loss: 0.06392	 Intra-Comp. 371.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.007668
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.232 	  Acc: 0.938	 Empiric Loss: 0.1206	 Intra-Comp. 371.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.006977
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1626 	  Acc: 1.0	 Empiric Loss: 0.05242	 Intra-Comp. 367.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.007335
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1808 	  Acc: 1.0	 Empiric Loss: 0.0714	 Intra-Comp. 364.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.007903
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1697 	  Acc: 1.0	 Empiric Loss: 0.06154	 Intra-Comp. 360.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.007642
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.2376 	  Acc: 0.938	 Empiric Loss: 0.1303	 Intra-Comp. 357.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.008833
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.2287 	  Acc: 1.0	 Empiric Loss: 0.1221	 Intra-Comp. 355.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.008285
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.215 	  Acc: 0.938	 Empiric Loss: 0.1079	 Intra-Comp. 356.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.008173
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1533 	  Acc: 1.0	 Empiric Loss: 0.04685	 Intra-Comp. 354.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.00819
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1817 	  Acc: 1.0	 Empiric Loss: 0.07598	 Intra-Comp. 352.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.008742
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1579 	  Acc: 1.0	 Empiric Loss: 0.05368	 Intra-Comp. 347.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.008438
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1329 	  Acc: 1.0	 Empiric Loss: 0.02941	 Intra-Comp. 345.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.008424
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1159 	  Acc: 1.0	 Empiric Loss: 0.01348	 Intra-Comp. 341.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.008367
+Test Accuracy: 0.92 (23/25), Test loss: 0.008367
+MaxPosterior Average Test Error: 8.0%	 Runtime: 5.001140772365034 [sec]
+Meta-Testing task 9 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.523 	  Acc: 0.25	 Empiric Loss: 1.522	 Intra-Comp. 0.6432
+Test Accuracy: 0.92 (23/25), Test loss: 0.02368
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 0.9266 	  Acc: 0.75	 Empiric Loss: 0.9134	 Intra-Comp. 43.99
+Test Accuracy: 0.96 (24/25), Test loss: 0.01435
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.619 	  Acc: 0.812	 Empiric Loss: 0.5895	 Intra-Comp. 98.16
+Test Accuracy: 0.96 (24/25), Test loss: 0.00989
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.2309 	  Acc: 1.0	 Empiric Loss: 0.1851	 Intra-Comp. 152.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.007478
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.2162 	  Acc: 1.0	 Empiric Loss: 0.156	 Intra-Comp. 200.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.005701
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.2275 	  Acc: 0.938	 Empiric Loss: 0.1565	 Intra-Comp. 236.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.004885
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.1429 	  Acc: 1.0	 Empiric Loss: 0.06484	 Intra-Comp. 260.2
+Test Accuracy: 1.0 (25/25), Test loss: 0.004178
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.1394 	  Acc: 1.0	 Empiric Loss: 0.05652	 Intra-Comp. 276.3
+Test Accuracy: 1.0 (25/25), Test loss: 0.003684
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.128 	  Acc: 1.0	 Empiric Loss: 0.04266	 Intra-Comp. 284.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.003432
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.132 	  Acc: 1.0	 Empiric Loss: 0.04638	 Intra-Comp. 285.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.003309
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.178 	  Acc: 0.938	 Empiric Loss: 0.09304	 Intra-Comp. 283.1
+Test Accuracy: 1.0 (25/25), Test loss: 0.003374
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.1582 	  Acc: 1.0	 Empiric Loss: 0.07567	 Intra-Comp. 275.1
+Test Accuracy: 1.0 (25/25), Test loss: 0.003567
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.1321 	  Acc: 1.0	 Empiric Loss: 0.05275	 Intra-Comp. 264.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.003648
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1097 	  Acc: 1.0	 Empiric Loss: 0.03325	 Intra-Comp. 254.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.00371
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1217 	  Acc: 1.0	 Empiric Loss: 0.04787	 Intra-Comp. 246.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.003596
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1265 	  Acc: 1.0	 Empiric Loss: 0.05554	 Intra-Comp. 236.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.003732
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.09465 	  Acc: 1.0	 Empiric Loss: 0.02629	 Intra-Comp. 227.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.003897
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1174 	  Acc: 1.0	 Empiric Loss: 0.05057	 Intra-Comp. 222.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.003885
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1112 	  Acc: 1.0	 Empiric Loss: 0.04566	 Intra-Comp. 218.3
+Test Accuracy: 1.0 (25/25), Test loss: 0.003024
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1075 	  Acc: 1.0	 Empiric Loss: 0.04272	 Intra-Comp. 216.1
+Test Accuracy: 1.0 (25/25), Test loss: 0.002877
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1071 	  Acc: 1.0	 Empiric Loss: 0.04208	 Intra-Comp. 216.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.002712
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1259 	  Acc: 1.0	 Empiric Loss: 0.06046	 Intra-Comp. 218.1
+Test Accuracy: 1.0 (25/25), Test loss: 0.002672
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.09146 	  Acc: 1.0	 Empiric Loss: 0.02643	 Intra-Comp. 216.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.003108
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1793 	  Acc: 0.938	 Empiric Loss: 0.1128	 Intra-Comp. 221.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.003217
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.0924 	  Acc: 1.0	 Empiric Loss: 0.02713	 Intra-Comp. 217.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.003309
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1076 	  Acc: 1.0	 Empiric Loss: 0.04276	 Intra-Comp. 216.3
+Test Accuracy: 1.0 (25/25), Test loss: 0.003557
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.08504 	  Acc: 1.0	 Empiric Loss: 0.02102	 Intra-Comp. 213.4
+Test Accuracy: 1.0 (25/25), Test loss: 0.003772
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.08076 	  Acc: 1.0	 Empiric Loss: 0.01727	 Intra-Comp. 211.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.003351
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1059 	  Acc: 1.0	 Empiric Loss: 0.04298	 Intra-Comp. 209.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.002997
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.07516 	  Acc: 1.0	 Empiric Loss: 0.01355	 Intra-Comp. 205.4
+Test Accuracy: 1.0 (25/25), Test loss: 0.002689
+Test Accuracy: 1.0 (25/25), Test loss: 0.002689
+MaxPosterior Average Test Error: 0.0%	 Runtime: 5.149365819059312 [sec]
+Meta-Testing task 10 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.627 	  Acc: 0.375	 Empiric Loss: 1.627	 Intra-Comp. 0.6597
+Test Accuracy: 0.84 (21/25), Test loss: 0.02625
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 0.9385 	  Acc: 0.625	 Empiric Loss: 0.9262	 Intra-Comp. 40.95
+Test Accuracy: 1.0 (25/25), Test loss: 0.01348
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8137 	  Acc: 0.625	 Empiric Loss: 0.7851	 Intra-Comp. 95.53
+Test Accuracy: 1.0 (25/25), Test loss: 0.009414
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.5432 	  Acc: 0.875	 Empiric Loss: 0.4983	 Intra-Comp. 149.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.006529
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.2845 	  Acc: 0.938	 Empiric Loss: 0.2259	 Intra-Comp. 195.2
+Test Accuracy: 1.0 (25/25), Test loss: 0.004041
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.2285 	  Acc: 1.0	 Empiric Loss: 0.1594	 Intra-Comp. 230.3
+Test Accuracy: 1.0 (25/25), Test loss: 0.003344
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.3044 	  Acc: 0.938	 Empiric Loss: 0.2269	 Intra-Comp. 258.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.002795
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2206 	  Acc: 0.938	 Empiric Loss: 0.1376	 Intra-Comp. 276.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.00235
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.1299 	  Acc: 1.0	 Empiric Loss: 0.04364	 Intra-Comp. 287.4
+Test Accuracy: 1.0 (25/25), Test loss: 0.002217
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1721 	  Acc: 1.0	 Empiric Loss: 0.08286	 Intra-Comp. 297.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.00192
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.135 	  Acc: 1.0	 Empiric Loss: 0.0443	 Intra-Comp. 302.3
+Test Accuracy: 1.0 (25/25), Test loss: 0.001635
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.1534 	  Acc: 1.0	 Empiric Loss: 0.0623	 Intra-Comp. 303.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.001375
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.2564 	  Acc: 0.938	 Empiric Loss: 0.1648	 Intra-Comp. 305.2
+Test Accuracy: 1.0 (25/25), Test loss: 0.001073
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1275 	  Acc: 1.0	 Empiric Loss: 0.03777	 Intra-Comp. 299.0
+Test Accuracy: 1.0 (25/25), Test loss: 0.001181
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1313 	  Acc: 1.0	 Empiric Loss: 0.04285	 Intra-Comp. 294.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.001474
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1027 	  Acc: 1.0	 Empiric Loss: 0.01546	 Intra-Comp. 290.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.001697
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.1554 	  Acc: 1.0	 Empiric Loss: 0.06844	 Intra-Comp. 289.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.001237
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1611 	  Acc: 1.0	 Empiric Loss: 0.07549	 Intra-Comp. 285.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.0008983
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.09674 	  Acc: 1.0	 Empiric Loss: 0.01294	 Intra-Comp. 279.4
+Test Accuracy: 1.0 (25/25), Test loss: 0.0007411
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1409 	  Acc: 1.0	 Empiric Loss: 0.05818	 Intra-Comp. 275.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.0007036
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1614 	  Acc: 0.938	 Empiric Loss: 0.07991	 Intra-Comp. 271.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.001087
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1352 	  Acc: 1.0	 Empiric Loss: 0.05478	 Intra-Comp. 267.9
+Test Accuracy: 1.0 (25/25), Test loss: 0.00111
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1083 	  Acc: 1.0	 Empiric Loss: 0.02872	 Intra-Comp. 265.2
+Test Accuracy: 1.0 (25/25), Test loss: 0.0007313
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.105 	  Acc: 1.0	 Empiric Loss: 0.02602	 Intra-Comp. 263.3
+Test Accuracy: 1.0 (25/25), Test loss: 0.0007184
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1152 	  Acc: 1.0	 Empiric Loss: 0.03723	 Intra-Comp. 259.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.0009484
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.14 	  Acc: 1.0	 Empiric Loss: 0.06281	 Intra-Comp. 257.2
+Test Accuracy: 1.0 (25/25), Test loss: 0.00117
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1029 	  Acc: 1.0	 Empiric Loss: 0.02703	 Intra-Comp. 253.0
+Test Accuracy: 1.0 (25/25), Test loss: 0.001091
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1615 	  Acc: 1.0	 Empiric Loss: 0.08575	 Intra-Comp. 252.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.0009004
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1212 	  Acc: 1.0	 Empiric Loss: 0.04574	 Intra-Comp. 251.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.0009948
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1328 	  Acc: 1.0	 Empiric Loss: 0.05741	 Intra-Comp. 251.4
+Test Accuracy: 1.0 (25/25), Test loss: 0.0008349
+Test Accuracy: 1.0 (25/25), Test loss: 0.0008349
+MaxPosterior Average Test Error: 0.0%	 Runtime: 5.063233094289899 [sec]
+Meta-Testing task 11 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.957 	  Acc: 0.125	 Empiric Loss: 1.957	 Intra-Comp. 0.7083
+Test Accuracy: 0.6 (15/25), Test loss: 0.04365
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 0.8745 	  Acc: 0.75	 Empiric Loss: 0.8629	 Intra-Comp. 38.64
+Test Accuracy: 0.84 (21/25), Test loss: 0.02937
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.7971 	  Acc: 0.75	 Empiric Loss: 0.7678	 Intra-Comp. 97.61
+Test Accuracy: 0.88 (22/25), Test loss: 0.02114
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.3007 	  Acc: 1.0	 Empiric Loss: 0.254	 Intra-Comp. 155.8
+Test Accuracy: 0.88 (22/25), Test loss: 0.01564
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.4682 	  Acc: 0.812	 Empiric Loss: 0.4038	 Intra-Comp. 214.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01227
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.5612 	  Acc: 0.875	 Empiric Loss: 0.4815	 Intra-Comp. 265.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.01053
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.2407 	  Acc: 0.938	 Empiric Loss: 0.1504	 Intra-Comp. 301.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.009803
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2389 	  Acc: 1.0	 Empiric Loss: 0.1412	 Intra-Comp. 325.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.009603
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.1207 	  Acc: 1.0	 Empiric Loss: 0.01953	 Intra-Comp. 337.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.00928
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1757 	  Acc: 1.0	 Empiric Loss: 0.0722	 Intra-Comp. 345.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.008741
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.1945 	  Acc: 1.0	 Empiric Loss: 0.09068	 Intra-Comp. 346.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.008481
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.141 	  Acc: 1.0	 Empiric Loss: 0.03874	 Intra-Comp. 340.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.008218
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.1316 	  Acc: 1.0	 Empiric Loss: 0.0321	 Intra-Comp. 331.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.008547
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1284 	  Acc: 1.0	 Empiric Loss: 0.03201	 Intra-Comp. 321.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1166 	  Acc: 1.0	 Empiric Loss: 0.02311	 Intra-Comp. 311.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.0104
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1264 	  Acc: 1.0	 Empiric Loss: 0.03447	 Intra-Comp. 306.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.00965
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.13 	  Acc: 1.0	 Empiric Loss: 0.04	 Intra-Comp. 300.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.008552
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1121 	  Acc: 1.0	 Empiric Loss: 0.02471	 Intra-Comp. 291.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.007714
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1085 	  Acc: 1.0	 Empiric Loss: 0.02392	 Intra-Comp. 282.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.007641
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.113 	  Acc: 1.0	 Empiric Loss: 0.0307	 Intra-Comp. 274.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.008218
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1123 	  Acc: 1.0	 Empiric Loss: 0.03192	 Intra-Comp. 267.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.008427
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1153 	  Acc: 1.0	 Empiric Loss: 0.03667	 Intra-Comp. 262.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.008154
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.09429 	  Acc: 1.0	 Empiric Loss: 0.01797	 Intra-Comp. 254.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.007469
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.09013 	  Acc: 1.0	 Empiric Loss: 0.01588	 Intra-Comp. 247.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.006664
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.09017 	  Acc: 1.0	 Empiric Loss: 0.01762	 Intra-Comp. 241.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.006605
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1651 	  Acc: 0.938	 Empiric Loss: 0.09317	 Intra-Comp. 239.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.008048
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.08733 	  Acc: 1.0	 Empiric Loss: 0.01753	 Intra-Comp. 232.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.008085
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1435 	  Acc: 1.0	 Empiric Loss: 0.07423	 Intra-Comp. 231.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.007057
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.0857 	  Acc: 1.0	 Empiric Loss: 0.01759	 Intra-Comp. 227.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.006718
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.08552 	  Acc: 1.0	 Empiric Loss: 0.01756	 Intra-Comp. 226.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.006673
+Test Accuracy: 0.92 (23/25), Test loss: 0.006673
+MaxPosterior Average Test Error: 8.0%	 Runtime: 5.266494616866112 [sec]
+Meta-Testing task 12 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.958 	  Acc: 0.188	 Empiric Loss: 1.958	 Intra-Comp. 0.7084
+Test Accuracy: 0.56 (14/25), Test loss: 0.04989
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.154 	  Acc: 0.5	 Empiric Loss: 1.142	 Intra-Comp. 41.78
+Test Accuracy: 0.72 (18/25), Test loss: 0.03623
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 1.099 	  Acc: 0.625	 Empiric Loss: 1.07	 Intra-Comp. 96.04
+Test Accuracy: 0.76 (19/25), Test loss: 0.02924
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.8159 	  Acc: 0.75	 Empiric Loss: 0.7692	 Intra-Comp. 155.4
+Test Accuracy: 0.84 (21/25), Test loss: 0.02527
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.6336 	  Acc: 0.75	 Empiric Loss: 0.5685	 Intra-Comp. 217.2
+Test Accuracy: 0.84 (21/25), Test loss: 0.02361
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.3808 	  Acc: 0.938	 Empiric Loss: 0.3002	 Intra-Comp. 268.7
+Test Accuracy: 0.84 (21/25), Test loss: 0.02356
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.6005 	  Acc: 0.812	 Empiric Loss: 0.5062	 Intra-Comp. 314.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.02376
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3091 	  Acc: 1.0	 Empiric Loss: 0.207	 Intra-Comp. 340.2
+Test Accuracy: 0.84 (21/25), Test loss: 0.02465
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.4443 	  Acc: 0.938	 Empiric Loss: 0.335	 Intra-Comp. 364.3
+Test Accuracy: 0.84 (21/25), Test loss: 0.02509
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.5571 	  Acc: 0.812	 Empiric Loss: 0.4414	 Intra-Comp. 385.6
+Test Accuracy: 0.84 (21/25), Test loss: 0.02505
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.3495 	  Acc: 0.875	 Empiric Loss: 0.23	 Intra-Comp. 398.3
+Test Accuracy: 0.84 (21/25), Test loss: 0.0243
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.3189 	  Acc: 0.938	 Empiric Loss: 0.1965	 Intra-Comp. 407.7
+Test Accuracy: 0.84 (21/25), Test loss: 0.02415
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.3507 	  Acc: 0.938	 Empiric Loss: 0.2259	 Intra-Comp. 416.2
+Test Accuracy: 0.84 (21/25), Test loss: 0.02407
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.3152 	  Acc: 0.938	 Empiric Loss: 0.1887	 Intra-Comp. 421.8
+Test Accuracy: 0.84 (21/25), Test loss: 0.02412
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.4817 	  Acc: 0.875	 Empiric Loss: 0.3525	 Intra-Comp. 430.4
+Test Accuracy: 0.84 (21/25), Test loss: 0.02376
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.3121 	  Acc: 0.938	 Empiric Loss: 0.1835	 Intra-Comp. 428.8
+Test Accuracy: 0.84 (21/25), Test loss: 0.02271
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.2574 	  Acc: 0.938	 Empiric Loss: 0.1289	 Intra-Comp. 428.3
+Test Accuracy: 0.84 (21/25), Test loss: 0.02252
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.2926 	  Acc: 0.938	 Empiric Loss: 0.1636	 Intra-Comp. 430.0
+Test Accuracy: 0.84 (21/25), Test loss: 0.02372
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.2629 	  Acc: 1.0	 Empiric Loss: 0.1343	 Intra-Comp. 428.4
+Test Accuracy: 0.84 (21/25), Test loss: 0.02395
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.2687 	  Acc: 1.0	 Empiric Loss: 0.1392	 Intra-Comp. 431.4
+Test Accuracy: 0.84 (21/25), Test loss: 0.0239
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1803 	  Acc: 1.0	 Empiric Loss: 0.05185	 Intra-Comp. 428.2
+Test Accuracy: 0.84 (21/25), Test loss: 0.02459
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1697 	  Acc: 1.0	 Empiric Loss: 0.04168	 Intra-Comp. 426.6
+Test Accuracy: 0.84 (21/25), Test loss: 0.02512
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.2017 	  Acc: 1.0	 Empiric Loss: 0.07351	 Intra-Comp. 427.3
+Test Accuracy: 0.84 (21/25), Test loss: 0.02565
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.2656 	  Acc: 0.938	 Empiric Loss: 0.1379	 Intra-Comp. 425.6
+Test Accuracy: 0.84 (21/25), Test loss: 0.02637
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.2023 	  Acc: 1.0	 Empiric Loss: 0.07661	 Intra-Comp. 419.0
+Test Accuracy: 0.84 (21/25), Test loss: 0.02674
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.3505 	  Acc: 0.938	 Empiric Loss: 0.2255	 Intra-Comp. 416.7
+Test Accuracy: 0.84 (21/25), Test loss: 0.02697
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1652 	  Acc: 1.0	 Empiric Loss: 0.04296	 Intra-Comp. 407.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.02707
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.2241 	  Acc: 0.938	 Empiric Loss: 0.1022	 Intra-Comp. 406.3
+Test Accuracy: 0.84 (21/25), Test loss: 0.02655
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.2627 	  Acc: 0.938	 Empiric Loss: 0.1411	 Intra-Comp. 405.4
+Test Accuracy: 0.84 (21/25), Test loss: 0.0257
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.2749 	  Acc: 1.0	 Empiric Loss: 0.1531	 Intra-Comp. 406.1
+Test Accuracy: 0.84 (21/25), Test loss: 0.02479
+Test Accuracy: 0.84 (21/25), Test loss: 0.02479
+MaxPosterior Average Test Error: 16.0%	 Runtime: 5.073927851393819 [sec]
+Meta-Testing task 13 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 2.498 	  Acc: 0.0625	 Empiric Loss: 2.498	 Intra-Comp. 0.7801
+Test Accuracy: 0.72 (18/25), Test loss: 0.04667
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.291 	  Acc: 0.562	 Empiric Loss: 1.278	 Intra-Comp. 44.03
+Test Accuracy: 0.84 (21/25), Test loss: 0.03248
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 1.02 	  Acc: 0.812	 Empiric Loss: 0.9866	 Intra-Comp. 110.6
+Test Accuracy: 0.88 (22/25), Test loss: 0.02411
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.8537 	  Acc: 0.75	 Empiric Loss: 0.7985	 Intra-Comp. 183.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01901
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.4547 	  Acc: 0.875	 Empiric Loss: 0.3794	 Intra-Comp. 251.0
+Test Accuracy: 0.96 (24/25), Test loss: 0.01465
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.3334 	  Acc: 1.0	 Empiric Loss: 0.2402	 Intra-Comp. 310.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.01196
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.3455 	  Acc: 1.0	 Empiric Loss: 0.237	 Intra-Comp. 361.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.01068
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3643 	  Acc: 0.938	 Empiric Loss: 0.2454	 Intra-Comp. 396.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.009641
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.4259 	  Acc: 0.938	 Empiric Loss: 0.2988	 Intra-Comp. 423.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.008703
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2079 	  Acc: 1.0	 Empiric Loss: 0.07751	 Intra-Comp. 434.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.008308
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.2308 	  Acc: 1.0	 Empiric Loss: 0.09837	 Intra-Comp. 441.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.007924
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2367 	  Acc: 1.0	 Empiric Loss: 0.1041	 Intra-Comp. 442.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.008296
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.3242 	  Acc: 0.938	 Empiric Loss: 0.1926	 Intra-Comp. 438.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.007281
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1823 	  Acc: 1.0	 Empiric Loss: 0.05246	 Intra-Comp. 432.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.006873
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.2551 	  Acc: 1.0	 Empiric Loss: 0.1259	 Intra-Comp. 430.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.006755
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.2009 	  Acc: 1.0	 Empiric Loss: 0.07418	 Intra-Comp. 422.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.006669
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.3047 	  Acc: 0.938	 Empiric Loss: 0.1802	 Intra-Comp. 414.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.006626
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1738 	  Acc: 1.0	 Empiric Loss: 0.05414	 Intra-Comp. 398.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.007387
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.2194 	  Acc: 1.0	 Empiric Loss: 0.1021	 Intra-Comp. 390.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.00721
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1909 	  Acc: 1.0	 Empiric Loss: 0.07586	 Intra-Comp. 383.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.006798
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1422 	  Acc: 1.0	 Empiric Loss: 0.02942	 Intra-Comp. 376.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.006678
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1454 	  Acc: 1.0	 Empiric Loss: 0.03377	 Intra-Comp. 372.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.006687
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1512 	  Acc: 1.0	 Empiric Loss: 0.04133	 Intra-Comp. 366.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.006743
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1624 	  Acc: 1.0	 Empiric Loss: 0.05427	 Intra-Comp. 360.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.007009
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1331 	  Acc: 1.0	 Empiric Loss: 0.0273	 Intra-Comp. 352.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.00724
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1394 	  Acc: 1.0	 Empiric Loss: 0.03592	 Intra-Comp. 345.0
+Test Accuracy: 0.96 (24/25), Test loss: 0.007116
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1272 	  Acc: 1.0	 Empiric Loss: 0.02613	 Intra-Comp. 336.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.007098
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.122 	  Acc: 1.0	 Empiric Loss: 0.02194	 Intra-Comp. 333.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.006952
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.2028 	  Acc: 1.0	 Empiric Loss: 0.1033	 Intra-Comp. 331.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.00789
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1353 	  Acc: 1.0	 Empiric Loss: 0.0369	 Intra-Comp. 328.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.008862
+Test Accuracy: 0.92 (23/25), Test loss: 0.008862
+MaxPosterior Average Test Error: 8.0%	 Runtime: 5.340435297228396 [sec]
+Meta-Testing task 14 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 2.33 	  Acc: 0.0625	 Empiric Loss: 2.33	 Intra-Comp. 0.7587
+Test Accuracy: 0.6 (15/25), Test loss: 0.04832
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.371 	  Acc: 0.438	 Empiric Loss: 1.358	 Intra-Comp. 45.08
+Test Accuracy: 0.68 (17/25), Test loss: 0.03389
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.6609 	  Acc: 0.938	 Empiric Loss: 0.6286	 Intra-Comp. 107.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.02256
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.6278 	  Acc: 0.938	 Empiric Loss: 0.5755	 Intra-Comp. 174.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.01619
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.4982 	  Acc: 0.812	 Empiric Loss: 0.4273	 Intra-Comp. 236.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.01208
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.3472 	  Acc: 0.938	 Empiric Loss: 0.2611	 Intra-Comp. 287.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.00956
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.3982 	  Acc: 0.938	 Empiric Loss: 0.2997	 Intra-Comp. 328.4
+Test Accuracy: 0.88 (22/25), Test loss: 0.008869
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3742 	  Acc: 0.938	 Empiric Loss: 0.2675	 Intra-Comp. 355.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.007427
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2803 	  Acc: 1.0	 Empiric Loss: 0.168	 Intra-Comp. 374.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.006133
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2368 	  Acc: 1.0	 Empiric Loss: 0.1205	 Intra-Comp. 387.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.005394
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.2068 	  Acc: 1.0	 Empiric Loss: 0.08851	 Intra-Comp. 394.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.004503
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.1456 	  Acc: 1.0	 Empiric Loss: 0.0267	 Intra-Comp. 396.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.005222
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.2016 	  Acc: 1.0	 Empiric Loss: 0.08302	 Intra-Comp. 395.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.005267
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1649 	  Acc: 1.0	 Empiric Loss: 0.04752	 Intra-Comp. 391.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.004523
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1551 	  Acc: 1.0	 Empiric Loss: 0.03901	 Intra-Comp. 387.1
+Test Accuracy: 1.0 (25/25), Test loss: 0.003859
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1326 	  Acc: 1.0	 Empiric Loss: 0.01815	 Intra-Comp. 381.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.004338
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.1879 	  Acc: 1.0	 Empiric Loss: 0.07442	 Intra-Comp. 378.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.005517
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1724 	  Acc: 1.0	 Empiric Loss: 0.0607	 Intra-Comp. 372.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.005462
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1683 	  Acc: 1.0	 Empiric Loss: 0.05778	 Intra-Comp. 368.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.00426
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1354 	  Acc: 1.0	 Empiric Loss: 0.02668	 Intra-Comp. 362.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.004428
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1404 	  Acc: 1.0	 Empiric Loss: 0.03455	 Intra-Comp. 352.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.007014
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.1338 	  Acc: 1.0	 Empiric Loss: 0.03136	 Intra-Comp. 341.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.006316
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1216 	  Acc: 1.0	 Empiric Loss: 0.02082	 Intra-Comp. 335.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.005859
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1123 	  Acc: 1.0	 Empiric Loss: 0.01202	 Intra-Comp. 334.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.004913
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1909 	  Acc: 0.938	 Empiric Loss: 0.09046	 Intra-Comp. 334.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.004483
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1489 	  Acc: 1.0	 Empiric Loss: 0.05023	 Intra-Comp. 329.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.006767
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1621 	  Acc: 1.0	 Empiric Loss: 0.06478	 Intra-Comp. 324.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.007242
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1612 	  Acc: 1.0	 Empiric Loss: 0.06471	 Intra-Comp. 321.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.005325
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1696 	  Acc: 1.0	 Empiric Loss: 0.07337	 Intra-Comp. 320.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.006776
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1456 	  Acc: 1.0	 Empiric Loss: 0.04898	 Intra-Comp. 322.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.007352
+Test Accuracy: 0.96 (24/25), Test loss: 0.007352
+MaxPosterior Average Test Error: 4.0%	 Runtime: 5.065680179744959 [sec]
+Meta-Testing task 15 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.951 	  Acc: 0.0625	 Empiric Loss: 1.951	 Intra-Comp. 0.7075
+Test Accuracy: 0.76 (19/25), Test loss: 0.03789
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 0.9876 	  Acc: 0.625	 Empiric Loss: 0.9744	 Intra-Comp. 43.77
+Test Accuracy: 0.84 (21/25), Test loss: 0.02433
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8798 	  Acc: 0.75	 Empiric Loss: 0.8468	 Intra-Comp. 110.3
+Test Accuracy: 0.84 (21/25), Test loss: 0.01854
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.5807 	  Acc: 0.75	 Empiric Loss: 0.5276	 Intra-Comp. 176.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.01329
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.3177 	  Acc: 0.938	 Empiric Loss: 0.248	 Intra-Comp. 232.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.00935
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.4796 	  Acc: 0.938	 Empiric Loss: 0.3977	 Intra-Comp. 273.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01005
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.4479 	  Acc: 0.75	 Empiric Loss: 0.3594	 Intra-Comp. 295.2
+Test Accuracy: 0.88 (22/25), Test loss: 0.01102
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2498 	  Acc: 1.0	 Empiric Loss: 0.1565	 Intra-Comp. 310.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.009726
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.1774 	  Acc: 1.0	 Empiric Loss: 0.0804	 Intra-Comp. 323.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.007682
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2274 	  Acc: 1.0	 Empiric Loss: 0.1276	 Intra-Comp. 332.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.006219
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.157 	  Acc: 1.0	 Empiric Loss: 0.05621	 Intra-Comp. 335.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.005735
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2041 	  Acc: 1.0	 Empiric Loss: 0.1025	 Intra-Comp. 338.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.006096
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.1795 	  Acc: 1.0	 Empiric Loss: 0.0789	 Intra-Comp. 335.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.006444
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1672 	  Acc: 1.0	 Empiric Loss: 0.06766	 Intra-Comp. 331.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.006822
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.157 	  Acc: 1.0	 Empiric Loss: 0.05865	 Intra-Comp. 327.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.006189
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1516 	  Acc: 1.0	 Empiric Loss: 0.05408	 Intra-Comp. 325.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.00584
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.3046 	  Acc: 0.938	 Empiric Loss: 0.2062	 Intra-Comp. 328.0
+Test Accuracy: 1.0 (25/25), Test loss: 0.004875
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1459 	  Acc: 1.0	 Empiric Loss: 0.04909	 Intra-Comp. 322.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.004729
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1491 	  Acc: 1.0	 Empiric Loss: 0.05313	 Intra-Comp. 319.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.004753
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1513 	  Acc: 1.0	 Empiric Loss: 0.05634	 Intra-Comp. 316.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.004774
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.144 	  Acc: 1.0	 Empiric Loss: 0.05016	 Intra-Comp. 312.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.005142
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.2309 	  Acc: 1.0	 Empiric Loss: 0.1373	 Intra-Comp. 312.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.006422
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1516 	  Acc: 1.0	 Empiric Loss: 0.05888	 Intra-Comp. 309.0
+Test Accuracy: 0.96 (24/25), Test loss: 0.005508
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.2119 	  Acc: 1.0	 Empiric Loss: 0.1187	 Intra-Comp. 310.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.005343
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.2018 	  Acc: 1.0	 Empiric Loss: 0.1084	 Intra-Comp. 311.3
+Test Accuracy: 1.0 (25/25), Test loss: 0.004621
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1313 	  Acc: 1.0	 Empiric Loss: 0.03859	 Intra-Comp. 309.0
+Test Accuracy: 1.0 (25/25), Test loss: 0.00486
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.11 	  Acc: 1.0	 Empiric Loss: 0.01796	 Intra-Comp. 306.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.005106
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.2337 	  Acc: 0.938	 Empiric Loss: 0.1411	 Intra-Comp. 308.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.006071
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.09942 	  Acc: 1.0	 Empiric Loss: 0.008453	 Intra-Comp. 303.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.006231
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1315 	  Acc: 1.0	 Empiric Loss: 0.04039	 Intra-Comp. 303.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.005676
+Test Accuracy: 0.96 (24/25), Test loss: 0.005676
+MaxPosterior Average Test Error: 4.0%	 Runtime: 4.860597210004926 [sec]
+Meta-Testing task 16 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 2.24 	  Acc: 0.0625	 Empiric Loss: 2.239	 Intra-Comp. 0.7469
+Test Accuracy: 0.2 (5/25), Test loss: 0.05412
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.339 	  Acc: 0.5	 Empiric Loss: 1.325	 Intra-Comp. 46.85
+Test Accuracy: 0.88 (22/25), Test loss: 0.03511
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8394 	  Acc: 0.688	 Empiric Loss: 0.8037	 Intra-Comp. 118.9
+Test Accuracy: 0.92 (23/25), Test loss: 0.02389
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.5866 	  Acc: 1.0	 Empiric Loss: 0.5292	 Intra-Comp. 191.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01689
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5868 	  Acc: 0.812	 Empiric Loss: 0.5107	 Intra-Comp. 253.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.01189
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.4281 	  Acc: 1.0	 Empiric Loss: 0.3374	 Intra-Comp. 302.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.008638
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.537 	  Acc: 0.938	 Empiric Loss: 0.4338	 Intra-Comp. 344.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.006434
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2344 	  Acc: 1.0	 Empiric Loss: 0.1236	 Intra-Comp. 369.4
+Test Accuracy: 0.96 (24/25), Test loss: 0.005656
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2206 	  Acc: 1.0	 Empiric Loss: 0.1042	 Intra-Comp. 387.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.005213
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.4473 	  Acc: 0.938	 Empiric Loss: 0.3263	 Intra-Comp. 403.5
+Test Accuracy: 1.0 (25/25), Test loss: 0.003922
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.2861 	  Acc: 1.0	 Empiric Loss: 0.1641	 Intra-Comp. 406.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.003579
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2469 	  Acc: 0.938	 Empiric Loss: 0.1252	 Intra-Comp. 405.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.003493
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.381 	  Acc: 0.938	 Empiric Loss: 0.2588	 Intra-Comp. 407.3
+Test Accuracy: 0.96 (24/25), Test loss: 0.004971
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.2297 	  Acc: 1.0	 Empiric Loss: 0.1085	 Intra-Comp. 404.0
+Test Accuracy: 1.0 (25/25), Test loss: 0.00294
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.3059 	  Acc: 0.938	 Empiric Loss: 0.1842	 Intra-Comp. 405.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.00281
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.2062 	  Acc: 1.0	 Empiric Loss: 0.08534	 Intra-Comp. 403.0
+Test Accuracy: 1.0 (25/25), Test loss: 0.002921
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.2389 	  Acc: 1.0	 Empiric Loss: 0.1184	 Intra-Comp. 401.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.002944
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.2089 	  Acc: 1.0	 Empiric Loss: 0.09035	 Intra-Comp. 395.1
+Test Accuracy: 1.0 (25/25), Test loss: 0.00304
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1982 	  Acc: 1.0	 Empiric Loss: 0.08186	 Intra-Comp. 387.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.00258
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1928 	  Acc: 1.0	 Empiric Loss: 0.0776	 Intra-Comp. 384.1
+Test Accuracy: 1.0 (25/25), Test loss: 0.002331
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1632 	  Acc: 1.0	 Empiric Loss: 0.04843	 Intra-Comp. 382.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.001923
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.3116 	  Acc: 0.938	 Empiric Loss: 0.1959	 Intra-Comp. 385.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.002027
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1557 	  Acc: 1.0	 Empiric Loss: 0.04293	 Intra-Comp. 375.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.001935
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1615 	  Acc: 1.0	 Empiric Loss: 0.05048	 Intra-Comp. 370.2
+Test Accuracy: 1.0 (25/25), Test loss: 0.001776
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1942 	  Acc: 1.0	 Empiric Loss: 0.08422	 Intra-Comp. 366.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.001947
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1422 	  Acc: 1.0	 Empiric Loss: 0.034	 Intra-Comp. 360.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.001815
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1771 	  Acc: 1.0	 Empiric Loss: 0.06962	 Intra-Comp. 358.4
+Test Accuracy: 1.0 (25/25), Test loss: 0.001523
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1285 	  Acc: 1.0	 Empiric Loss: 0.0224	 Intra-Comp. 353.6
+Test Accuracy: 1.0 (25/25), Test loss: 0.001694
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.2263 	  Acc: 1.0	 Empiric Loss: 0.1201	 Intra-Comp. 353.8
+Test Accuracy: 1.0 (25/25), Test loss: 0.00258
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.2306 	  Acc: 0.938	 Empiric Loss: 0.126	 Intra-Comp. 348.7
+Test Accuracy: 1.0 (25/25), Test loss: 0.002346
+Test Accuracy: 1.0 (25/25), Test loss: 0.002346
+MaxPosterior Average Test Error: 0.0%	 Runtime: 5.032522659748793 [sec]
+Meta-Testing task 17 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.955 	  Acc: 0.125	 Empiric Loss: 1.955	 Intra-Comp. 0.708
+Test Accuracy: 0.8 (20/25), Test loss: 0.03805
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.696 	  Acc: 0.312	 Empiric Loss: 1.685	 Intra-Comp. 35.93
+Test Accuracy: 0.76 (19/25), Test loss: 0.02935
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.9846 	  Acc: 0.812	 Empiric Loss: 0.9603	 Intra-Comp. 80.84
+Test Accuracy: 0.92 (23/25), Test loss: 0.02397
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.9116 	  Acc: 0.75	 Empiric Loss: 0.8733	 Intra-Comp. 127.8
+Test Accuracy: 0.84 (21/25), Test loss: 0.01991
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.4476 	  Acc: 1.0	 Empiric Loss: 0.3972	 Intra-Comp. 168.1
+Test Accuracy: 0.84 (21/25), Test loss: 0.01709
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.5908 	  Acc: 0.875	 Empiric Loss: 0.5276	 Intra-Comp. 210.6
+Test Accuracy: 0.84 (21/25), Test loss: 0.01495
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.534 	  Acc: 0.875	 Empiric Loss: 0.4593	 Intra-Comp. 249.0
+Test Accuracy: 0.88 (22/25), Test loss: 0.01301
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.6587 	  Acc: 0.875	 Empiric Loss: 0.5732	 Intra-Comp. 284.8
+Test Accuracy: 0.88 (22/25), Test loss: 0.01302
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3514 	  Acc: 0.875	 Empiric Loss: 0.2591	 Intra-Comp. 307.6
+Test Accuracy: 0.84 (21/25), Test loss: 0.01344
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.422 	  Acc: 0.812	 Empiric Loss: 0.3234	 Intra-Comp. 328.8
+Test Accuracy: 0.8 (20/25), Test loss: 0.01342
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.3433 	  Acc: 1.0	 Empiric Loss: 0.2397	 Intra-Comp. 345.3
+Test Accuracy: 0.8 (20/25), Test loss: 0.01315
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.3729 	  Acc: 0.938	 Empiric Loss: 0.2648	 Intra-Comp. 360.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.01183
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.328 	  Acc: 0.875	 Empiric Loss: 0.2168	 Intra-Comp. 370.7
+Test Accuracy: 0.84 (21/25), Test loss: 0.0126
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.3259 	  Acc: 1.0	 Empiric Loss: 0.2126	 Intra-Comp. 377.8
+Test Accuracy: 0.84 (21/25), Test loss: 0.01207
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.3623 	  Acc: 0.938	 Empiric Loss: 0.247	 Intra-Comp. 384.3
+Test Accuracy: 0.84 (21/25), Test loss: 0.01186
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.2208 	  Acc: 1.0	 Empiric Loss: 0.1054	 Intra-Comp. 384.8
+Test Accuracy: 0.84 (21/25), Test loss: 0.01312
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.2227 	  Acc: 1.0	 Empiric Loss: 0.1065	 Intra-Comp. 387.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.01379
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.3382 	  Acc: 0.875	 Empiric Loss: 0.221	 Intra-Comp. 390.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.01282
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1948 	  Acc: 1.0	 Empiric Loss: 0.07812	 Intra-Comp. 388.9
+Test Accuracy: 0.84 (21/25), Test loss: 0.01277
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1425 	  Acc: 1.0	 Empiric Loss: 0.02649	 Intra-Comp. 386.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.01562
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.2383 	  Acc: 1.0	 Empiric Loss: 0.121	 Intra-Comp. 390.7
+Test Accuracy: 0.84 (21/25), Test loss: 0.01438
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.243 	  Acc: 0.938	 Empiric Loss: 0.1247	 Intra-Comp. 394.1
+Test Accuracy: 0.88 (22/25), Test loss: 0.01214
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.2672 	  Acc: 0.938	 Empiric Loss: 0.1476	 Intra-Comp. 398.6
+Test Accuracy: 0.84 (21/25), Test loss: 0.0135
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.2138 	  Acc: 1.0	 Empiric Loss: 0.09415	 Intra-Comp. 398.9
+Test Accuracy: 0.84 (21/25), Test loss: 0.01613
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.205 	  Acc: 1.0	 Empiric Loss: 0.08574	 Intra-Comp. 397.6
+Test Accuracy: 0.84 (21/25), Test loss: 0.01383
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.2441 	  Acc: 1.0	 Empiric Loss: 0.1245	 Intra-Comp. 398.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.01219
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.2152 	  Acc: 1.0	 Empiric Loss: 0.09583	 Intra-Comp. 397.8
+Test Accuracy: 0.84 (21/25), Test loss: 0.01162
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1693 	  Acc: 1.0	 Empiric Loss: 0.05078	 Intra-Comp. 395.1
+Test Accuracy: 0.84 (21/25), Test loss: 0.01302
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1477 	  Acc: 1.0	 Empiric Loss: 0.03048	 Intra-Comp. 390.8
+Test Accuracy: 0.84 (21/25), Test loss: 0.0134
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.2384 	  Acc: 0.938	 Empiric Loss: 0.1215	 Intra-Comp. 389.7
+Test Accuracy: 0.84 (21/25), Test loss: 0.01175
+Test Accuracy: 0.84 (21/25), Test loss: 0.01175
+MaxPosterior Average Test Error: 16.0%	 Runtime: 5.23838752694428 [sec]
+Meta-Testing task 18 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.75 	  Acc: 0.25	 Empiric Loss: 1.749	 Intra-Comp. 0.6782
+Test Accuracy: 0.52 (13/25), Test loss: 0.03887
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 1.112 	  Acc: 0.688	 Empiric Loss: 1.098	 Intra-Comp. 45.69
+Test Accuracy: 0.8 (20/25), Test loss: 0.02431
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.8612 	  Acc: 0.688	 Empiric Loss: 0.8271	 Intra-Comp. 113.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.01541
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.5839 	  Acc: 0.875	 Empiric Loss: 0.5323	 Intra-Comp. 172.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.01144
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.4302 	  Acc: 0.938	 Empiric Loss: 0.3628	 Intra-Comp. 224.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.008389
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.2949 	  Acc: 1.0	 Empiric Loss: 0.2154	 Intra-Comp. 265.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.006581
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.325 	  Acc: 0.938	 Empiric Loss: 0.2352	 Intra-Comp. 299.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.0053
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.3542 	  Acc: 0.938	 Empiric Loss: 0.2562	 Intra-Comp. 326.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.004627
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2916 	  Acc: 0.938	 Empiric Loss: 0.1876	 Intra-Comp. 346.7
+Test Accuracy: 0.96 (24/25), Test loss: 0.004498
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1871 	  Acc: 1.0	 Empiric Loss: 0.0797	 Intra-Comp. 357.9
+Test Accuracy: 0.96 (24/25), Test loss: 0.004889
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.2066 	  Acc: 1.0	 Empiric Loss: 0.09729	 Intra-Comp. 364.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.004994
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.253 	  Acc: 0.938	 Empiric Loss: 0.1429	 Intra-Comp. 367.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.004655
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.1926 	  Acc: 1.0	 Empiric Loss: 0.08212	 Intra-Comp. 368.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.004239
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1875 	  Acc: 1.0	 Empiric Loss: 0.07603	 Intra-Comp. 371.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.004641
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1796 	  Acc: 1.0	 Empiric Loss: 0.06817	 Intra-Comp. 371.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.005153
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1382 	  Acc: 1.0	 Empiric Loss: 0.02804	 Intra-Comp. 367.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.004778
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.1401 	  Acc: 1.0	 Empiric Loss: 0.03158	 Intra-Comp. 361.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.004408
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.2398 	  Acc: 1.0	 Empiric Loss: 0.1318	 Intra-Comp. 360.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.004298
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1592 	  Acc: 1.0	 Empiric Loss: 0.05242	 Intra-Comp. 356.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.004267
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1421 	  Acc: 1.0	 Empiric Loss: 0.03503	 Intra-Comp. 357.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.004915
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1814 	  Acc: 1.0	 Empiric Loss: 0.0733	 Intra-Comp. 360.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.005302
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.2023 	  Acc: 1.0	 Empiric Loss: 0.09362	 Intra-Comp. 362.2
+Test Accuracy: 0.96 (24/25), Test loss: 0.005105
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1791 	  Acc: 1.0	 Empiric Loss: 0.07062	 Intra-Comp. 361.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.004842
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1526 	  Acc: 1.0	 Empiric Loss: 0.04533	 Intra-Comp. 357.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.004551
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.1431 	  Acc: 1.0	 Empiric Loss: 0.03732	 Intra-Comp. 352.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.00613
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1179 	  Acc: 1.0	 Empiric Loss: 0.01436	 Intra-Comp. 345.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.006355
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1494 	  Acc: 1.0	 Empiric Loss: 0.04746	 Intra-Comp. 339.8
+Test Accuracy: 0.96 (24/25), Test loss: 0.00625
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1731 	  Acc: 1.0	 Empiric Loss: 0.07268	 Intra-Comp. 334.6
+Test Accuracy: 0.96 (24/25), Test loss: 0.006093
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1546 	  Acc: 1.0	 Empiric Loss: 0.05617	 Intra-Comp. 328.1
+Test Accuracy: 0.96 (24/25), Test loss: 0.005338
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1638 	  Acc: 1.0	 Empiric Loss: 0.06734	 Intra-Comp. 321.5
+Test Accuracy: 0.96 (24/25), Test loss: 0.004524
+Test Accuracy: 0.96 (24/25), Test loss: 0.004524
+MaxPosterior Average Test Error: 4.0%	 Runtime: 5.170218103565276 [sec]
+Meta-Testing task 19 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.706 	  Acc: 0.312	 Empiric Loss: 1.705	 Intra-Comp. 0.6716
+Test Accuracy: 0.72 (18/25), Test loss: 0.0413
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 0.9109 	  Acc: 0.75	 Empiric Loss: 0.8995	 Intra-Comp. 37.88
+Test Accuracy: 0.92 (23/25), Test loss: 0.02789
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.5417 	  Acc: 0.938	 Empiric Loss: 0.5148	 Intra-Comp. 89.83
+Test Accuracy: 0.92 (23/25), Test loss: 0.02077
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.5551 	  Acc: 0.812	 Empiric Loss: 0.5112	 Intra-Comp. 146.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.01623
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.5432 	  Acc: 0.812	 Empiric Loss: 0.4837	 Intra-Comp. 198.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.01432
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.2536 	  Acc: 1.0	 Empiric Loss: 0.1819	 Intra-Comp. 238.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01154
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.1561 	  Acc: 1.0	 Empiric Loss: 0.0751	 Intra-Comp. 270.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01009
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2411 	  Acc: 0.938	 Empiric Loss: 0.1527	 Intra-Comp. 294.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01034
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.3735 	  Acc: 0.812	 Empiric Loss: 0.2806	 Intra-Comp. 309.6
+Test Accuracy: 0.88 (22/25), Test loss: 0.01265
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.2226 	  Acc: 0.938	 Empiric Loss: 0.129	 Intra-Comp. 312.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.009217
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.1237 	  Acc: 1.0	 Empiric Loss: 0.03085	 Intra-Comp. 309.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.00996
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.2063 	  Acc: 1.0	 Empiric Loss: 0.1127	 Intra-Comp. 312.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01177
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.1392 	  Acc: 1.0	 Empiric Loss: 0.04683	 Intra-Comp. 308.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.01144
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.1703 	  Acc: 1.0	 Empiric Loss: 0.07896	 Intra-Comp. 304.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.01011
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1893 	  Acc: 1.0	 Empiric Loss: 0.09943	 Intra-Comp. 299.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.00993
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1328 	  Acc: 1.0	 Empiric Loss: 0.04477	 Intra-Comp. 293.3
+Test Accuracy: 0.92 (23/25), Test loss: 0.01
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.1899 	  Acc: 0.938	 Empiric Loss: 0.1029	 Intra-Comp. 290.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.009976
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.1094 	  Acc: 1.0	 Empiric Loss: 0.0248	 Intra-Comp. 281.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01125
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1734 	  Acc: 1.0	 Empiric Loss: 0.08965	 Intra-Comp. 279.2
+Test Accuracy: 0.92 (23/25), Test loss: 0.0114
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1145 	  Acc: 1.0	 Empiric Loss: 0.03243	 Intra-Comp. 273.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01256
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.1195 	  Acc: 1.0	 Empiric Loss: 0.0387	 Intra-Comp. 269.5
+Test Accuracy: 0.92 (23/25), Test loss: 0.01204
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.2267 	  Acc: 0.938	 Empiric Loss: 0.1457	 Intra-Comp. 269.8
+Test Accuracy: 0.92 (23/25), Test loss: 0.01054
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1241 	  Acc: 1.0	 Empiric Loss: 0.0446	 Intra-Comp. 265.1
+Test Accuracy: 0.92 (23/25), Test loss: 0.00955
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1421 	  Acc: 1.0	 Empiric Loss: 0.0627	 Intra-Comp. 264.6
+Test Accuracy: 0.92 (23/25), Test loss: 0.01036
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.2353 	  Acc: 0.875	 Empiric Loss: 0.1546	 Intra-Comp. 268.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01087
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.1075 	  Acc: 1.0	 Empiric Loss: 0.0276	 Intra-Comp. 266.4
+Test Accuracy: 0.92 (23/25), Test loss: 0.01185
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.1682 	  Acc: 1.0	 Empiric Loss: 0.08791	 Intra-Comp. 267.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01096
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1124 	  Acc: 1.0	 Empiric Loss: 0.03268	 Intra-Comp. 265.7
+Test Accuracy: 0.92 (23/25), Test loss: 0.01054
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1105 	  Acc: 1.0	 Empiric Loss: 0.03102	 Intra-Comp. 264.8
+Test Accuracy: 0.88 (22/25), Test loss: 0.01009
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.1197 	  Acc: 1.0	 Empiric Loss: 0.04078	 Intra-Comp. 263.0
+Test Accuracy: 0.92 (23/25), Test loss: 0.01067
+Test Accuracy: 0.92 (23/25), Test loss: 0.01067
+MaxPosterior Average Test Error: 8.0%	 Runtime: 5.036595355719328 [sec]
+Meta-Testing task 20 out of 20...
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.804 	  Acc: 0.25	 Empiric Loss: 1.804	 Intra-Comp. 0.6863
+Test Accuracy: 0.52 (13/25), Test loss: 0.04335
+(3.3%)	Epoch: 1 	 Batch: 0 	 Objective: 0.9005 	  Acc: 0.812	 Empiric Loss: 0.8881	 Intra-Comp. 41.45
+Test Accuracy: 0.6 (15/25), Test loss: 0.03475
+(6.7%)	Epoch: 2 	 Batch: 0 	 Objective: 0.5147 	  Acc: 0.938	 Empiric Loss: 0.4844	 Intra-Comp. 101.0
+Test Accuracy: 0.6 (15/25), Test loss: 0.03037
+(10.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.3618 	  Acc: 0.875	 Empiric Loss: 0.3126	 Intra-Comp. 164.0
+Test Accuracy: 0.64 (16/25), Test loss: 0.02788
+(13.3%)	Epoch: 4 	 Batch: 0 	 Objective: 0.3954 	  Acc: 0.875	 Empiric Loss: 0.3288	 Intra-Comp. 221.7
+Test Accuracy: 0.6 (15/25), Test loss: 0.02779
+(16.7%)	Epoch: 5 	 Batch: 0 	 Objective: 0.2795 	  Acc: 0.938	 Empiric Loss: 0.2	 Intra-Comp. 264.8
+Test Accuracy: 0.8 (20/25), Test loss: 0.02333
+(20.0%)	Epoch: 6 	 Batch: 0 	 Objective: 0.3054 	  Acc: 0.938	 Empiric Loss: 0.2161	 Intra-Comp. 297.6
+Test Accuracy: 0.84 (21/25), Test loss: 0.02023
+(23.3%)	Epoch: 7 	 Batch: 0 	 Objective: 0.2355 	  Acc: 1.0	 Empiric Loss: 0.1401	 Intra-Comp. 318.1
+Test Accuracy: 0.8 (20/25), Test loss: 0.01901
+(26.7%)	Epoch: 8 	 Batch: 0 	 Objective: 0.2836 	  Acc: 1.0	 Empiric Loss: 0.1827	 Intra-Comp. 336.6
+Test Accuracy: 0.76 (19/25), Test loss: 0.0194
+(30.0%)	Epoch: 9 	 Batch: 0 	 Objective: 0.1887 	  Acc: 1.0	 Empiric Loss: 0.08498	 Intra-Comp. 345.6
+Test Accuracy: 0.8 (20/25), Test loss: 0.01971
+(33.3%)	Epoch: 10 	 Batch: 0 	 Objective: 0.228 	  Acc: 1.0	 Empiric Loss: 0.1226	 Intra-Comp. 351.3
+Test Accuracy: 0.8 (20/25), Test loss: 0.0204
+(36.7%)	Epoch: 11 	 Batch: 0 	 Objective: 0.299 	  Acc: 0.938	 Empiric Loss: 0.1928	 Intra-Comp. 353.9
+Test Accuracy: 0.76 (19/25), Test loss: 0.02298
+(40.0%)	Epoch: 12 	 Batch: 0 	 Objective: 0.2381 	  Acc: 0.938	 Empiric Loss: 0.1327	 Intra-Comp. 351.4
+Test Accuracy: 0.8 (20/25), Test loss: 0.02094
+(43.3%)	Epoch: 13 	 Batch: 0 	 Objective: 0.2028 	  Acc: 0.938	 Empiric Loss: 0.09855	 Intra-Comp. 347.6
+Test Accuracy: 0.76 (19/25), Test loss: 0.0191
+(46.7%)	Epoch: 14 	 Batch: 0 	 Objective: 0.1479 	  Acc: 1.0	 Empiric Loss: 0.04546	 Intra-Comp. 341.4
+Test Accuracy: 0.8 (20/25), Test loss: 0.01901
+(50.0%)	Epoch: 15 	 Batch: 0 	 Objective: 0.1889 	  Acc: 1.0	 Empiric Loss: 0.08791	 Intra-Comp. 336.7
+Test Accuracy: 0.76 (19/25), Test loss: 0.02234
+(53.3%)	Epoch: 16 	 Batch: 0 	 Objective: 0.1589 	  Acc: 1.0	 Empiric Loss: 0.05988	 Intra-Comp. 329.9
+Test Accuracy: 0.68 (17/25), Test loss: 0.02375
+(56.7%)	Epoch: 17 	 Batch: 0 	 Objective: 0.128 	  Acc: 1.0	 Empiric Loss: 0.0315	 Intra-Comp. 321.6
+Test Accuracy: 0.76 (19/25), Test loss: 0.01945
+(60.0%)	Epoch: 18 	 Batch: 0 	 Objective: 0.1531 	  Acc: 1.0	 Empiric Loss: 0.05874	 Intra-Comp. 314.7
+Test Accuracy: 0.76 (19/25), Test loss: 0.01993
+(63.3%)	Epoch: 19 	 Batch: 0 	 Objective: 0.1578 	  Acc: 1.0	 Empiric Loss: 0.0652	 Intra-Comp. 308.7
+Test Accuracy: 0.8 (20/25), Test loss: 0.02312
+(66.7%)	Epoch: 20 	 Batch: 0 	 Objective: 0.133 	  Acc: 1.0	 Empiric Loss: 0.04182	 Intra-Comp. 303.8
+Test Accuracy: 0.64 (16/25), Test loss: 0.02799
+(70.0%)	Epoch: 21 	 Batch: 0 	 Objective: 0.2163 	  Acc: 0.938	 Empiric Loss: 0.1249	 Intra-Comp. 304.7
+Test Accuracy: 0.8 (20/25), Test loss: 0.0218
+(73.3%)	Epoch: 22 	 Batch: 0 	 Objective: 0.1324 	  Acc: 1.0	 Empiric Loss: 0.04274	 Intra-Comp. 298.9
+Test Accuracy: 0.84 (21/25), Test loss: 0.01864
+(76.7%)	Epoch: 23 	 Batch: 0 	 Objective: 0.1237 	  Acc: 1.0	 Empiric Loss: 0.035	 Intra-Comp. 295.8
+Test Accuracy: 0.8 (20/25), Test loss: 0.02051
+(80.0%)	Epoch: 24 	 Batch: 0 	 Objective: 0.147 	  Acc: 1.0	 Empiric Loss: 0.05835	 Intra-Comp. 295.5
+Test Accuracy: 0.84 (21/25), Test loss: 0.01956
+(83.3%)	Epoch: 25 	 Batch: 0 	 Objective: 0.214 	  Acc: 0.938	 Empiric Loss: 0.1249	 Intra-Comp. 297.0
+Test Accuracy: 0.84 (21/25), Test loss: 0.01864
+(86.7%)	Epoch: 26 	 Batch: 0 	 Objective: 0.144 	  Acc: 1.0	 Empiric Loss: 0.05558	 Intra-Comp. 294.6
+Test Accuracy: 0.8 (20/25), Test loss: 0.01902
+(90.0%)	Epoch: 27 	 Batch: 0 	 Objective: 0.1461 	  Acc: 1.0	 Empiric Loss: 0.05776	 Intra-Comp. 294.3
+Test Accuracy: 0.88 (22/25), Test loss: 0.02284
+(93.3%)	Epoch: 28 	 Batch: 0 	 Objective: 0.1091 	  Acc: 1.0	 Empiric Loss: 0.02073	 Intra-Comp. 294.7
+Test Accuracy: 0.88 (22/25), Test loss: 0.02246
+(96.7%)	Epoch: 29 	 Batch: 0 	 Objective: 0.2793 	  Acc: 0.938	 Empiric Loss: 0.1901	 Intra-Comp. 297.4
+Test Accuracy: 0.84 (21/25), Test loss: 0.01886
+Test Accuracy: 0.84 (21/25), Test loss: 0.01886
+MaxPosterior Average Test Error: 16.0%	 Runtime: 5.248744596727192 [sec]
+Parameter name: log_var, mean value: -9.59, STD: 0.197
+Parameter name: log_var, mean value: -9.56, STD: 0.24
+Parameter name: log_var, mean value: -9.44, STD: 0.308
+Parameter name: log_var, mean value: -8.86, STD: 0.225
+Total runtime: 00 hours, 18 minutes and 46 seconds
+----- Final Results: 
+----- Meta-Testing - Avg test err: 7.6%, STD: 4.88%

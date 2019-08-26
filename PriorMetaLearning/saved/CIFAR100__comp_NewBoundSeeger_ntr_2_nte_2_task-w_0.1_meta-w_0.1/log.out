@@ -1,0 +1,28 @@
+Log file created at  2019-04-22 16:54:23
+Run script: main_Meta_Bayes.py
+Parameters:
+Namespace(K_Shot_MetaTest=100, K_Shot_MetaTrain=100, N_Way=5, batch_size=16, chars_split_type='random', complexity_type='NewBoundSeeger', data_path='/data5/tlgao/meta/meta-learning-adjusting-priors/ML_data_sets', data_source='CIFAR100', data_transform='None', limit_train_samples_in_test_tasks=2000, load_model_path='', loss_type='CrossEntropy', lr=0.001, meta_batch_size=16, meta_complex_w=0.1, mode='MetaTrain', model_name='CIFARNet', n_inner_steps=50, n_meta_test_epochs=4, n_meta_train_chars=1200, n_meta_train_classes=500, n_meta_train_epochs=3, n_pixels_shuffles=200, n_test_tasks=2, n_train_tasks=2, result_dir='saved/CIFAR100__comp_NewBoundSeeger_ntr_2_nte_2_task-w_0.1_meta-w_0.1', run_name='CIFAR100__comp_NewBoundSeeger_ntr_2_nte_2_task-w_0.1_meta-w_0.1', seed=1, task_complex_w=0.1, test_batch_size=128)
+--------------------------------------------------
+--- Generating 2 training-tasks
+Stochastic-CIFARNet
+---- Meta-Training set: 2 tasks
+Run finished at:  2019-04-22 16:54:53
+MaxPosterior Average Test Error: 45.9%	 Runtime: 19.021886648610234 [sec]
+Trained prior saved in saved/CIFAR100__comp_NewBoundSeeger_ntr_2_nte_2_task-w_0.1_meta-w_0.1/model.pt
+---- Generating 2 test-tasks with at most 2000 training samples
+Meta-Testing with transferred prior....
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.655 	  Acc: 0.188	 Empiric Loss: 1.632	 Intra-Comp. 0.2378
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.226 	  Acc: 0.438	 Empiric Loss: 1.206	 Intra-Comp. 0.2082
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.129 	  Acc: 0.562	 Empiric Loss: 1.109	 Intra-Comp. 0.2008
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 0.911 	  Acc: 0.75	 Empiric Loss: 0.8927	 Intra-Comp. 0.183
+MaxPosterior Average Test Error: 39.6%	 Runtime: 14.434886547736824 [sec]
+0 task : Error 0.396, Complexity 0.19063284993171692, loss 0.9936017990112305
+(0.0%)	Epoch: 0 	 Batch: 0 	 Objective: 1.656 	  Acc: 0.0625	 Empiric Loss: 1.632	 Intra-Comp. 0.2378
+(25.0%)	Epoch: 1 	 Batch: 0 	 Objective: 1.1 	  Acc: 0.562	 Empiric Loss: 1.08	 Intra-Comp. 0.1985
+(50.0%)	Epoch: 2 	 Batch: 0 	 Objective: 1.04 	  Acc: 0.625	 Empiric Loss: 1.021	 Intra-Comp. 0.1938
+(75.0%)	Epoch: 3 	 Batch: 0 	 Objective: 1.071 	  Acc: 0.625	 Empiric Loss: 1.051	 Intra-Comp. 0.1963
+MaxPosterior Average Test Error: 40.6%	 Runtime: 15.042502242140472 [sec]
+1 task : Error 0.406, Complexity 0.19081425666809082, loss 1.0589654445648193
+Total runtime: 00 hours, 01 minutes and 00 seconds
+----- Final Results: 
+----- Meta-Testing - Avg test err: 40.1%, STD: 0.5%, Avg test loss : 1.03, std : 0.0327, Avg complexity : 0.191, std : 9.07e-05

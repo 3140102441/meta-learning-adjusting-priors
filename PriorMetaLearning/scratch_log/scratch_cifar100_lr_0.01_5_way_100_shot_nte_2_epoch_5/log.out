@@ -1,0 +1,53 @@
+Written by scratch.py at  2019-05-03 15:10:42
+Train : Task 0, Epoch 0/5, loss : 1.6046756505966187, acc : 0.2109375
+Train : Task 0, Epoch 0/5, loss : 1.5273298025131226, acc : 0.3359375
+Train : Task 0, Epoch 0/5, loss : 1.5806158781051636, acc : 0.453125
+Train : Task 0, Epoch 0/5, loss : 1.4439780712127686, acc : 0.41379310344827586
+Test : Task 0 , Epoch 0/5, Test Acc: 0.3008
+Train : Task 0, Epoch 1/5, loss : 1.5713987350463867, acc : 0.3359375
+Train : Task 0, Epoch 1/5, loss : 1.36146879196167, acc : 0.3828125
+Train : Task 0, Epoch 1/5, loss : 1.430288553237915, acc : 0.3515625
+Train : Task 0, Epoch 1/5, loss : 1.2561496496200562, acc : 0.4396551724137931
+Test : Task 0 , Epoch 1/5, Test Acc: 0.4988
+Train : Task 0, Epoch 2/5, loss : 1.1567165851593018, acc : 0.5234375
+Train : Task 0, Epoch 2/5, loss : 1.3182178735733032, acc : 0.46875
+Train : Task 0, Epoch 2/5, loss : 1.1151816844940186, acc : 0.5859375
+Train : Task 0, Epoch 2/5, loss : 1.2268931865692139, acc : 0.5086206896551724
+Test : Task 0 , Epoch 2/5, Test Acc: 0.5072
+Train : Task 0, Epoch 3/5, loss : 1.1254340410232544, acc : 0.5390625
+Train : Task 0, Epoch 3/5, loss : 1.0152568817138672, acc : 0.6171875
+Train : Task 0, Epoch 3/5, loss : 0.9990721344947815, acc : 0.5859375
+Train : Task 0, Epoch 3/5, loss : 0.9157264828681946, acc : 0.6293103448275862
+Test : Task 0 , Epoch 3/5, Test Acc: 0.6396
+Train : Task 0, Epoch 4/5, loss : 0.9729467034339905, acc : 0.6328125
+Train : Task 0, Epoch 4/5, loss : 0.9439268708229065, acc : 0.6171875
+Train : Task 0, Epoch 4/5, loss : 0.9224387407302856, acc : 0.6484375
+Train : Task 0, Epoch 4/5, loss : 0.69651198387146, acc : 0.7327586206896551
+Test : Task 0 , Epoch 4/5, Test Acc: 0.668
+Task 0 Best Loss : 1.001875877380371, Acc : 0.668
+Train : Task 1, Epoch 0/5, loss : 1.6027328968048096, acc : 0.2734375
+Train : Task 1, Epoch 0/5, loss : 1.598780632019043, acc : 0.28125
+Train : Task 1, Epoch 0/5, loss : 1.5545483827590942, acc : 0.3125
+Train : Task 1, Epoch 0/5, loss : 2.4560914039611816, acc : 0.25862068965517243
+Test : Task 1 , Epoch 0/5, Test Acc: 0.292
+Train : Task 1, Epoch 1/5, loss : 1.4442036151885986, acc : 0.3125
+Train : Task 1, Epoch 1/5, loss : 1.5121313333511353, acc : 0.296875
+Train : Task 1, Epoch 1/5, loss : 1.5315933227539062, acc : 0.2265625
+Train : Task 1, Epoch 1/5, loss : 1.4788516759872437, acc : 0.27586206896551724
+Test : Task 1 , Epoch 1/5, Test Acc: 0.4144
+Train : Task 1, Epoch 2/5, loss : 1.3194389343261719, acc : 0.453125
+Train : Task 1, Epoch 2/5, loss : 1.361120343208313, acc : 0.4140625
+Train : Task 1, Epoch 2/5, loss : 1.3383092880249023, acc : 0.3984375
+Train : Task 1, Epoch 2/5, loss : 1.2944207191467285, acc : 0.39655172413793105
+Test : Task 1 , Epoch 2/5, Test Acc: 0.4508
+Train : Task 1, Epoch 3/5, loss : 1.2224570512771606, acc : 0.453125
+Train : Task 1, Epoch 3/5, loss : 1.1771365404129028, acc : 0.5234375
+Train : Task 1, Epoch 3/5, loss : 1.1062105894088745, acc : 0.5078125
+Train : Task 1, Epoch 3/5, loss : 1.1883714199066162, acc : 0.5
+Test : Task 1 , Epoch 3/5, Test Acc: 0.5024
+Train : Task 1, Epoch 4/5, loss : 1.0923086404800415, acc : 0.6015625
+Train : Task 1, Epoch 4/5, loss : 1.165520429611206, acc : 0.4921875
+Train : Task 1, Epoch 4/5, loss : 1.0218076705932617, acc : 0.5703125
+Train : Task 1, Epoch 4/5, loss : 1.0727601051330566, acc : 0.5517241379310345
+Test : Task 1 , Epoch 4/5, Test Acc: 0.4652
+Task 1 Best Loss : 1.2219963073730469, Acc : 0.5024

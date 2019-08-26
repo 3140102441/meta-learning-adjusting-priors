@@ -17,12 +17,14 @@ class StochasticLayer(nn.Module):
         # create the layer parameters
         # values initialization is done later
         self.w_mu = get_param(weights_size)
-        self.w_log_var = get_param(weights_size)
-        self.w = {'mean': self.w_mu, 'log_var': self.w_log_var}
+        #self.w_log_var = get_param(weights_size)
+        self.w = {'mean': self.w_mu}
+       # self.w = {'mean': self.w_mu, 'log_var': self.w_log_var}
         if bias_size is not None:
             self.b_mu = get_param(bias_size)
-            self.b_log_var = get_param(bias_size)
-            self.b = {'mean': self.b_mu, 'log_var': self.b_log_var}
+            #self.b_log_var = get_param(bias_size)
+            self.b = {'mean': self.b_mu}
+            #self.b = {'mean': self.b_mu, 'log_var': self.b_log_var}
 
 
     def forward(self, x):
@@ -32,7 +34,8 @@ class StochasticLayer(nn.Module):
         # self.operation should be linear or conv
 
         if self.use_bias:
-            b_var = torch.exp(self.b_log_var)
+            #b_var = torch.exp(self.b_log_var)
+            b_var = None
             bias_mean = self.b['mean']
         else:
             b_var = None
@@ -43,19 +46,22 @@ class StochasticLayer(nn.Module):
         eps_std = self.eps_std
         if eps_std == 0.0:
             layer_out = out_mean
+            #print("std = 0")
         else:
-            w_var = torch.exp(self.w_log_var)
-            out_var = self.operation(x.pow(2), w_var, bias=b_var)
+            # 这两行其实看不懂在干嘛
+            #w_var = torch.exp(self.w_log_var)
+            #out_var = self.operation(x.pow(2), w_var, bias=b_var)
 
             # Draw Gaussian random noise, N(0, eps_std) in the size of the
             # layer output:
+            #new compute a data with same data type
             noise = out_mean.data.new(out_mean.size()).normal_(0, eps_std)
             # noise = randn_gpu(size=out_mean.size(), mean=0, std=eps_std)
 
             noise = Variable(noise, requires_grad=False)
 
-            out_var = F.relu(out_var) # to avoid nan due to numerical errors in sqrt
-            layer_out = out_mean + noise * torch.sqrt(out_var)
+            #out_var = F.relu(out_var) # to avoid nan due to numerical errors in sqrt
+            layer_out = out_mean + noise
 
         return layer_out
 
@@ -82,8 +88,9 @@ class StochasticLinear(StochasticLayer):
         else:
             bias_size = None
         self.create_stochastic_layer(weights_size, bias_size, prm)
+        #Xavier init defined by the authors
         init_stochastic_linear(self, prm.log_var_init)
-        self.eps_std = 1.0
+        self.eps_std = 0
 
 
     def __str__(self):
@@ -99,6 +106,8 @@ class StochasticLinear(StochasticLayer):
 class StochasticConv2d(StochasticLayer):
 
     def __init__(self, in_channels, out_channels, kernel_size, prm, use_bias=False, stride=1, padding=0, dilation=1):
+        from pudb import set_trace
+        #set_trace()
         super(StochasticConv2d, self).__init__()
         self.in_channels = in_channels
         self.out_channels = out_channels
@@ -106,7 +115,7 @@ class StochasticConv2d(StochasticLayer):
         self.stride = stride
         self.padding = padding
         self.dilation = dilation
-        kernel_size = make_pair(kernel_size)
+        kernel_size = make_pair(kernel_size) # k   -->   (k,k)
         self.kernel_size = kernel_size
 
         weights_size = (out_channels, in_channels, kernel_size[0], kernel_size[1])
@@ -116,7 +125,8 @@ class StochasticConv2d(StochasticLayer):
             bias_size = None
         self.create_stochastic_layer(weights_size, bias_size, prm)
         init_stochastic_conv2d(self, prm.log_var_init)
-        self.eps_std = 1.0
+        #self.eps_std = 1.0
+        self.eps_std = 0
 
 
     def __str__(self):

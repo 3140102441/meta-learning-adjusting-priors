@@ -1,0 +1,17 @@
+Log file created at  2019-03-18 14:46:01
+Run script: main_Meta_Bayes.py
+Parameters:
+Namespace(K_Shot_MetaTest=100, K_Shot_MetaTrain=100, N_Way=5, batch_size=16, chars_split_type='random', complexity_type='NewBoundSeeger', data_path='/data5/tlgao/meta/meta-learning-adjusting-priors/ML_data_sets', data_source='CIFAR100', data_transform='None', limit_train_samples_in_test_tasks=2000, load_model_path='', loss_type='CrossEntropy', lr=0.001, meta_batch_size=16, meta_complex_w=0.0, mode='MetaTrain', model_name='CIFARNet', n_inner_steps=50, n_meta_test_epochs=20, n_meta_train_chars=1200, n_meta_train_classes=500, n_meta_train_epochs=20, n_pixels_shuffles=200, n_test_tasks=10, n_train_tasks=5, result_dir='saved/CIFAR100_5_tasks_split_comp_NewBoundSeeger', run_name='CIFAR100_5_tasks_split_comp_NewBoundSeeger', seed=1, task_complex_w=0.0, test_batch_size=128)
+--------------------------------------------------
+--- Generating 5 training-tasks
+Stochastic-CIFARNet
+---- Meta-Training set: 5 tasks
+Run finished at:  2019-03-18 14:51:26
+MaxPosterior Average Test Error: 33.5%	 Runtime: 309.8168307663873 [sec]
+Trained prior saved in saved/CIFAR100_5_tasks_split_comp_NewBoundSeeger/model.pt
+---- Generating 10 test-tasks with at most 2000 training samples
+Meta-Testing with transferred prior....
+MaxPosterior Average Test Error: 29.8%	 Runtime: 62.881994504947215 [sec]
+MaxPosterior Average Test Error: 23.1%	 Runtime: 60.745400784071535 [sec]
+MaxPosterior Average Test Error: 27.4%	 Runtime: 61.038174089975655 [sec]
+MaxPosterior Average Test Error: 27.7%	 Runtime: 59.718716895673424 [sec]

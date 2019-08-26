@@ -9,7 +9,8 @@ import multiprocessing, os
 import numpy as np
 from Utils import omniglot
 from Utils import imagenet_data
-
+from Utils import cifar100
+from Utils import Caltech256
 import matplotlib.pyplot as plt
 
 # -------------------------------------------------------------------------------------------
@@ -29,18 +30,29 @@ class Task_Generator(object):
             # Later, tasks will be generated using this characters
             self.chars_splits = omniglot.split_chars(prm.data_path, prm.chars_split_type, prm.n_meta_train_chars)
 
-        elif self.data_source == 'SmallImageNet':
-            self.class_split = imagenet_data.split_classes(prm)
+        #elif self.data_source == 'SmallImageNet':
+        #    self.class_split = imagenet_data.split_classes(prm)
+
+        elif self.data_source == 'Caltech256':
+            self.class_split = Caltech256.split_classes()
+
+        elif self.data_source == 'CIFAR100':
+            self.class_split = cifar100.split_classes()
+
+        else:
+            raise Exception("No such dataset")
 
 
     def create_meta_batch(self, prm, n_tasks, meta_split='meta_train', limit_train_samples=None):
         ''' generate a meta-batch of tasks'''
-        data_loaders = [self.get_data_loader(prm, meta_split, limit_train_samples) for i_task in range(n_tasks)]
+        #data_loaders = [self.get_data_loader(prm, meta_split, limit_train_samples) for i_task in range(n_tasks)]
+        data_loaders = [self.get_data_loader(prm, meta_split, limit_train_samples, i_task = i_task) for i_task in range(n_tasks)]
         return data_loaders
 
 
-    def get_data_loader(self, prm, meta_split='meta_train', limit_train_samples=None):
+    def get_data_loader(self, prm, meta_split='meta_train', limit_train_samples=None, i_task = None):
 
+        """
         # Set data transformation function:
         if self.data_transform == 'Permute_Pixels':
             # Create a fixed random pixels permutation, applied to all images
@@ -63,7 +75,8 @@ class Task_Generator(object):
             final_input_trans = [create_rotation_trans()]
             target_trans = []
 
-        elif self.data_transform == 'None':
+        """
+        if self.data_transform == 'None':
             final_input_trans = None
             target_trans = []
 
@@ -102,6 +115,33 @@ class Task_Generator(object):
             train_dataset, test_dataset = omniglot.get_task(chars, prm.data_path,
                 n_labels=prm.N_Way, k_train_shot=k_train_shot,
                 final_input_trans=final_input_trans, target_transform=target_trans)
+        #This part is for get_split_task
+        # in which the cls of MAML do not overlap
+        #elif self.data_source == 'CIFAR100':
+        #    classes = self.class_split[meta_split] #   list of chars dirs  for current meta-split
+        #    if meta_split == 'meta_test':
+        #        k_train_shot = prm.K_Shot_MetaTest
+        #        train_dataset, test_dataset = cifar100.get_task(classes, prm.N_Way, k_train_shot)
+        #    else:
+        #        k_train_shot = prm.K_Shot_MetaTrain
+        #        train_dataset, test_dataset = cifar100.get_split_task(classes, prm.N_Way, k_train_shot, i_task)
+
+        elif self.data_source == 'Caltech256':
+            classes = self.class_split[meta_split]
+            if meta_split == 'meta_test':
+                k_train_shot = prm.K_Shot_MetaTest
+            else:
+                k_train_shot = prm.K_Shot_MetaTrain
+            train_dataset, test_dataset = Caltech256.get_task(classes, prm.N_Way, k_train_shot)
+
+        elif self.data_source == 'CIFAR100':
+            classes = self.class_split[meta_split]
+            if meta_split == 'meta_test':
+                k_train_shot = prm.K_Shot_MetaTest
+            else:
+                k_train_shot = prm.K_Shot_MetaTrain
+            train_dataset, test_dataset = cifar100.get_task(classes, prm.N_Way, k_train_shot)
+
         else:
             raise ValueError('Invalid data_source')
 
@@ -112,8 +152,10 @@ class Task_Generator(object):
 
         # Create data loaders:
         # kwargs = {'num_workers': multiprocessing.cpu_count(), 'pin_memory': True}   # this might cause "connection refuse" problems
-        kwargs = {'num_workers': 0, 'pin_memory': True}
+        kwargs = {'num_workers': 1, 'pin_memory': True}
 
+        import pudb
+        #pudb.set_trace()
         train_loader = data_utils.DataLoader(train_dataset, batch_size=prm.batch_size, shuffle=True, **kwargs)
         test_loader = data_utils.DataLoader(test_dataset, batch_size=prm.test_batch_size, shuffle=True, **kwargs)
 
@@ -205,6 +247,12 @@ def get_info(prm):
 
     elif prm.data_source == 'SmallImageNet':
         info = {'input_shape': (3, 84, 84), 'n_classes': prm.N_Way}
+
+    elif prm.data_source == 'Caltech256':
+        info = {'input_shape': (3, 84, 84), 'n_classes': prm.N_Way}
+
+    elif prm.data_source == 'CIFAR100':
+        info = {'input_shape': (3, 32, 32), 'n_classes': prm.N_Way}
 
     else:
         raise ValueError('Invalid data_source')

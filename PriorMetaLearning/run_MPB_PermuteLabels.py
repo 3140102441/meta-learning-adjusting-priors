@@ -1,6 +1,8 @@
 from subprocess import call, run
 import argparse
 import os
+import sys
+sys.path.append("/home/tlgao/meta/meta-learning-adjusting-priors")
 
 n_train_tasks = 5
 
@@ -22,7 +24,7 @@ call(['python', 'main_Meta_Bayes.py',
       '--mode', 'MetaTrain',
       '--complexity_type',  complexity_type,
       '--model-name', 'ConvNet3',
-      '--n_meta_train_epochs', '150',
+      '--n_meta_train_epochs', '50',
       '--n_meta_test_epochs', '200',
       '--n_test_tasks', '20',
       '--meta_batch_size', '16',

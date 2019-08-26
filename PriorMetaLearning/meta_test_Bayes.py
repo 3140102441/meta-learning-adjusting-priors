@@ -6,7 +6,8 @@ import timeit
 from Models.stochastic_models import get_model
 from Utils import common as cmn, data_gen
 from Utils.Bayes_utils import get_bayes_task_objective, run_test_Bayes
-from Utils.common import grad_step, count_correct, get_loss_criterion, write_to_log
+from Utils.common import grad_step, count_correct, get_loss_criterion, write_to_log, load_model_state
+
 
 
 def run_learning(task_data, prior_model, prm, init_from_prior=True, verbose=1):
@@ -43,6 +44,8 @@ def run_learning(task_data, prior_model, prm, init_from_prior=True, verbose=1):
     # The data-sets of the new task:
     train_loader = task_data['train']
     test_loader = task_data['test']
+    #import pudb
+    #pudb.set_trace()
     n_train_samples = len(train_loader.dataset)
     n_batches = len(train_loader)
 
@@ -59,7 +62,13 @@ def run_learning(task_data, prior_model, prm, init_from_prior=True, verbose=1):
 
         post_model.train()
 
+        train_info = {}
+        train_info["task_comp"] = 0.0
+        train_info["total_loss"] = 0.0
+
+        cnt = 0
         for batch_idx, batch_data in enumerate(train_loader):
+            cnt += 1
 
             correct_count = 0
             sample_count = 0
@@ -76,7 +85,8 @@ def run_learning(task_data, prior_model, prm, init_from_prior=True, verbose=1):
                 outputs = post_model(inputs)
                 curr_empirical_loss = loss_criterion(outputs, targets)
 
-                curr_empirical_loss, curr_complexity = get_bayes_task_objective(prm, prior_model, post_model,
+                #hyper_kl = 0 when testing
+                curr_empirical_loss, curr_complexity, task_info = get_bayes_task_objective(prm, prior_model, post_model,
                                                            n_train_samples, curr_empirical_loss, noised_prior=False)
 
                 task_empirical_loss += (1 / n_MC) * curr_empirical_loss
@@ -87,18 +97,26 @@ def run_learning(task_data, prior_model, prm, init_from_prior=True, verbose=1):
 
             # Total objective:
 
-            total_objective = task_empirical_loss + task_complexity
+            total_objective = task_empirical_loss + prm.task_complex_w * task_complexity
+
+            train_info["task_comp"] += task_complexity.data[0]
+            train_info["total_loss"] += total_objective.data[0]
 
             # Take gradient step with the posterior:
             grad_step(total_objective, optimizer, lr_schedule, prm.lr, i_epoch)
 
 
+
             # Print status:
             if batch_idx % log_interval == 0:
                 batch_acc = correct_count / sample_count
-                print(cmn.status_string(i_epoch, prm.n_meta_test_epochs, batch_idx, n_batches, batch_acc, total_objective.data[0]) +
-                      ' Empiric Loss: {:.4}\t Intra-Comp. {:.4}'.
-                      format(task_empirical_loss.data[0], task_complexity.data[0]))
+                write_to_log(cmn.status_string(i_epoch, prm.n_meta_test_epochs, batch_idx, n_batches, batch_acc, total_objective.data[0]) +
+                        ' Empiric Loss: {:.4}\t Intra-Comp. {:.4}, w_kld {:.4}, b_kld {:.4}'.
+                      format(task_empirical_loss.data[0], task_complexity.data[0], task_info["w_kld"], task_info["b_kld"]), prm)
+
+        train_info["task_comp"] /= cnt
+        train_info["total_loss"] /= cnt
+        return train_info
 
 
     # -----------------------------------------------------------------------------------------------------------#
@@ -112,14 +130,24 @@ def run_learning(task_data, prior_model, prm, init_from_prior=True, verbose=1):
     start_time = timeit.default_timer()
 
     # Training loop:
+    best_acc = -1
+    best_acc_loss = -1
+    best_acc_comp = -1
+
     for i_epoch in range(prm.n_meta_test_epochs):
-        run_train_epoch(i_epoch)
+        train_info = run_train_epoch(i_epoch)
+        test_acc, test_loss = run_test_Bayes(post_model, test_loader, loss_criterion, prm)
+        if test_acc > best_acc:
+            best_acc = test_acc
+            best_acc_loss = test_loss
+            best_acc_comp = train_info["task_comp"]
+
 
     # Test:
     test_acc, test_loss = run_test_Bayes(post_model, test_loader, loss_criterion, prm)
 
     stop_time = timeit.default_timer()
-    cmn.write_final_result(test_acc, stop_time - start_time, prm, result_name=prm.test_type, verbose=verbose)
+    cmn.write_final_result(best_acc, stop_time - start_time, prm, result_name=prm.test_type, verbose=verbose)
 
-    test_err = 1 - test_acc
-    return test_err, post_model
+    test_err = 1 - best_acc
+    return test_err, best_acc_comp, best_acc_loss, post_model

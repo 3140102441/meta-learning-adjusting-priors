@@ -1,0 +1,36 @@
+Log file created at  2019-03-18 13:52:11
+Run script: main_Meta_Bayes.py
+Parameters:
+Namespace(K_Shot_MetaTest=15, K_Shot_MetaTrain=15, N_Way=5, batch_size=16, chars_split_type='random', complexity_type='NewBoundSeeger', data_path='/data5/tlgao/meta/meta-learning-adjusting-priors/ML_data_sets', data_source='Omniglot', data_transform='None', limit_train_samples_in_test_tasks=2000, load_model_path='', loss_type='CrossEntropy', lr=0.001, meta_batch_size=16, meta_complex_w=0.0, mode='MetaTrain', model_name='ConvNet3', n_inner_steps=50, n_meta_test_epochs=20, n_meta_train_chars=1200, n_meta_train_classes=500, n_meta_train_epochs=20, n_pixels_shuffles=200, n_test_tasks=20, n_train_tasks=20, result_dir='saved/PermutedLabels_20_Tasks_NewBoundSeeger_Comp', run_name='PermutedLabels_20_Tasks_NewBoundSeeger_Comp', seed=1, task_complex_w=0.0001, test_batch_size=128)
+--------------------------------------------------
+--- Generating 20 training-tasks
+Stochastic-ConvNet3
+---- Meta-Training set: 20 tasks
+Run finished at:  2019-03-18 13:53:39
+MaxPosterior Average Test Error: 10.4%	 Runtime: 81.63980353297666 [sec]
+Trained prior saved in saved/PermutedLabels_20_Tasks_NewBoundSeeger_Comp/model.pt
+---- Generating 20 test-tasks with at most 2000 training samples
+Meta-Testing with transferred prior....
+MaxPosterior Average Test Error: 16.0%	 Runtime: 4.1472455081529915 [sec]
+MaxPosterior Average Test Error: 8.0%	 Runtime: 4.066389703657478 [sec]
+MaxPosterior Average Test Error: 20.0%	 Runtime: 4.030639653094113 [sec]
+MaxPosterior Average Test Error: 0.0%	 Runtime: 3.942893471568823 [sec]
+MaxPosterior Average Test Error: 12.0%	 Runtime: 3.768322096206248 [sec]
+MaxPosterior Average Test Error: 16.0%	 Runtime: 3.9690776681527495 [sec]
+MaxPosterior Average Test Error: 20.0%	 Runtime: 3.757228208705783 [sec]
+MaxPosterior Average Test Error: 24.0%	 Runtime: 3.770625920034945 [sec]
+MaxPosterior Average Test Error: 16.0%	 Runtime: 3.7316622980870306 [sec]
+MaxPosterior Average Test Error: 24.0%	 Runtime: 4.277871155180037 [sec]
+MaxPosterior Average Test Error: 8.0%	 Runtime: 4.204882309772074 [sec]
+MaxPosterior Average Test Error: 8.0%	 Runtime: 4.0398486838676035 [sec]
+MaxPosterior Average Test Error: 12.0%	 Runtime: 3.7786863148212433 [sec]
+MaxPosterior Average Test Error: 8.0%	 Runtime: 3.81555447075516 [sec]
+MaxPosterior Average Test Error: 4.0%	 Runtime: 3.9000675240531564 [sec]
+MaxPosterior Average Test Error: 0.0%	 Runtime: 3.883127973880619 [sec]
+MaxPosterior Average Test Error: 8.0%	 Runtime: 4.063854550942779 [sec]
+MaxPosterior Average Test Error: 12.0%	 Runtime: 3.8189809527248144 [sec]
+MaxPosterior Average Test Error: 28.0%	 Runtime: 3.5586613942869008 [sec]
+MaxPosterior Average Test Error: 12.0%	 Runtime: 3.674849051050842 [sec]
+Total runtime: 00 hours, 02 minutes and 49 seconds
+----- Final Results: 
+----- Meta-Testing - Avg test err: 12.8%, STD: 7.55%

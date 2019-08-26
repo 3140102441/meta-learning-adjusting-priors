@@ -6,6 +6,7 @@ import torch
 from torch.autograd import Variable
 import math
 from Utils import common as cmn, data_gen
+from Utils.common import debug
 from Utils.common import count_correct, get_value
 import torch.nn.functional as F
 from Models.stochastic_layers import StochasticLayer
@@ -48,7 +49,7 @@ def run_test_max_posterior(model, test_loader, loss_criterion, prm):
         test_loss += loss_criterion(outputs, targets)  # sum the mean loss in batch
         n_correct += count_correct(outputs, targets)
 
-    test_loss /= n_test_samples
+    test_loss /= len(test_loader)
     test_acc = n_correct / n_test_samples
     info = {'test_acc':test_acc, 'n_correct':n_correct, 'test_type':'max_posterior',
             'n_test_samples':n_test_samples, 'test_loss':get_value(test_loss)}
@@ -131,7 +132,7 @@ def get_meta_complexity_term(hyper_kl, prm, n_train_tasks):
 
         elif prm.complexity_type == 'Variational_Bayes':
             meta_complex_term = hyper_kl
-            
+
         elif prm.complexity_type == 'NoComplexity':
             meta_complex_term = 0.0
 
@@ -145,10 +146,13 @@ def get_meta_complexity_term(hyper_kl, prm, n_train_tasks):
 # -------------------------------------------------------------------------------------------
 
 def get_bayes_task_objective(prm, prior_model, post_model, n_samples, empirical_loss, hyper_kl=0, n_train_tasks=1, noised_prior=True):
+    import pudb
+    #pudb.set_trace()
 
     complexity_type = prm.complexity_type
     delta = prm.delta  #  maximal probability that the bound does not hold
-    tot_kld = get_total_kld(prior_model, post_model, prm, noised_prior)  # KLD between posterior and sampled prior
+    tot_kld, info = get_total_kld(prior_model, post_model, prm, noised_prior)  # KLD between posterior and sampled prior
+    #print("hyper_KL : {}, prior_posterior_KL : {}".format(hyper_kl, tot_kld))
 
     if complexity_type == 'NoComplexity':
         # set as zero
@@ -189,7 +193,7 @@ def get_bayes_task_objective(prm, prior_model, post_model, n_samples, empirical_
     else:
         raise ValueError('Invalid complexity_type')
 
-    return empirical_loss, complex_term
+    return empirical_loss, complex_term, info
 
 
 def get_total_kld(prior_model, post_model, prm, noised_prior):
@@ -197,15 +201,37 @@ def get_total_kld(prior_model, post_model, prm, noised_prior):
     prior_layers_list = [layer for layer in prior_model.children() if isinstance(layer, StochasticLayer)]
     post_layers_list = [layer for layer in post_model.children() if isinstance(layer, StochasticLayer)]
 
+    info = {}
     total_kld = 0
+    w_kld = 0.0
+    b_kld = 0.0
     for i_layer, prior_layer in enumerate(prior_layers_list):
         post_layer = post_layers_list[i_layer]
         if hasattr(prior_layer, 'w'):
-            total_kld += kld_element(post_layer.w, prior_layer.w, prm, noised_prior)
+            #total_kld += kld_element(post_layer.w, prior_layer.w, prm, noised_prior)
+            temp = deter_kld_conv(post_layer.w, prior_layer.w, prm)
+            w_kld += temp.detach()
+            total_kld += temp
         if hasattr(prior_layer, 'b'):
-            total_kld += kld_element(post_layer.b, prior_layer.b, prm, noised_prior)
+            temp = deter_kld_conv(post_layer.b, prior_layer.b, prm)
+            b_kld += temp.detach()
+            total_kld += temp
 
-    return total_kld
+    info['w_kld'] = w_kld
+    info['b_kld'] = b_kld
+    return total_kld, info
+
+def deter_kld_conv(post, prior, prm):
+    """KL divergence D_{KL}[post(x)||prior(x)] for a fully factorized Gaussian"""
+
+    #weight is nn.Parameters and is actually subclass of Tensor
+    #so can be minus directly
+    kld = (prior['mean'] - post['mean']).pow(2)
+    kld = 0.5 * torch.mean(kld)
+    # note: don't add small number to denominator, since we need to have zero KL when post==prior.
+
+    return kld
+
 
 
 def kld_element(post, prior, prm, noised_prior):

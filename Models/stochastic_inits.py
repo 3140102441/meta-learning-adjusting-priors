@@ -17,8 +17,8 @@ def init_stochastic_conv2d(m, log_var_init):
     m.w_mu.data.uniform_(-stdv, stdv)
     if m.use_bias:
         m.b_mu.data.uniform_(-stdv, stdv)
-        m.b_log_var.data.normal_(log_var_init['mean'], log_var_init['std'])
-    m.w_log_var.data.normal_(log_var_init['mean'], log_var_init['std'])
+        #m.b_log_var.data.normal_(log_var_init['mean'], log_var_init['std'])
+    #m.w_log_var.data.normal_(log_var_init['mean'], log_var_init['std'])
 
 def init_stochastic_linear(m, log_var_init):
     n = m.w_mu.size(1)
@@ -26,5 +26,5 @@ def init_stochastic_linear(m, log_var_init):
     m.w_mu.data.uniform_(-stdv, stdv)
     if m.use_bias:
         m.b_mu.data.uniform_(-stdv, stdv)
-        m.b_log_var.data.normal_(log_var_init['mean'], log_var_init['std'])
-    m.w_log_var.data.normal_(log_var_init['mean'], log_var_init['std'])
+        #m.b_log_var.data.normal_(log_var_init['mean'], log_var_init['std'])
+    #m.w_log_var.data.normal_(log_var_init['mean'], log_var_init['std'])

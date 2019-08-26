@@ -34,6 +34,7 @@ def get_model(prm, model_type='Stochastic'):
 
     # Get task info:
     task_info = data_gen.get_info(prm)
+    print(task_info)
 
     # Define default layers functions
     def linear_layer(in_dim, out_dim, use_bias=True):
@@ -62,6 +63,8 @@ def get_model(prm, model_type='Stochastic'):
 
     elif model_name == 'OmConvNet':
         model = OmConvNet(model_type, model_name, linear_layer, conv2d_layer, task_info)
+    elif model_name == 'CIFARNet':
+        model = CIFARNet(model_type, model_name, linear_layer, conv2d_layer, task_info)
 
     else:
         raise ValueError('Invalid model_name')
@@ -166,6 +169,47 @@ class ConvNet3(general_model):
         x = self.fc_out(x)
         return x
 
+class CIFARNet(general_model):
+    def __init__(self, model_type, model_name, linear_layer, conv2d_layer, task_info):
+        super(CIFARNet, self).__init__()
+        self.model_type = model_type
+        self.model_name = model_name
+        self.layers_names = ('conv1', 'conv2', 'conv3', 'FC_out')
+        input_shape = task_info['input_shape']
+        color_channels = input_shape[0]
+        n_classes = task_info['n_classes']
+        n_filt1 = 32
+        n_filt2 = 32
+        n_filt3 = 32
+        n_filt4 = 32
+        self.conv1 = conv2d_layer(color_channels, n_filt1, kernel_size=3, stride = 1, padding = 1)
+        self.conv2 = conv2d_layer(n_filt1, n_filt2, kernel_size=3, stride = 1, padding = 1)
+        self.conv3 = conv2d_layer(n_filt2, n_filt3, kernel_size=3, stride = 1, padding = 1)
+        self.conv4 = conv2d_layer(n_filt3, n_filt4, kernel_size=3, stride = 1, padding = 1)
+        conv_feat_size = get_size_of_conv_output(input_shape, self._forward_features)
+        print("conv_feat_size : {}".format(conv_feat_size))
+        #self.fc1 = linear_layer(conv_feat_size, n_hidden_fc1)
+        self.fc_out = linear_layer(conv_feat_size, n_classes)
+
+        # self._init_weights(log_var_init)  # Initialize weights
+        # self.cuda()  # always use GPU
+
+    def _forward_features(self, x):
+        x = F.elu(F.max_pool2d(self.conv1(x), 2))
+        x = F.elu(F.max_pool2d(self.conv2(x), 2))
+        x = F.elu(F.max_pool2d(self.conv3(x), 2))
+        x = F.elu(F.max_pool2d(self.conv4(x), 2))
+        return x
+
+    def forward(self, x):
+        x = self._forward_features(x)
+        x = x.view(x.size(0), -1)
+        x = F.elu(self.fc_out(x))
+        #x = F.dropout(x, training=self.training)
+        #x = self.fc_out(x)
+        return x
+
+
 
 # -------------------------------------------------------------------------------------------
 #  OmConvNet
@@ -232,15 +276,15 @@ class OmConvNet(general_model):
 #         conv_feat_size = get_size_of_conv_output(input_shape, self._forward_features)
 #         self.fc1 = linear_layer(conv_feat_size, n_hidden_fc1)
 #         self.fc_out = linear_layer(n_hidden_fc1, n_classes)
-# 
+#
 #         # self._init_weights(log_var_init)  # Initialize weights
 #         # self.cuda()  # always use GPU
-# 
+#
 #     def _forward_features(self, x):
 #         x = F.elu(F.max_pool2d(self.conv1(x), 2))
 #         x = F.elu(F.max_pool2d(self.conv2(x), 2))
 #         return x
-# 
+#
 #     def forward(self, x):
 #         x = self._forward_features(x)
 #         x = x.view(x.size(0), -1)

@@ -16,6 +16,9 @@ import pickle
 # General - PyTorch
 # -----------------------------------------------------------------------------------------------------------#
 
+def debug():
+    import pudb
+    pudb.set_trace()
 
 def get_value(x):
     ''' Returns the value of any scalar type'''
@@ -69,11 +72,21 @@ def save_model_state(model, f_path):
     return f_path
 
 
-def load_model_state(model, f_path):
+def load_model_state(model, f_path, pop_softmax = False):
     if not os.path.exists(f_path):
         raise ValueError('No file found with the path: ' + f_path)
     with open(f_path, 'rb') as f_pointer:
-        model.load_state_dict(torch.load(f_pointer))
+        update_params = torch.load(f_pointer)
+
+        if pop_softmax :
+            update_params.pop('fc_out.w_mu', None)
+            update_params.pop( 'fc_out.b_mu', None)
+            new_params = model.state_dict()
+            new_params.update(update_params)
+            model.load_state_dict(new_params)
+        else:
+            model.load_state_dict(update_params)
+
 
 #
 # def get_data_path():
@@ -189,7 +202,7 @@ def create_result_dir(prm):
     time_str = datetime.now().strftime(' %Y-%m-%d %H:%M:%S')
     if prm.run_name == '':
         prm.run_name = time_str
-    prm.result_dir = os.path.join('saved', prm.run_name)
+    prm.result_dir = os.path.join('saved_epoch', prm.run_name)
     if not os.path.exists(prm.result_dir):
         os.makedirs(prm.result_dir)
     message = ['Log file created at ' + time_str,
